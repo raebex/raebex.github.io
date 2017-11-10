@@ -1,0 +1,27 @@
+.self-portrait {
+  max-width: 25em;
+}
+
+.st0, .st1, .st2, .st3, .st4, .st6 {
+  fill: none;
+  stroke: $color-text;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.st0, .st2 {
+  stroke-width: 3;
+}
+
+.st1, .st4, .st6 {
+  stroke-width: 2;
+}
+
+.st6 {
+  stroke: #D8D8D8;
+}
+
+.st5 {
+  fill: $color-text;
+}

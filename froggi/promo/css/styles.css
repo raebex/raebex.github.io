@@ -1,0 +1,281 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	color: #777;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  border-radius: 5px;
+}
+
+a {
+  	color: #555;
+}
+
+a:hover, a:focus {
+  	color: #777;
+}
+
+nav {
+	visibility: hidden;
+}
+
+.nav-secondary {
+	display: none;
+}
+
+.nav-tertiary {
+	visibility: visible;
+	background-color: #fff;
+	position: absolute;
+	right: -150px;
+	transition: all 0.5s ease;
+}
+
+.nav-tertiary ul li {
+	list-style-type: none;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	margin-right: 10px;
+}
+
+.nav-tertiary.active {
+	right: 0;
+}
+
+header {
+	background: url(../images/knit.jpg);
+	background-attachment: fixed;
+	height: 100%;
+	margin-bottom: 10%;
+  padding: 100px 0;
+}
+
+h3 {
+	font-family: 'Hammersmith One', 'sans-serif';
+}
+
+.menu-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 30;
+	cursor: pointer;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 10px solid #CCE547;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  margin: 0px auto;
+  z-index: 10;
+}
+
+.logo {
+	padding-top: 55px;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.logo h1 {
+	font-family: 'Hammersmith One', 'sans-serif';
+	line-height: 40px;
+	margin-top: 40px;
+}
+
+.about {
+  padding-top: 200px;
+}
+
+.medium-4, .small-12, .medium-6, .medium-5 {
+	margin-top: 15%;
+}
+
+.values {
+	margin: 0 auto;
+}
+
+.medium-4, .medium-6, .small-12, .medium-5 {
+	text-align: center;
+}
+
+.contact {
+	text-align: left;
+	margin-top: 10%;
+}
+
+input {
+	width: 300px;
+	height: 30px;
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	border-bottom: 2px dashed #8EC4EA;
+}
+
+button {
+	background-color: #CCE547;
+  color: #555;
+}
+
+#message {
+	height: 150px;
+}
+
+footer {
+	text-align: center;
+	border-top: 2px dashed #8EC4EA;
+	padding: 15px;
+	margin-top: 20%;
+	font-size: 0.8em;
+}
+
+.coming-soon {
+  position: relative;
+  width: 100%;
+}
+
+.soon-images {
+  opacity: 0.3;
+}
+
+.coming-soon h3 {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  margin: 0 0 0 -25.5%;
+  top: 10%;
+  z-index: 40;
+}
+
+.access:link, .access:visited {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #CCE547; 
+  border-radius: 5px;
+}
+
+@media (min-width: 767px){
+  /* medium */
+
+  .coming-soon {
+    width: 80%;
+    margin: 0 auto;
+  }
+  nav {
+  	visibility: visible;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	background: none;
+  }
+
+  nav ul {
+  	padding-right: 40px;
+  }
+
+  nav ul li {
+  	list-style-type: none;
+  	display: inline;
+  	padding:  10px 20px;
+  }
+
+  .nav-right {
+  	float: right;
+  	padding: 20px 40px;
+  }
+
+  .nav-left {
+  	float: left;
+  	padding: 20px 0 0 40px;
+  	font-family: 'Hammersmith One', 'sans-serif';
+  	font-size: 2em;
+  }
+
+  .nav-left img {
+  	float: left;
+  	padding-right: 15px;
+  }
+
+  .nav-secondary {
+	display: none;
+	background-color: #CCE547;
+	z-index: 50;
+  }
+
+  .nav-secondary .nav-right {
+  	padding: 30px 20px 0 0;
+  }
+
+  .nav-tertiary {
+  	display: none;
+  }
+
+  .menu-icon {
+  	display: none;
+  }
+
+  .medium-4, .small-12 {
+	margin-bottom: 0;
+  }
+
+  header {
+  	height: 100%;
+  }
+
+  .circle {
+  	height: 400px;
+  	width: 400px;
+  }
+
+  .logo {
+  	margin-top: 10%;
+  }
+
+  .logo-thumb {
+  	float: left;
+  	margin: 0;
+  }
+
+  .center {
+  	text-align: center;
+  }
+
+  .intro p {
+  	width: 60%;
+  	margin: 0 auto;
+  }
+  
+}
+
+@media (min-width: 1023px) {
+  /* large */ 
+  .coming-soon {
+    width: 50%;
+  }
+
+   header {
+  	height: 100%;
+  }
+}
+
+

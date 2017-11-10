@@ -1,0 +1,45 @@
+.social-media {
+  margin: 1em 0 0;
+
+  @media (min-width: $width-med) {
+    margin: 0;
+  }
+}
+
+.social-media__link {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 .3em;
+  position: relative;
+  transition: $transition;
+
+  &:hover .social-media__caption {
+    color: $color-hover;
+    opacity: 1;
+  }
+
+  a:hover .icon {
+    opacity: 0.2;
+  }
+
+  @media (min-width: $width-med) {
+    display: block;
+    height: 2.3em;
+    margin: .7em 0;
+  }
+}
+
+.social-media__caption {
+  display: none;
+  transition: $transition;
+
+  @media (min-width: $width-med) {
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

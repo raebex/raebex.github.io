@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+  <title>Froggi</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+
+<main id="froggi-app">
+    <div class="header">
+        <ul>
+            <li>
+                <a href="#">
+                    <img id="logo-pic" src=""/>
+                    <h2  id="logo">Froggi</h2>
+                </a>
+            </li>
+            <li id="menu-icon" >
+                <a href="#">
+                  <img src="images/menu.png"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="favorites">Favorites</li>
+            <li class="about">About Us</li>
+            <li class="settings">Settings</li>
+        </ul>
+    </nav>  
+
+    <!-- <h1>Stitches to cast on: <span id="stitch-count"></span></h1> -->
+
+    <div class="banner">
+        <h3 style="margin: 5px 0;">Cast on:</h3>
+        <div class="stitch-count" id="stitch-count">0</div>
+    </div>
+
+    <form id="froggi-form" class="main-form">
+
+      <div class="parameter measurement pure-control-group">
+          <label for="measurement">Measurement(<span id="units">in</span>):</label>
+          <input type="num" id="measurement" style="width: 40%">
+      </div>
+      <br>
+      <div class="parameter technique pure-control-group">
+          <label>Technique: </label>
+          <button class="technique-button" id="round">In-the-round</button>
+          <button class="technique-button" id="straight">Straight</button>
+      </div>
+      <div class="parameter needle-type pure-control-group" id="show-needle-type">
+          <br>
+          <label for="needle-type">Needle Type: </label>
+          <select id="needle-type">
+            <option>DPN</option>
+            <option>Circle</option>
+            <option>Magic Loop</option>
+          </select>
+      </div>
+      <br>
+      <div class="parameter needle-size pure-control-group">
+          <label for="needle-size">Needle Size: </label>
+          <select id="needle-size">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>10.5</option>
+              <option>11</option>
+              <option>13</option>
+              <option>15</option>
+              <option>17</option>
+              <option>19</option>
+              <option>35</option>
+              <option>50</option>
+          </select>
+      </div>
+      <br>
+      <div class="parameter yarn-weight pure-control-group">
+          <label for="yarn-weight">Yarn Weight: </label>
+          <select id="yarn-weight">
+              <option>0: Fingering</option>
+              <option>1: Sock/baby</option>
+              <option>2: Sport</option>
+              <option>3: DK</option>
+              <option selected="selected">4: Worsted</option>
+              <option>5: Chunky</option>
+              <option>6: Bulky</option>
+          </select>
+      </div>
+      <br>
+      <div class="parameter stitch-type pure-control-group">
+          <label for="stitch-type">Stitch Type: </label>
+          <select id="stitch-type">
+              <option>Garter</option>
+              <option>Stockinette</option>
+              <option>Rib</option>
+              <option>Seed</option>
+          </select>
+      </div>
+      <br>
+      <div>
+        <button type="submit" id="calculate" class="">Calculate!</button>
+      </div>
+      <!--clear form or save-->
+      <div class="commands">
+            <a id="clear" href="#">Clear</a>
+            <a id="heart" href="#">
+              <img src="images/heart.png"/>
+            </a>
+      </div>
+
+    </form>
+
+    <!--overlay-->
+    <div id="overlay"></div>
+
+    <!--save modal-->
+    <div class="modal modal-save" >   
+        <img class="close" src="images/close_icon.png">   
+        <form class="modal-form" id="save-form"> 
+          <input type="text" name="save-input" id="title" placeholder="Give me a name!">
+          <br>
+          <button type="submit" id="save">Save</button>          
+        </form>     
+    </div>
+
+    <!--units modal-->
+    <div class="modal modal-units">
+        <img class="close" src="images/close_icon.png"> 
+        <h4>Default Units</h4>         
+        <form class="modal-form">
+            <input type="checkbox" name="metric" id="metric">
+            <label for="metric">Metric(mm)</label>
+            <br><br>
+            <input type="checkbox" name="us" id="us">
+            <label for="us">US</label>
+            <br><br>
+            <input type="checkbox" name="uk" id="uk">
+            <label for="uk">UK/Canada</label>   
+        </form>     
+    </div>
+
+     <!--list to be populated with favorites-->
+    <ul id="favs-list"></ul>
+
+    <!--about page-->
+    <div id="about-things">     
+        <h3>frog·ging <br>'frôgiNG,fräg-/</h3>
+        <p><em>noun</em><br>1. the act of ripping yarn stitches out.</p> 
+        <br>
+        <p>If you've ever knitted before, I'm pretty sure you've run into the problem of starting over a project because you cast on two extra stitches, or something similarly frustrating.</p>
+        <br>
+        <h3>No more gauging!</h3>
+        <p>The existing gauge system is rather confusing, especially to beginners. Froggi makes sure knitters no longer have to fiddle and waste time with crazy calculations.</p>
+        <br>
+        <h3>Time &amp; sanity saved</h3>
+        <p>Start your project right away and forget about tedious swatching and gauge calucations. Froggi takes away the fear of frogging. </p>
+        <br>
+        <h3>Easy inputs</h3>
+        <p>With Froggi's easy input form, choose variables based on your project, such as yarn weight, needle size, and type of stitch.</p>
+        <br>
+        <h3>Instant calculations</h3>
+        <p>Press the 'calculate!' button and instantly find out the exact number of stitches you need to cast on.</p>
+        <br>
+        <h3>Favorites</h3>
+        <p>Save your results by pressing the heart button, and your projects will be kept in local storage for future reference!</p>
+    </div>
+</main>
+
+<!--fav template-->
+<script type="text/template" id="fav-template">
+    <div class="fav-container">
+        <div class="see-more">
+            <h3 class="center"><%=title%></h3>
+        </div>
+        <div class="hide">
+            <div class="banner-fav">
+                <p>Cast on:</p>
+                 <div class="stitch-count" id="stitch-count"><%=stitch_count%></div>
+            </div>
+
+            <table class="fav-table">
+                <tr class="parameter measurement">
+                  <td class="text-left">Measurement: </td>
+                  <td class="text-right"><%=measurement%></td>
+                </tr>
+
+                <tr class="parameter technique">
+                  <td class="text-left">Technique: </td>
+                  <td class="text-right"><%=technique%></td>
+                </tr>
+
+                <tr class="parameter">
+                  <td class="text-left">Needle Type: </td>
+                  <td class="text-right"><%=needle_type%></td>
+                </tr>
+
+                <tr class="parameter needle-size">
+                  <td class="text-left">Needle Size: </td>
+                  <td class="text-right"><%=needle_size%></td>
+                </tr>
+                
+                <tr class="parameter yarn-weight">
+                  <td class="text-left">Yarn Weight: </td>
+                  <td class="text-right"><%=yarn_weight%></td>
+                </tr>
+                
+                <tr class="parameter stitch-type">
+                  <td class="text-left">Stitch Type: </td>
+                  <td class="text-right"><%=stitch_type%></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td> <a class="delete" href="#">
+                          <img src="images/trash.png"/>
+                      </a>
+                  </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</script>
+
+<!--scripts-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="backbone.localStorage-min.js"></script> <!--include after backbone-->
+
+<script src="froggi-model.js"></script>
+<script src="fav-view.js"></script>
+<script src="froggi-collection.js"></script>
+<script src="app-view.js"></script>
+
+</body>
+</html>

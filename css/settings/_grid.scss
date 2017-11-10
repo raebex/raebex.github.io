@@ -1,0 +1,46 @@
+$grid-columns: 12;
+
+.grid-row {
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.grid-col {
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+
+@function grid-calc($columns: $grid-columns, $n: 1) {
+  @return ((100% / $grid-columns) * $n);
+}
+
+@for $i from 1 through $grid-columns {
+  .small-#{$i} {
+    width: grid-calc($n: $i);
+  }
+}
+
+@media (min-width: $width-med) {
+  @for $i from 1 through $grid-columns {
+    .medium-#{$i} {
+      width: grid-calc($n: $i);
+    }
+  }
+}
+
+@media (min-width: $width-large) {
+  @for $i from 1 through $grid-columns {
+    .large-#{$i} {
+      width: grid-calc($n: $i);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.project-list {
+  list-style-type: none;
+}
+
+.project {
+  display: inline;
+  font-size: 1.2em;
+  transition: $transition;
+
+  &:before {
+    content: '- ';
+  }
+
+  &:first-child:before {
+    content: '';
+  }
+}
+
+.project-description,
+.project-header {
+  margin: 1em 0;
+}
+
+img {
+  width: 100%;
+}
+
+.video iframe {
+  width: 100%;
+
+  @media (min-width: $width-med) {
+    min-height: 28em;
+  }
+}

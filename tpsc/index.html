@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rebecca Young">
+    <meta name="keywords" content="developer, designer">
+    <title>Tibetan People's Solidarity Campaign</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/vendor/modernizr.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      .main-section-wrapper {
+        width: 700px;
+      }
+      .project-description {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+<body>
+<nav class="main-nav clearfix" id="main-nav">
+  <ul>
+    <li>
+      <a href="http://rebeccayoung.me/" data-code="home"><img id="logo-pic" class="home" src="../images/logo.svg" alt="rebecca_young_logo"/></a>
+    </li>
+    <li class="right home">
+      <a href="http://rebeccayoung.me/#home" data-code="home">Home</a>
+    </li>
+    <li class="right work">
+      <a href="http://rebeccayoung.me/#work" class="insite-nav" data-code="work">Work</a>
+    </li>  
+    <li class="right about">
+      <a href="http://rebeccayoung.me/#about" data-code="about">About</a>
+    </li>
+    <li class="right contact">
+      <a href="http://rebeccayoung.me/#contact" data-code="contact">Contact</a>
+    </li>
+    <li class="right blog">
+      <a href="http://raebex.github.io/" target="_blank">Blog</a>
+    </li>
+    <li class="right github" title="Check me out on github!">
+      <a href="https://github.com/raebex/" target="_blank"><img src="../images/github.svg" alt="Rebecca Young on Github" class="goto-github"/></a>
+    </li>     
+  </ul>
+</nav>
+<div class="fake-nav" id="fake-nav">
+  <a href="http://rebeccayoung.me/" data-code="home"><img id="logo-pic" src="../images/logo.svg" alt="rebecca_young_logo"/></a>
+  <a href="#menu" id="open-menu">&#9776;</a>
+</div>
+<main role="main" class="container">            
+    <section id="work" class="main-section">
+      <h1 class="section-title">Tibetan People's Solidarity</h1>    
+      <div class="subpage-section-wrapper">  
+        <div class="project-description">
+          <p>China's occupation of Tibet has brought international attention to human rights violations and cultural dismantling since the late 1950s. Half a century later, the Central Tibetan Administration held a conference to begin international protest of Chinese Occupation in Tibet. I designed an invitation and takeaway for the inaugural ceremony. The invitee will recieve a scroll wrapped in a prayer flag, which will be the RSVP method for the event. At the end of the ceremony, attendees will string together all the prayer flags and bless the Tibetan people for their freedom.</p>
+        </div> 
+        <img class="design-pic" src="images/tpsc6.jpg">
+        <img class="design-pic" src="images/tpsc5.jpg">
+        <img class="design-pic" src="images/tpsc1.jpg">                    
+        <img class="design-pic" src="images/tpsc2.jpg">
+        <img class="design-pic" src="images/tpsc3.jpg">
+        <img class="design-pic" src="images/tpsc7.jpg">
+    </section>    
+</main>
+<footer class="site-footer">
+  <p>&copy;2015 Rebecca Young</p>
+</footer>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var $menu_icon = $('#open-menu');
+    var $nav = $('#main-nav');
+    $menu_icon.on('click', function(e){
+      $nav.addClass('active');
+      if(!$(this).next().hasClass('active')){
+        $(this).next().addClass('active');
+      }else {
+        $(this).next().removeClass('active');
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    });
+
+    //click anywhere to remove menu
+    $(document).on('click', function(){
+      $nav.removeClass('active');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+  max-width: $width-content-max;
+  padding: 1em 0;
+  position: relative;
+  width: 90%;
+
+  @media (min-width: $width-med) {
+    padding: 2.5em 0;
+  }
+}
+
+.section {
+  @media (min-width: $width-med) {
+    padding: 0 1em;
+  }
+}
+
+.subsection {
+  padding: 1em 0;
+}
