@@ -4,400 +4,39 @@
   <title>Meep-Plugin</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-  <style>
-
-  
-    /* apply a natural box layout model to all elements */
-    *, *:before, *:after {
-      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-    }
-
-    html, body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 2em;
-      margin: 0;
-      padding: 0;
-      color: #555;
-    }
-
-    h1, h3 {
-      font-family: 'Montserrat', sans-serif;
-      color: #000;
-    }
-
-    body {
-      background: url(back.png);
-      background-attachment: fixed;
-    }
-
-    header {
-      width: 100%;
-      padding-top: 40px;
-    }
-
-    header h1 {
-      margin-top: 0;
-    }
-
-    a:link, a:visited, a:focus, a:target, a:active {
-      text-decoration: none;
-      color: #555;
-    }
-
-    .wrapper {
-      width: 900px;
-      margin: 0px auto 500px;
-    }
-
-    .right {
-    	float: right;
-    }
-
-    .left {
-    	float: left;
-    }
-
-    .magic {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-   	.playlist, .sounds {
-    	width: 442px;
-    	float: left;
-    }
-
-    .playlist {
-      margin-left: 4px;
-    }
-
-    .sounds {
-      margin-right: 4px;
-    }
-
-    #playlist {
-    	background-color: #555;
-    	height: 500px;
-    	overflow: scroll;
-    }
-
-    #sound-list {
-    	background-color: #eee;
-    	height: 500px;
-    	overflow: scroll;
-    }
-
-    .sound-list li {
-    	text-decoration: none;
-    	list-style-type: none;
-    	padding: 10px;
-    	border: 1px dotted #aaa;
-    	margin: 5px;
-    	background-color: #fff;
-    }
-
-    .image {
-    	width: 100px;
-    }
-
-    .text {
-    	padding-left: 20px;
-    	width: 260px;
-    }
-
-    .group:after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-
-    .delete{
-    	display: none;
-    }
-
-    .track {
-    	transition: 1s background-color ease;
-    }
-
-    .track.now-playing {
-    	background-color: #CCE547;
-    }
-
-    .search {
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    button, input {
-      border-radius: 3px;
-      border: 1px solid #aaa;
-      height: 30px;
-    }
-
-    input {
-      width: 300px;
-    }
-
-    button {
-      background-color: #CCE547;
-      cursor: pointer;
-      padding: 0 15px;
-      font-size: 12px;
-    }
-
-    nav {
-      padding: 2px 0;
-      width: 100%;
-      margin: 0 auto;
-      background-color: #fff;
-    }
-
-    nav ul li {
-      display: inline;
-      list-style-type: none;
-      padding: 0 30px;
-    }
-
-    .download-buttons {
-      width: 250px;
-      margin: 0 auto;
-      padding-left: 0;
-      text-align: center;
-    }
-
-    .download-buttons li {
-      list-style-type: none;
-      padding: 5px 0;
-    }
-
-    .download-buttons li button{
-      width: 200px;
-    }
-
-    nav ul li a:link, nav ul li a:visited {
-      text-decoration: none;
-      color: #6699FF;
-    }
-
-    nav, h1 {
-      text-align: center;
-    }
-
-    #usage h3, #download h3 {
-      text-align: center;
-    }
-
-    section {
-      margin-bottom: 60px;
-      padding-top: 50px;
-    }
-
-    .sample {
-      background-color: #fff;
-      margin: 0 auto 60px;
-      padding: 2%;
-    }
-
-    code {
-      font-size: 0.8em;
-      color: #6699FF;
-    }
-
-    .comment {
-      color: #aaa;
-    }
-
-    .indent {
-      text-indent: 30px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8em;
-      color: #aaa;
-      background-color: #fff;
-      padding: 20px 0;
-    }
-
-  </style>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header> 
-      <h1 class="h1">Meep.js</h1>
-      <nav>
-        <ul class="nav">
-          <li><a data-code="demo" href="#">Demo</a></li>
-          <li><a data-code="usage"  href="#">Usage</a></li>
-          <li><a data-code="download" href="#">Download</a></li>
-          <li><a data-code="contact" href="#">Contact</a></li>
-        </ul>
-      </nav>    
+    <h1 class="h1">Meep.js 
+      <a href="https://github.com/raebex/meep"> | Github</a> 
+    </h1>
   </header> 
   <div class="wrapper">
-     
     <section id="demo" role="main" class="group">
-        <div class="search"> 
-            <input type="text" id="search-bar">
-            <button type="submit" id="search-button">Search</button> 
+      <div class="search"> 
+          <input type="text" id="search-bar">
+          <button type="submit" id="search-button">Search</button> 
+      </div>
+      <div class="magic group">
+        <div class="sounds group">          	
+    		  <p>Choose from the songs below to create your playlist:</p>
+        	<ul class="sound-list" id="choose-from-list"></ul>
         </div>
-        <div class="magic group">
-            <div class="sounds group">          	
-          		  <p>Choose from the songs below to create your playlist:</p>
-              	<ul class="sound-list" id="sound-list"></ul>
-            </div>
-            <div class="playlist group">
-                <p>The chosen ones:</p>
-                <ul class="sound-list" id="playlist"></ul>
-            </div>
+        <div class="playlist group">
+          <p>The chosen ones:</p>
+          <ul class="sound-list" id="playlist"></ul>
         </div>
-    </section>
-    <section id="usage">
-      <h3>Getting started</h3>
-      <p>IMPORTANT: Make sure you are working off a live server, not locally!</p>
-      <p>1) Include jquery, underscore, soundcloud sdk, and meep.js in html at the end of your &#60;body&#62;</p>
-      <div class="sample">
-          <code>
-            &#60;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&#62;&#60;/script&#62;
-            <br>
-            &#60;script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"&#62;&#60;/script&#62;
-            <br>
-            &#60;script src="http://connect.soundcloud.com/sdk.js"&#62;&#60;/script&#62;
-            <br>
-            &#60;script src="your-path-to/meep.js"&#62;&#60;/script&#62;
-            <br>
-            &#60;script src="your-path-to/script.js"&#62;&#60;/script&#62;  <span class="comment">&#60;!--your own script file--&#62;</span>
-          </code>
       </div>
-      <p>2) The HTML structure is up to you, as long as you have tags for a search bar, search button, and two list tags: one for SoundCloud's tracks, and one for the custom playlist. The ids are also up to you. For example: </p>
-      <div class="sample">
-          <code>
-          &#60;html&#62;<br>
-          &#60;head&#62;&#60;/head&#62;<br>
-          &#60;body&#62;
-            <blockquote>
-                &#60;input type="text" id="search-bar"&#62;<br>
-                &#60;button type="submit" id="search-button"&#62;Search&#60;/button&#62;<br><br>
-                &#60;ul id="sound-list"&#62;&#60;/ul&#62;<br>
-                &#60;ul id="playlist"&#62;&#60;/ul&#62;
-            </blockquote>
-          &#60;/body&#62;<br>
-          &#60;/html&#62;
-          </code>
-      </div>
-      <p>3) Copy past this underscore template above the rest of the script tags:</p>
-      <div class="sample">
-          <code>
-            &#60;script type="text/template" id="embed-template"&#62;<br>
-                <blockquote>
-                &#60;li  class="track"&#62;<br>
-                <blockquote>
-                &#60;img src="<%=image%>"/&#62;<span class="comment">&#60;!--where the track image will show up--&#62;</span><br>
-                &#60;div&#62;<br>
-                  <blockquote>
-                  &#60;%=title%&#62;<span class="comment">&#60;!--title of track--&#62;</span><br>
-                  &#60;a href="#" id="<%=id%>" class="play"&#62;Play&#60;/a&#62;<span class="comment">&#60;!--play button...you can also make this a button as long as it has the 'play' class--&#62;</span><br>
-                  &#60;a href="#" id="<%=id%>" class="stop"&#62;Stop&#60;/a&#62;<span class="comment">&#60;!--stop button--&#62;</span><br>
-                  &#60;a href="#" class="add"&#62;Add&#60;/a&#62;<span class="comment">&#60;!--button to add to playlist--&#62;</span><br>
-                  </blockquote>
-                &#60;/div&#62;<br>
-                </blockquote>
-              &#60;/li&#62;<br>
-              </blockquote>
-            &#60;/script&#62;<br>
-          </code>
-      </div>
-      <p>4) In your custom script file, copy/paste this snippet and fill in the parameters with your own id tags from your html file. For example:</p>
-      <div class="sample">
-          <code>
-            ;(function($) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;'use strict';
-            <blockquote>
-            <span class="comment"><br>//specify where you want tracks to sit</span><br>
-            var meep_config = {<br>
-              
-              <blockquote>
-              sound_list: $('#sound-list'),<span class="comment">//id of list to be filled with sounds</span><br>
-              playlist: $('#playlist'),<span class="comment">//id of list to be user's custom playlist</span><br>
-              search_bar: $('#search-bar'),<span class="comment">//id of search bar</span><br>
-              search_button: $('#search-button')<span class="comment">//id of search button</span><br>
-              </blockquote>
-            };<br>
-            <span class="comment">//initialize the configuration</span><br>
-            Meep.init(meep_config);
-            </blockquote>
-            })(window.jQuery);
-          </code>
-      </div>
-      <h3>VOILA! The meep playlist is now incorporated into your project!</h3>
-      <p>The following code snippets are optional, but will help you out with styling and such. </p>
-      <p>6) Right now, the default search keyword for the listed tracks is 'pizza.' To change or delete this, go to line 23 in meep.js and delete or modify the result variable: </p>
-      <div class="sample">
-          <code>
-            <span class="comment">//default</span><br>
-            var result = 'pizza';<br><br>
-            <span class="comment">//modified so no tracks will appear until user enters something into the search bar:</span><br>
-            var result = '';<br><br>
-            <span class="comment">//or, set your own default:</span><br>
-            var result = 'rock';<br><br>
-          </code>
-      </div>
-      <p>7) To get the sound list and playlist displaying side by side:</p>
-      <div class="sample">
-          <code>
-            &#60;style&#62;
-            <blockquote>
-
-            #playlist, #sound-list {
-              <blockquote>
-              height: 500px;<br>
-              width: 50%;<br>
-              float: left;<br>
-              padding-left: 0;<br>
-              list-style-type: none;<br>
-              </blockquote>
-            }
-            </blockquote>
-            &#60;/style&#62;
-          </code>
-      </div>
-      <p>8) To have styles show up when the track is playing: </p>
-      <div class="sample">
-          <code>
-            &#60;style&#62;
-            <blockquote>
-            .track {
-              <blockquote>
-              transition: 1s background-color ease;
-              </blockquote>
-            }<br><br>
-            .track.now-playing {
-              <blockquote>
-              background-color: #CCE547;
-              </blockquote>
-            }
-            </blockquote>
-            &#60;/style&#62;
-          </code>
-      </div>
-    </section>
-    <section id="download">
-      <h3>Download</h3>
-      <ul class="download-buttons">
-        <li><a class="access" href="meep.zip"><button>Zip Files</button></a></li>
-        <li><a class="access" href="https://github.com/raebex/meep" target="_blank"><button>Github</button></a></li>
-      </ul>
-    </section>
-    <section id="contact">
-    <p>For feedback and suggestions, feel free to email me at <a style="color: #6699FF;" href="mailto:r.young1025@gmail.com">r.young1025@gmail.com</a>!</p>
-    </section>
+    </section> 
   </div>
   <footer>
     &copy;2014 Rebecca Young
   </footer>
+
 <!--template-->
 <script type="text/template" id="embed-template">
-  	<li class="track group">
+  <li class="track group">
 		<img class="left image" src="<%=image%>"/>
 		<div class="left text">
 			<strong><%=title%></strong>
@@ -408,7 +47,6 @@
 		</div>
 	</li>
 </script>
-
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>

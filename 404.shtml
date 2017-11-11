@@ -12,7 +12,7 @@
 
 <body>
   <main role="main" class="error-container">
-    <figure class="error-image center">
+    <figure class="error-image">
       <img src="http://rebeccayoung.me/images/404.svg">
       <figcaption>Looks like you've lost your way...</figcaption>
       <a class="back-btn" href="http://rebeccayoung.me">Get me outta here</a>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rebecca Young</title>
+    <description>BFG | Developer</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Aliens &amp; Cats - SXSW Day 3</title>
+        <description>
+</description>
+        <pubDate>Sun, 15 Mar 2015 00:00:00 -0500</pubDate>
+        <link>/sxsw-aliens-and-cats/</link>
+        <guid isPermaLink="true">/sxsw-aliens-and-cats/</guid>
+      </item>
+    
+      <item>
+        <title>Learning About the Web - SXSW Day 2</title>
+        <description>&lt;p&gt;I tried to get into the TechBreakfast Spectacular around 9:30. According to the SXSW Go app, there would be “25 demos, 15 kiosks, and 1,000+ attendees coming to see cool new demos and interactive demos from companies all over the world.” Sadly, I didn’t have an RSVP, so I had to wait in line. After about 30 minutes of waiting, I was getting hangry. I decided I wasn’t meant to be one of those 1,000 attendees and bounced to go to a session. This was the beauty of being indecisive when making my itinerary. Although limiting my schedule was important for my sanity, it was good to have a few alternatives for every time slot in case I couldn’t get in, or the topic wasn’t what I thought it was going to be. Especially with so many other cool things going on at SXSW, waiting in line forever is never worth it. &lt;/p&gt;
+
+&lt;h3 id=&quot;the-evolution-of-the-web&quot;&gt;The Evolution of the Web&lt;/h3&gt;
+&lt;p&gt;I was super excited that this session provided food. Thanks Adobe! CJ Gammon, a computer scientist at Adobe, presented a bunch of new and upcoming web technologies. In the realm of animation, graphics, and peripherals, libraries are making things easier. Here are just a few:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://virtual.wf/&quot;&gt;Virtual World&lt;/a&gt; is a WebGL framework that has the ability to create stereoscopic views. &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.leapmotion.com/&quot;&gt;Leap Motion&lt;/a&gt; allows users to interact with their computer simply by gesturing at it. The controller achieves this by tracking both hands and all 10 fingers. They also provide a developer SDK that anyone can play with.  &lt;/li&gt;
+  &lt;li&gt;Mozilla is developing a &lt;a href=&quot;http://mozvr.com/&quot;&gt;web VR API&lt;/a&gt; that accesses phone hardware&lt;/li&gt;
+  &lt;li&gt;Instead of being limited to Google Street Views, &lt;a href=&quot;http://mashable.com/2014/12/18/street-view-virtual-reality/&quot;&gt;VR drones&lt;/a&gt; with accompanying headsets gives users the ability to explore maps in real time&lt;/li&gt;
+  &lt;li&gt;A three.js camera tool &lt;a href=&quot;https://github.com/cjgammon/three.js-camera-path-tool&quot;&gt;plugin&lt;/a&gt; is geared towards game designers to map out camera views&lt;/li&gt;
+  &lt;li&gt;3D workflows such as &lt;a href=&quot;http://www.blender.org/&quot;&gt;Blender&lt;/a&gt; now support a &lt;a href=&quot;http://threejs.org/&quot;&gt;three.js&lt;/a&gt; plugin.&lt;/li&gt;
+  &lt;li&gt;Flash might be relevant again. In addition to being able to export WebGL and SVG animations, it also supports custom platforms and plugins. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;His presentation can be accessed &lt;a href=&quot;https://github.com/cjgammon/SXSW-2015&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;going-from-design-to-code-without-going-insane&quot;&gt;Going From Design to Code Without Going Insane&lt;/h3&gt;
+&lt;p&gt;This session presented tools that facilitate communication between designers and developers. Often there can be mishaps in the transfer, an example of which is in the following slide:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/design-to-code.jpg&quot; alt=&quot;Design to Code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I looked forward to this session since I recently started working as the developer half of the team with my friend and designer &lt;a href=&quot;http://tjfulfer.com&quot;&gt;TJ Fulfer&lt;/a&gt;. The speakers were Ryan Stewart and Sarah Hunt, both product managers at Adobe. Most of the session focused on &lt;a href=&quot;http://www.adobe.com/creativecloud/extract.html&quot;&gt;Adobe Extract&lt;/a&gt; inside the Creative Cloud. It gives all the members on the team a collaborative interface around a .psd file. It automatically pulls out a style guide unique to the selected .psd file, including fonts, font sizes, colors, and more. The style guide is a great way to stay on the same page and is also a sanity check for the designer in catching inconsistent colors and sizes. Selecting an element on the .psd file translates the styles directly to CSS, and it even gives options for different preprocessors! The same can be done for prototyping behavioral components in javascript. Extract also automatically resizes images according to screen size. Throughout the whole process, a chat window is open for any comments or issues. &lt;/p&gt;
+
+&lt;p&gt;Extract sounded so awesome that I was ready to sell TJ’s soul for it, but unfortunately, Creative Cloud does not accept souls as payment. Luckily, Sarah and Ryan also pitched Adobe’s open source alternative, &lt;a href=&quot;http://brackets.io/&quot;&gt;Brackets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Other software that was recommended:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For prototyping:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.invisionapp.com/&quot;&gt;InVision&lt;/a&gt; - we used this in my capstone class and while it has it’s limitations, the interaction is easily presentable&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://tv.adobe.com/show/learn-edge-animate/.html&quot;&gt;Edge Animate&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For version control: 
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://trello.com/&quot;&gt;Trello&lt;/a&gt; - also used in my capstone class&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com&quot;&gt;Github Issues&lt;/a&gt; - Ryan noted that of all the teams he’s worked with, many prefer Github Issues over more specialized programs such Trello or Slak. Having the communication be close to the actual code is always a plus.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;is-your-responsive-design-responsive-enough&quot;&gt;Is Your Responsive Design Responsive Enough?&lt;/h3&gt;
+&lt;p&gt;25% of users will abandon a site that takes more than four seconds to load, and 3.5 billion people have internet connection that is less than 4 mb/s. James Zetlen and Dane Downer led a discussion on responsive design that went beyond flexible grid systems. This session was a &lt;em&gt;core conversation&lt;/em&gt;, so it was less about the speakers and more about audience members speaking with each other. The discussion touched on media queries, responsive images, scaling. Hearing real professionals talk about their development environment, good or bad, was a valuable learning experience. &lt;/p&gt;
+</description>
+        <pubDate>Sat, 14 Mar 2015 00:00:00 -0500</pubDate>
+        <link>/sxsw-learning-about-the-web/</link>
+        <guid isPermaLink="true">/sxsw-learning-about-the-web/</guid>
+      </item>
+    
+      <item>
+        <title>Girl Power  - SXSW Day 2 &amp; 3</title>
+        <description>
+</description>
+        <pubDate>Sat, 14 Mar 2015 00:00:00 -0500</pubDate>
+        <link>/sxsw-girl-power/</link>
+        <guid isPermaLink="true">/sxsw-girl-power/</guid>
+      </item>
+    
+      <item>
+        <title>When It Got Weird - SXSW Day 1</title>
+        <description>&lt;p&gt;During the &lt;em&gt;Personal Side of Robots&lt;/em&gt; session, my phone totally died and it’s why I had to use pictures from the internet for that portion of the post. By the powers that be, my misfortune again turned into a blessing in disguise. While charging my phone, I met a new friend and we went bar hopping on 6th street together. SXSW is unique in that it’s not just confined to conference happenings. Rather, the whole town is in on it. Every night of SXSW, 6th street closes to traffic and becomes one big block party. It’s filled with bars, food, and of course live music. People aren’t joking when they say Austin is America’s live music capital. We stopped in a bar called Friends and listened to an amazing blues musician named Dave Scher: &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/dave-scher.jpg&quot; alt=&quot;Dave Scher @ Friends&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Afterwards, we stumbled upon the Museum of the Weird. The storefront is a typical tourist shop and I ended up buying a “Keep Austin Weird” keychain. We were then coerced by the staff into seeing the museum and side show. It was obviously a tourist trap, but nevertheless right up my alley:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-zultan.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;
+&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-hallway.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;
+&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-fetuses.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;
+&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-head.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;
+&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-mermaid.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;
+&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-johnny-depp.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our attendant said that the door that I was standing next to is the back door to an apartment that Johnny Depp once rented. Do I believe it? Maybe. After that, we went to a temperature controlled room where the “Ice Man” is housed. He was an extremely hairy humanoid that has been preserved in an ice box for thousands of years. Unfortunately, I wasn’t allowed to take pictures of him.&lt;/p&gt;
+
+&lt;p&gt;The side show was a one-man show put on by our attendant. He claimed he was resistant to electric shock and sent a current through him. He proved it by giving me a lightbulb, and when I touched the end to his skin, it lit up. I was very impressed and a little concerned for his health, but he reassured me that he only felt a tickle. I wanted to commemorate the moment and ended up buying a poster from him. He signed it with: “Rebecca, never forget the spark we shared.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/mw-poster.jpg&quot; alt=&quot;Museum of the Weird&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Mar 2015 00:00:00 -0500</pubDate>
+        <link>/sxsw-when-it-got-weird/</link>
+        <guid isPermaLink="true">/sxsw-when-it-got-weird/</guid>
+      </item>
+    
+      <item>
+        <title>Racing Against My Phone Battery - SXSW Day 1</title>
+        <description>&lt;p&gt;First thing on my agenda was the Interactive Welcome at 10:15 am. I got to the Convention Center way too early and the food stations inside the Convention center weren’t open yet,  so I wandered around for a bit looking for a coffee shop. I ended up at &lt;a href=&quot;http://www.houndstoothcoffee.com/&quot;&gt;Houndstooth Coffee&lt;/a&gt; and experienced my first of many hangry moments standing in a SXSW food line. The seemingly endless, out-the-door kind of lines were depressingly commonplace at SXSW. It’s something that I didn’t account for in managing my time, so I ended up being about 15 min late to the Welcome. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/welcome.jpg&quot; alt=&quot;SXSW Interactive Welcome&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pocket-full-of-dynamite-making-the-mobile-web-3d&quot;&gt;Pocket Full of Dynamite: Making the Mobile Web 3D&lt;/h3&gt;
+&lt;p&gt;This was my first session of SXSW and I remember being a little starstruck by the speaker, Hai Nguyen, Creative Technology Lead at Google. I have this irrational belief that all Google engineers are mythical geniuses who may or may not actually exist. So the fact that a very real, Google employee was standing in front of me made me realize that they’re sort of human too. &lt;/p&gt;
+
+&lt;p&gt;The session covered WebGL as the future of animation on mobile web.  For the first example, Hai used the website that his team worked on for the 2014 World Cup. FIFA needed a service to amplify moments, allow real time responses with fast refreshes, and be easily shareable around the world. Since all smartphones have the ability to access a site through a browser, the solution was to create it on the web with WebGL. What makes WebGL so special is that it delegates all heavy animation to the GPU. This leaves the main processor free for other things. Hai encouraged us to visit &lt;a href=&quot;http://riskeverything.nike.com&quot;&gt;riskeverything.nike.com&lt;/a&gt; on our phones to see the project in action. Unfortunately, the WiFi was so slow that I had a hard time loading the site (even with the supposedly speedy WebGL animation), but thankfully a friendly neighbor shared his screen with me. The next set of examples are on &lt;a href=&quot;http://accdemos.com/sxsw&quot;&gt;accdemos.com/sxsw&lt;/a&gt;. The cool thing about WebGL is that it can access the phone or computer’s hardware sensors. This is seen with the petal and snowflake examples. &lt;/p&gt;
+
+&lt;p&gt;WebGL will eventually put mobile web graphics on par with native apps. Native apps are a good solution for the time being, but impede sustainability with multiple codebases, app store restrictions, and cross-platform accessibility. (This is something I discussed in one of my earlier &lt;a href=&quot;http://raebex.github.io/Native-vs-Web&quot;&gt;posts&lt;/a&gt;!) By the end of 2015, there will be 1.9 billion people using smartphones. 78% of those are capable of WebGL (according to &lt;a href=&quot;http://caniuse.com&quot;&gt;caniuse.com&lt;/a&gt;). By the time the new iOS ships this year, the number of WebGL capable smartphones will double.  In the future, Hai hopes that hardware and browser advancements will eventually allow his team to create games that run offline. &lt;/p&gt;
+
+&lt;h3 id=&quot;css-as-a-service-maintaining-style&quot;&gt;CSS As a Service: Maintaining Style&lt;/h3&gt;
+&lt;p&gt;Fellow Chicagoan Shay Howe discussed optimizing CSS in this session. CSS has a monstrous reputation of easily getting unorganized and bloated. Even with the advent of preprocessors such as SASS and LESS, developers often find themselves retyping certain styles for every project. Shay presented an innovative way to solve this problem by writing CSS as a service. The service oriented architecture he described was a little beyond me at this point, but it’s still an interesting way to think about tackling CSS. I went up to meet Shay after the session and was definitely a little star struck. Some of my professors link to his learning site and I’ve heard him talk at Columbia before, so it was great actually meeting him.&lt;/p&gt;
+
+&lt;h3 id=&quot;fire-alarm--google-fiber&quot;&gt;Fire alarm &amp;amp; Google Fiber&lt;/h3&gt;
+&lt;p&gt;After Shay Howe’s session, I waited in line for the Burger Bar then took my food into the JW Marriot. I had about two hours to kill before the next session, so I decided to charge my phone for a while. Which, I was not expecting my battery to drain so quickly. In addition to the SXSW Go app being a real battery suck, I was constantly getting almost lost on Google Maps, tweeting sessions, and browsing Imgur while waiting in lines. My poor phone had a lot to do. I scowled at myself for thinking I didn’t need a battery pack. I ate my fries while side-eyeing those who were smart and did have battery chargers.&lt;/p&gt;
+
+&lt;p&gt;Half an hour later, the fire alarm went off. Everyone was evacuating so I grudgingly packed up and went downstairs. However, this turned out to be a blessing in disguise. I wandered around aimlessly for a few minutes and came across the Google Fiber pop-up. Because of my weird tendency to get intimidated by Google employees, I actually walked past once, then got over it and went back. Inside there were demos of various projects that utilized Google Fiber: &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/google-fiber.jpg&quot; alt=&quot;Google Fiber pop-up&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My favorite was the Virtual Reality area:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/google-vr.jpg&quot; alt=&quot;Google Fiber VR&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The above VR station was booked up until Sunday, so I decided to pass and just take a creep shot of someone I didn’t know on it. I did get a free Google Cardboard though! All you have to do is put your phone into the cardboard contraption, download their 3D films, and voila: a suprisingly high quality virtual reality experience. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/google-cardboard.jpg&quot; alt=&quot;Google Cardboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ready-to-wear-body-informed-3d-printed-fashion&quot;&gt;Ready to Wear? Body Informed 3D Printed Fashion&lt;/h3&gt;
+&lt;p&gt;I was shocked to learn that fashion is one of the most polluting industries after oil. With developments in 3D Printing, manufacturing will become additive, and the overproduction of fashion will become less likely as 3D Printing can create garments custom to the body. The eloquent Pauline Van Dogen presented her research in 3D printed fabrics. It resulted in a sleeve made with flexible filaments. The “fabric” consisted of separate, active cells that pushed and pulled according to the movement of the arm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rebeccayoung.me/SXSW-2015/3d-print-sleeve.jpg&quot; alt=&quot;3D printed fabric&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-personal-side-of-robots&quot;&gt;The Personal Side of Robots&lt;/h3&gt;
+
+&lt;p&gt;I was super excited for this session because of my work with &lt;a href=&quot;http://rebeccayoung.me/roboplush&quot;&gt;Roboplush&lt;/a&gt;. Dr. Cynthia Breazeal is a brilliant woman who has done revolutionary work in robotics, specifically in emotional intelligence and facilitating goal driven behavior in robots. Below is Dr. Breazeal with Kismet:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.c.photoshelter.com/img-get/I0000pgl4iSZ3QaU/s/750/750/Usa-rs-165-120-xs.jpg&quot; alt=&quot;Dr. Breazeal and Kismet&quot; /&gt;
+&lt;em&gt;via http://cdn.c.photoshelter.com/&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://robotic.media.mit.edu/wp-content/uploads/sites/14/2014/05/session8-p004b.jpg&quot; alt=&quot;DragonBot&quot; /&gt;
+&lt;em&gt;via http://robotic.media.mit.edu/&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Her work with Dragonbot (see above) asks the question: can children “catch” curiousity from a robot? The answer is yes. In her study, children went through a series of activities while Dragonbot asked questions based on the state of the child. After a certain time, these children showed significant jumps of curiosity compared to a control group. Humanized robots have the potential to holistically support the human experience. In the case of Dragonbot, they can also improve our intelligence and curiosity. Social robots are about partnership, not replacement. Dr. Breazeal argues that they bring something new to the table &lt;em&gt;because&lt;/em&gt; they’re not human. Just like a smart phone or tablet, a social robot is a platform. She concluded her talk with her newest venture: &lt;a href=&quot;http://www.jibo.com/&quot;&gt;Jibo&lt;/a&gt;, the “world’s first family robot.” According to Mashable, “Jibo isn’t an appliance, it’s a companion, one that can interact and react with its human owners in ways that delight.”&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 13 Mar 2015 00:00:00 -0500</pubDate>
+        <link>/racing-against-my-phone-battery/</link>
+        <guid isPermaLink="true">/racing-against-my-phone-battery/</guid>
+      </item>
+    
+      <item>
+        <title>Native Apps vs. Web Apps</title>
+        <description>&lt;p&gt;As a user, I prefer native apps. They’re speedy, they can leverage the hardware on my device (ie. camera, accelerometer), and at least in theory, they are more secure. Though I mostly install a native app solely for the faster speeds. 4G just can’t compete with native capabilities yet, and mobile browsers use a lot of data when constantly making http requests. In the future, bandwidth capacity would be so powerful that it won’t matter, but for now, I will sacrifice an initial 2 minutes for a faster experience. &lt;/p&gt;
+
+&lt;p&gt;As a developer, I prefer web apps. They don’t require going through app stores or marketplaces for publishing, can be accessed on any device with one code base, can be easily made responsive, and versioning is not an issue. I don’t have to install special IDE’s, switch between different native languages, and wait for slow emulators. Making a native app accessible on multiple platforms and screen sizes is expensive. Native app developers constantly have to adapt to drastic changes when an SDK update or new phone model comes around, but working with the web is a little more forgiving. &lt;/p&gt;
+
+&lt;p&gt;And this is where I whine about life being unfair because ultimately, user experience must take first priority. Their needs are why developers have jobs. Web apps won’t win until bandwidth capacity becomes significantly larger than it is now. (Or &lt;a href=&quot;http://motherboard.vice.com/blog/south-koreas-internet-is-about-to-be-50-times-faster-than-yours&quot;&gt;moving to South Korea&lt;/a&gt;, perhaps?) Though if someone asked me which type of development they should learn, I would still say web development. HTML, CSS, and javascript have less of a learning curve and are a quicker way to get started. A lot of independent developers I know use third party applications to automagically port code into various native environments, such as iOS, android, windows, etc. Popular ones include &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phone Gap&lt;/a&gt; for HTML/Javascript, and &lt;a href=&quot;http://xamarin.com/&quot;&gt;Xamarin&lt;/a&gt; for C#.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/Native-vs-Web/</link>
+        <guid isPermaLink="true">/Native-vs-Web/</guid>
+      </item>
+    
+      <item>
+        <title>To the Modern Luddites</title>
+        <description>&lt;p&gt;Sometimes I feel like I’m too optimistic and nice about things, but updating browsers is NOT ONE OF THESE THINGS. I get quite worked up about this. The following image sums up my attitude towards people who use outdated browsers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ScCVRN1.jpg&quot; alt=&quot;Internet Explorer LOL&quot; title=&quot;Internet Explorer LOL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I know that I’m coming at this from inside the tech bubble. Most of the people around me are pretty like-minded when it comes to being up to date. My friends are programmers, gamers, designers, or just really into the internet. My dad’s a network designer, my teachers and mentors are all in the industry. We’re the kind of people who manually check that all software is up to date. While writing up this post, I realized that I only know a few people who don’t use Chrome. It’s unsettling, but definitely the lesser of two evils. This is why I was shocked to find that &lt;a href=&quot;http://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;amp;qpcustomd=0&quot;&gt;only 6.75% of the browser market consists of Chrome 38.0 users.&lt;/a&gt; Apparently the bubble was smaller than I imagined. I would be alright if the rest of the market share was a good mix of Firefox, Safari, IE 11, etc, but sadly, &lt;a href=&quot;http://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;amp;qpcustomd=0&quot;&gt;IE 8 and 9 make up a whopping 26%.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I get that sometimes people have no choice. A lot of enterprise software is only compatible with the browser it was written for. Rewriting and installing software company wide is expensive. (Though if they do have the funds, I’m looking for a job :D) Some companies cannot afford to buy new machines to handle newer operating systems. Banks and other high security institutions tend to adopt new technology only if it has proven its stability in the market, and this process can take a few years or ten. However, after making all these excuses for businesses, I have to point out that they’re not as valid as they used to be. I’m no businessman, but I do know that technology is changing fast enough that you either adapt or die. Waiting ten years for a browser version to stabilize just isn’t realistic anymore. By the time of adoption, less and less features will be supported. The startup community, who will most likely use the latest and greatest, will eventually win unless established companies upgrade to optimum performance.&lt;/p&gt;
+
+&lt;p&gt;Then there are the private citizens who either don’t know or refuse to update. There’s not much web developers can do about internal company policies, but we sure can heckle the laypeople. Google is &lt;a href=&quot;http://www.bbc.com/news/technology-29012038&quot;&gt;taking the ‘heavy handed’ approach&lt;/a&gt; by deliberately showing users an older version of Google until they upgrade their browser. According to BBC, after complaints of a bug, a Google engineer replied, “It’s working as intended.”&lt;/p&gt;
+
+&lt;p&gt;An easier transition can be found at my local library, where a class on using search engines is offered. At first I giggled, but then I remembered my bubble. Education is key for informed users and I’m glad the class exists.&lt;/p&gt;
+
+&lt;p&gt;In regards to developing for older browsers, it depends on the target market. A new website or app targeting a younger user base, where most of the population grew up already adapting to new tech, will be more savvy and open to change. In this case, spending time and money developing for browsers more than 3 years old shouldn’t be the first priority. If the product takes off, it might entice people to upgrade just to use it. For more established sites, it will probably be good for business to develop for IE8 and 9, or else the company loses 26% of its customer base. Though if you wanted to know what I truly think, you should be the hero that everyone needs and force people into upgrading.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/To-Modern-Luddites/</link>
+        <guid isPermaLink="true">/To-Modern-Luddites/</guid>
+      </item>
+    
+      <item>
+        <title>Web Components - Still YAY!</title>
+        <description>&lt;p&gt;After reading more about HTML’s new &lt;a href=&quot;http://www.html5rocks.com/en/tutorials/webcomponents/template/&quot;&gt;template tag&lt;/a&gt; and the &lt;a href=&quot;http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/&quot;&gt;Shadow DOM&lt;/a&gt;, I’m still a supporter. This list of &lt;a href=&quot;http://customelements.io/&quot;&gt;custom elements&lt;/a&gt; shows that a lot of people support it as well. The &lt;a href=&quot;http://customelements.io/&quot;&gt;site&lt;/a&gt; links to all the custom elements that are already made. My favorites include the &lt;a href=&quot;http://geelen.github.io/x-gif/#/http://i.imgur.com/iKXH4E2.gif&quot;&gt;x-gif&lt;/a&gt;, a gif playback widget, and of course &lt;a href=&quot;http://googlewebcomponents.github.io/google-map/components/google-map/&quot;&gt;google-map&lt;/a&gt;. People have really taken this capability and ran with it. &lt;/p&gt;
+
+&lt;p&gt;Let’s slow down a bit though. There are concerns that custom elements would render the traditional developer obsolete. There is no need for deep javascript knowledge if all these widgets are already premade. But for me, this is a good thing. Anything that saves me work is always a good thing. If Wordpress is anything indication, it’s not like I can’t still use my skills to customize the custom elements. If web components really take off, what it means to be a developer will fundamentally change. Composing a web page will involve more piecing together widgets than writing out a bunch of custom functions. Most websites today use a lot of the same capabilities anyways, like maps, navigation, etc. I have significantly less motivation to write my own when I can just plug and chug something someone else has already written. Hopefully it’s better written than most of the general developer population would have done. &lt;/p&gt;
+
+&lt;p&gt;To all the naysayers, I signed up to be a developer knowing that I will have to relearn everything at some point. Where would technology be today if we had to build our computers from scratch? Or our standard of living, if we had to shear our own sheep, spin our own wool, and learn to knit just to have a pair of socks? When someone puts out a good thing and shares it, we all become better off. &lt;/p&gt;
+</description>
+        <pubDate>Sat, 08 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/Web-Components-Critique/</link>
+        <guid isPermaLink="true">/Web-Components-Critique/</guid>
+      </item>
+    
+      <item>
+        <title>Web Components YAY!</title>
+        <description>&lt;p&gt;I’ll start off by saying that I’m extremely excited for Web Components to become the next big thing. Eric Bidelman, an engineer at Google, recently gave a talk called &lt;a href=&quot;https://developers.google.com/events/io/sessions/318907648&quot;&gt;Web Components: A Tectonic Shift for Web Development&lt;/a&gt; where he presented a collection of new API primitives in the browser. As of now, by browser I mean Chrome. &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HTML Templates:&lt;/strong&gt; pretty much does what javascript templating has done, but now it’s officially integrated into HTML itself with the &lt;template&gt; tag&lt;/template&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shadow DOM:&lt;/strong&gt; encapsulated features that can now be accessed with Chrome dev tools (ever wonder how the date picker and radio buttons worked?)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Custom Elements:&lt;/strong&gt; ability to create custom tags, like &lt;cute-kitties&gt;&lt;/cute-kitties&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;HTML Imports:&lt;/strong&gt; import HTML files into other HTML files (for example: to retain the custom elements you have created)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While watching the video, I was slightly disoriented when I kept hearing words not normally associated with HTML: constructor, instance, imports, encapsulation, to name a few. HTML is changing philosophically. Being a relative newbie to web development, it’s both exciting and intimidating to see the technology evolve so quickly. &lt;/p&gt;
+
+&lt;p&gt;Initially I was bummed that only Chrome users and Googlers would be able to play with these new features, but luckily there’s a polyfill for everything! &lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/Web-Components/</link>
+        <guid isPermaLink="true">/Web-Components/</guid>
+      </item>
+    
+      <item>
+        <title>Just Scrolly Things</title>
+        <description>&lt;p&gt;The New York Times feature &lt;a href=&quot;http://www.nytimes.com/newsgraphics/2013/10/27/south-china-sea/&quot;&gt;A Game of Shark and Minnow&lt;/a&gt; utilizes engaging scrolling animations with full-browser pictures and videos. I enjoyed the desktop experience. After many “ooos” and “ahhhs,” my reaction was to wonder how it was done. Animations fired depending on how far the user was scrolled down on the page. Not only is this an innovative way to present media, but it also takes the user on an interactive adventure. Full-browser videos without having to press a “full screen” button? What a time to be alive!&lt;/p&gt;
+
+&lt;p&gt;Then again, I’m coming at this from a web designer’s point of view. I found that I had to backtrack a lot to actually read the captions of the images, though I think the effects are worth the minor adjustments to my scrolling. Those who are strictly at the site to read content might find the initial scrolling to be a little excessive. The user has to scroll through 3 full-height images before the main story starts, or even realize that there is a story outside of the images and videos. &lt;/p&gt;
+
+&lt;p&gt;However, studies show that most people do enjoy a lot of image heavy layouts on desktop. Carolyn Pang, a PhD candidate at Simon Fraser University, surveyed 44 college students and working professionals on the usability of government websites. At the &lt;a href=&quot;http://gracehopper.org&quot;&gt;Grace Hopper Conference&lt;/a&gt; last week, she presented her findings that image based layouts were preferred for desktop, while text based layouts were preferred for mobile. &lt;/p&gt;
+
+&lt;p&gt;I visited the site on my phone and was pleasantly surprised that New York Times follows this principle as well. The scroll effects and videos were not included in the mobile version. Only the images were retained, and their captions included underneath. I assume this also reduces load time. With smaller real estate, the most effective mobile layouts stress function over flair. Kudos to New York Times for recognizing the limitations of devices and human interaction, then developing across platforms accordingly! &lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Oct 2014 00:00:00 -0500</pubDate>
+        <link>/Just-Scrolly-Things/</link>
+        <guid isPermaLink="true">/Just-Scrolly-Things/</guid>
+      </item>
+    
+  </channel>
+</rss>

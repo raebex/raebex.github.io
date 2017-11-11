@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contributing to Mozilla</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="import" href="x-gif.html">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
+  
+</head>
+<body>
+
+<nav id="main-nav" class="main-nav">
+    <ul>
+      <li id="nav-overview"><a href="#overview">Overview</a></li>
+      <li  id="nav-installation">
+        <a href="#installation">Installation</a>
+        <ul>
+          <li id="nav-clone"><a href="#clone">Cloning the repo</a></li>
+          <li id="nav-less"><a href="#less">LESS</a></li> 
+          <li id="nav-localization"><a href="#localization">Localization</a></li>
+        </ul>
+      </li>
+      <li id="nav-running-server">
+          <a href="#running-server">Running the server</a>
+          <ul>
+            <li id="nav-sandbox"><a href="#sandbox">Sandbox</a></li>
+            <!--<li><a href="#running-tests">Running the tests</a></li>-->
+            <li id="nav-localhost"><a href="#localhost">Localhost</a></li>
+          </ul>
+      </li>
+      <li id="nav-contributing">
+        <a href="#contributing">Contributing</a>
+        <ul>
+          <li id="nav-remote"><a href="#remote">Setting up remotes</a></li>
+          <li id="nav-work"><a href="#work">Doing the work</a></li>
+          <li id="nav-committing"><a href="#committing">Committing Changes</a></li>
+          <!--<li id="nav-squash-commits"><a href="#squash-commits">Squashing Commits</a></li>-->
+          <li id="nav-pull-requests"><a href="#pull-requests">Pull Requests</a></li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+<div class="fake-nav" id="fake-nav">
+  <a href="#menu" id="open-menu">&#9776;</a>
+</div>
+
+<main role="main" class="container">
+
+  <section class="title-scene">
+    <div class="title-content">
+      <h1 class="page-title">Contributing to Mozilla</h1>
+      <p class="section-tagline">Getting Started with Mozilla's open source repository, Bedrock</p>
+      <div class="code-icon coding"></div>
+      <div class="code-icon debugging"></div>
+      <p>Bedrock is where <a href="https://mozilla.org">Mozilla.org</a> is hosted, along with some projects that you might be familiar with:</p>
+      <ul class="moz-product-list">
+        <li class="firefox"><p>Firefox</p></li>
+        <li class="thunderbird"><p>Thunderbird</p></li>
+        <li class="webmaker"><p>Webmaker</p></li>
+        <li class="marketplace"><p>Marketplace</p></li>
+      </ul>
+      <div id="arrow"><a href="#overview">Let's go!</br>&#9660;</a></div>
+    </div>
+  </section>
+
+  <section class="overview section" id="overview">
+    <div class="content">
+      <h2 class="section-header track" data-code="overview">Overview</h2>
+      <p>Bedrock is a <a href="http://playdoh.readthedocs.org/en/latest/index.html">Playdoh</a> instance, which is a <a href="https://www.djangoproject.com/">Django</a> project.</p>
+      <p>Django is a Python framework that allows for rapid development and DRY design. Running the development server, creating models, managing the database, and what URLs look like are examples of things handled by Django. Playdoh is Mozilla's web application template based on Django, and Bedrock is an instance of Playdoh.</p>
+      <p>Bedrock is hosted on GitHub and uses git for version control. If you don't have a <a href="https://github.com">GitHub</a> account or have <a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a> installed, do it now! I'll go over the commands you need farther down the page.</p>
+    </div>
+  </section>
+
+  <section class="installation section" id="installation">
+    <div class="content">
+      <h2 class="section-header track" data-code="installation">Installation</h2>
+
+      <div class="subsection" id="clone">
+        <h3 class="subsection-header track" data-code="clone">Cloning the Repo</h3>
+        <p>First, get the source code onto your local computer. Open Terminal or command line program of your choice, navigate to the folder you want Bedrock to live, then type: </p>
+        <code class="code-block">$ git clone --recursive git://github.com/mozilla/bedrock.git</code>
+        <x-gif class="demo-gif" src="images/gifs/clone.gif" speed="5"></x-gif>
+        <p>Navigate to the Bedrock folder.</p>
+        <code class="code-block">$ cd bedrock</code>
+      </div>
+
+      <div class="subsection " id="less">
+        <h3 class="subsection-header track" data-code="less">Installing LESS</h3>
+        <p>Bedrock uses LESS as its CSS precompiler. The servers are currently stuck at version 1.4.1, so it's best to install this specific version to avoid compatibility issues. I used npm to install LESS, but you can install it however you want: </p>
+        <code class="code-block">$ npm install less@1.4.1</code>
+        <x-gif class="demo-gif" src="images/gifs/less.gif" speed="3"></x-gif>
+      </div>
+
+      <div class="subsection" id="localization">
+        <h3 class="subsection-header track" data-code="localization">Localization</h3>
+        <p>Mozilla is a global community, which means it has to support many different languages. Copy is almost never inserted into HTML as a string literal. Instead, the HTML looks something like this: </p>
+        <code class="code-block">
+          &#60;p&#62;
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% trans %}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Translate me!
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% endtrans %}
+          <br>&#60;/p&#62;
+        </code>
+        <p>Or be shorthand, like this:</p>
+        <code class="code-block">
+          &#60;p&#62;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ _('Translate me!') }}<br>
+          &#60;/p&#62;
+        </code>
+        <p>"Translate me!" will be translated depending on the user's language settings.</p>
+        <p>Since language files are pulled in as needed, they are housed in another repository. To get these files, navigate to the bedrock folder and type the following in the command line: </p>
+        <code class="code-block">$ git clone https://svn.mozilla.org/projects/mozilla.com/trunk/locales/ locale</code>
+      </div>
+    </div>
+  </section>
+
+  <section class="running-server section" id="running-server">
+    <div class="content">
+      <h2 class="section-header track" data-code="running-server">Running the Server</h2>
+
+      <div class="subsection" id="sandbox">
+        <h3 class="subsection-header track" data-code="sandbox">Starting a Sandbox</h3>
+        <p>A virtual environment, or sandbox, is needed to hold Python libraries, control changes in the libraries, and to isolate the server from the dangerous outside world. Bedrock uses <a href="http://virtualenv.readthedocs.org/en/latest/virtualenv.html">virtualenv</a>.</p>
+        <p>But first, install pip. It's a pain, I know.</p>
+
+        <code class="code-block">
+          $ sudo easy_install pip<br>
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/pip.gif" speed="2"></x-gif>
+
+        <p>Now use pip to install virtualenv:</p>
+        <code class="code-block">
+          $ pip install virtualenv
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/virtualenv.gif" speed="2"></x-gif>
+        
+        <p>Create a new instance of virtualenv called "venv". This is where your sandbox will live.</p>
+        <code class="code-block">
+          $ virtualenv venv
+        </code>
+        <p>Activate venv!</p>
+        <code class="code-block">
+          $ source venv/bin/activate<br>
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/activatevenv.gif" speed="2"></x-gif>
+
+        <p>Lastly, install the rest of the dependencies.</p>
+        <code class="code-block">
+          $ pip install -r requirements/compiled.txt<br>
+          $ pip install -r requirements/dev.txt<br>
+        </code>
+      </div>
+
+      <!--<div class="subsection" id="running-tests">
+        <h3 class="subsection-header">Running the tests</h3>
+      </div>-->
+
+      <div class="subsection" id="localhost">
+        <h3 class="subsection-header track" data-code="localhost">Running the server on localhost</h3>
+        <p>Make sure the venv sandbox is activated. You should see (venv) before your computer's name. Then type: </p>
+        <code class="code-block">
+          $ ./manage.py runserver
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/runserver.gif"></x-gif>
+        <p>If there are no errors, go to a browser and type: localhost:8000. Mozilla's home page should show up.</p>
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/localhost-desktop.jpg, images/localhost-desktop@2x.jpg 2x">
+          <img srcset="images/localhost-mobile.jpg, images/localhost-desktop.jpg 2x" alt="localhost:8000">
+      </picture>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contributing section" id="contributing">
+    <div class="content">
+      <h2 class="section-header track" data-code="contributing">Contributing</h2>
+      <p>Before we go farther, I'll give a quick overview of how the process works. </p>
+      <ol>
+        <li>Fork the Bedrock repository on GitHub</li>
+        <li>Find a bug to work on and create a new branch for that bug</li>
+        <li>After doing the work, add and commit your changes to the branch</li>
+        <li>Create a pull request</li>
+        <li>Your changes become live!</li>
+      </ol>
+
+      <div class="subsection" id="remote">
+        <h3 class="subsection-header track" data-code="remote">Setting up remote environment</h3>
+        <p>Working from your own fork and branch is super important. This allows for the main project to keep moving forward while features are in development. It's also a precaution to keep the official code pristine. To get started, login to your GitHub account and fork the Bedrock repository: <a href="https://github.com/mozilla/bedrock">https://github.com/mozilla/bedrock</a>.</p>
+        <p>Navigate to the Bedrock folder we cloned from earlier and type:</p>
+        <code class="code-block">
+          $ git remote
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/gitremote.gif" speed="2"></x-gif>
+        <p>You should see "origin" appear. Origin is remote where your changes will push to. Right now, the origin you're seeing is pointing to Mozilla's version of bedrock. We don't want this, so we need to rename this to "upstream".</p>
+        <code class="code-block">
+          $ git remote rename origin upstream
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/gitupstream.gif" speed="2"></x-gif>
+        <p>Add your fork as the origin instead:</p>
+        <code class="code-block">
+          $ git remote add origin git@github.com:yourgithubname/bedrock.git
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/gitrenameorigin.gif" speed="2"></x-gif>
+        <p>Typing "git remote" again will now give you two remotes: origin and upstream.</p>
+      </div>
+
+      <div class="subsection" id="work">
+        <h3 class="subsection-header track" data-code="work">Doing the work</h3>
+        <p>Now that the environment is set up, it's finally time to start working! An easy way to start contributing is to find and fix simple bugs. Mozilla has its own bug database on <a href="https://bugzilla.mozilla.org/">Bugzilla</a>. Any member of Mozilla's Bugzilla community can post a bug, and anyone with a Bugzilla account can fix it. Sign up and search "good first bug".</p>       
+        <p>First, make sure that your fork is up to date with Mozilla's repo. Switch to the master branch and "fetch" the code from Mozilla's repo.</p>
+        <code class="code-block">
+          $ git checkout master <br>
+          $ git fetch upstream
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/fetch2.gif" speed="3"></x-gif>
+        <p>DO NOT PULL. Ever!!!! Pulling overrides your code and merge errors are bound to happen. Always fetch.</p>
+        <p>Now merge the fetched code with your own fork:</p>
+        <code class="code-block">
+          $ git merge upstream/master
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/merge2.gif" speed="2"></x-gif>
+        <div class="important">
+          <h3>Important!</h3>
+          <p>Because Bedrock uses submodules, every time you switch branches, update the submodules with:</p>
+          <code class="code-block">
+            $ git submodule update --init --recursive
+          </code>
+        </div>
+        <p>Once you've found a bug you like, make sure no on else is assigned to it. The catch is that new members can't assign bugs to themselves, so ask someone like Jon to assign it to you.</p>
+        <p>Create a new branch for the bug:</p>
+        <code class="code-block">
+          $ git checkout -b bug-123456-short-description-of-bug
+        </code>
+        <p>Tip: use "git checkout" to switch between branches, and add "-b" to create a new branch. Below is an example of switching to an existing branch:</p>
+        <x-gif class="demo-gif" src="images/gifs/branch.gif" speed="3"></x-gif>
+        <p>Now open the file you need to work on in your favorite text editor, and get to work!</p>
+      </div>
+
+      <div class="subsection" id="committing">
+        <h3 class="subsection-header track" data-code="committing">Committing changes</h3>
+        <p>After you've saved your files, navigate to your bedrock folder, make sure you're on the branch for your bug, and check its status. In this example, I edited the file "media/css/sandstone/lib.less". You should see in red the files that you've changed. Ignore feedparser for now!</p>
+        <code class="code-block">
+          $ git status
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/status.gif" speed="3"></x-gif>
+        <p>Now it's time to add the files. There's multiple ways of doing this, though I would avoid "add ." since there's that feedparser bug going around.</p>
+        <code class="code-block">
+        <!--I know this is terrible indentation, but I couldn't get the preformatting 
+        to look right on the page. Any suggestions to not have to do this?-->
+          <pre>$ git add nameOfFile   #individual file 
+$ git add folderName   #every file in a folder
+$ git add .            #add everything </pre>
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/add.gif" speed="3"></x-gif>
+        <p>Now it's time to commit! It's VERY IMPORTANT to include a commit message. Normally the format is "Bug 12345: description of what you did".</p>
+        <code class="code-block"> 
+          $ git commit -m"commit message goes here"
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/commit.gif" speed="3"></x-gif>
+        <p>Just one more step! To push your changes to your fork of bedrock type: </p>
+        <code class="code-block">
+          $ git push origin nameOfYourBranch
+        </code>
+        <x-gif class="demo-gif" src="images/gifs/push.gif" speed="3"></x-gif>
+        <p>You can commit/push as many times as you like, but before making a pull request, make sure that you only have one commit of the work you've done. This will keep your pull request neat and tidy. To edit your last commit:</p>
+        <code class="code-block">
+          $ git commit --amend -m"commit message goes here"
+        </code>
+        <p>If you've already pushed the previous commit, you can force it to ammend with "-f":</p>
+        <code class="code-block">
+          $ git push origin nameOfYourBranch -f
+        </code>
+        <p>This is only for your previous commit. To go back farther, squashing is needed. Squashing commits is a topic for a future tutorial :(</p>
+      </div>
+
+      <!--<div class="subsection" id="squash-commits">
+        <h3 class="subsection-header track" data-code="squash-commits">Squashing Commits</h3>
+      </div>-->
+
+      <div class="subsection" id="pull-requests">
+        <h3 class="subsection-header track" data-code="pull-requests">Pull Requests</h3>
+        <p>A pull request sends a notification to the people in charge. It asks them to merge your branch (on your own fork) with Mozilla's bedrock repo. They review the work you've done, and if they decide it's good enough, your changes will become live.</p>
+        <p>The good news is that from here on out, you don't have to use the command line anymore! Pull requests are made using your GitHub account. Go to your fork of bedrock, and near the top you'll see the name of the branch you just pushed, along with a "Compare &amp; Pull Request" button.</p>
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/comparePR-desktop.jpg, images/comparePR-desktop@2x.jpg 2x">
+          <img srcset="images/comparePR-mobile.jpg, images/comparePR-desktop.jpg 2x" alt="compare and create pull request!">
+        </picture>
+        <p>A confirmation page shows that GitHub already knows your upstream is Mozilla's bedrock, so you can leave all the options alone. Click "Create pull request".</p>
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/createPR-desktop.jpg, images/createPR-desktop@2x.jpg 2x">
+          <img srcset="images/createPR-mobile.jpg, images/createPR-desktop.jpg 2x" alt="confirm pull request!">
+        </picture>
+        <p>Congrats! Now your pull request will be reviewed. If changes need to be made, you'll be notified via email and as comments on the pull request. To make changes, just commit the files again. The pull request will stay open until someone manually shuts it down. </p>
+        <p>View the pull request used in the example <a href="https://github.com/mozilla/bedrock/pull/2556#issuecomment-65498575">here!</a></p>
+        <p>For a more in depth tutorial, check out the <a href="http://bedrock.readthedocs.org/en/latest/install.html">docs</a>. And are you wondering why this page looks so pretty? Consult the <a href="https://www.mozilla.org/en-US/styleguide/">Mozilla style guide</a> before working on any design or front-end stuff. Happy contributing!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Tutorial by <a href="https://github.com/raebex">Rebecca Young</a> :3</p>
+  </footer>
+</main>
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script>
+  if ('registerElement' in document
+    && 'createShadowRoot' in HTMLElement.prototype
+    && 'import' in document.createElement('link')
+    && 'content' in document.createElement('template')) {
+    // We're using a browser with native WC support!
+  } else {
+    document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>')
+  }
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -12,7 +12,7 @@
 
 <body>
   <main role="main" class="error-container">
-    <figure class="error-image center">
+    <figure class="error-image">
       <img src="http://rebeccayoung.me/images/500.svg">
       <figcaption>Something's wrong with the server. I'll be back shortly.</figcaption>
       <a class="back-btn" href="http://rebeccayoung.me">Get me outta here</a>
