@@ -1,4 +1,4 @@
-;(function($) {
+;(function() {
   'use strict';
 
 var lastfm = {
@@ -9,18 +9,19 @@ var lastfm = {
   format: "json"
 }
 
-$.ajax({
-  method: "GET",
-  url: "http://ws.audioscrobbler.com/2.0/"+
-    "?method=" + lastfm.method +
-    "&user=" + lastfm.user +
-    "&limit=" + lastfm.limit +
-    "&api_key=" + lastfm.api_key +
-    "&format=" + lastfm.format,
-  success: function(result){
-    populateRecentTracks(result);
-  }
-});
+fetch('http://ws.audioscrobbler.com/2.0/' +
+  "?method=" + lastfm.method +
+  "&user=" + lastfm.user +
+  "&limit=" + lastfm.limit +
+  "&api_key=" + lastfm.api_key +
+  "&format=" + lastfm.format
+  )
+  .then(function (result) {
+    return result.json();
+  })
+  .then(function (json) {
+    populateRecentTracks(json);
+  });
 
 var populateRecentTracks = function(tracks){
   var music = document.querySelector('#music');
@@ -43,4 +44,4 @@ var populateRecentTracks = function(tracks){
   }
 };
 
-})(window.jQuery);
+})();
