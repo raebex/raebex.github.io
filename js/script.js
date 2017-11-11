@@ -28,7 +28,7 @@ var populateRecentTracks = function(tracks){
   var song_list = document.querySelector("#song-list");
   var clone;
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < tracks.recenttracks.track.length; i++) {
     var song = {
       name: tracks.recenttracks.track[i].name,
       artist: tracks.recenttracks.track[i].artist["#text"],
