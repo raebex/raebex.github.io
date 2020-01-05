@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+	<loc>https://illumina.wella.co.jp/</loc>
+	<lastmod>2019-10-29</lastmod>
+	<priority>1.00</priority>
+  </url>
+   <url>
+	<loc>https://illumina.wella.co.jp/campaign/</loc>
+	<lastmod>2019-10-29</lastmod>
+	<priority>0.80</priority>
+  </url>
+   <url>
+	<loc>https://illumina.wella.co.jp/product/</loc>
+	<lastmod>2019-09-02</lastmod>
+	<priority>0.80</priority>
+  </url>
+   <url>
+	<loc>https://illumina.wella.co.jp/shoplist/</loc>
+	<lastmod>2019-09-02</lastmod>
+	<priority>0.80</priority>
+  </url>
+</urlset>

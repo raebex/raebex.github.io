@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/* color
+=================================================================== */
+/* common
+=================================================================== */
+/* layout
+=================================================================== */
+/* animation delay
+=================================================================== */
+/* 3d
+=================================================================== */
+/* font
+=================================================================== */
+/* form
+=================================================================== */
+@-webkit-keyframes closeAnime {
+  0% {
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 24px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+@keyframes closeAnime {
+  0% {
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 24px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+
+@-webkit-keyframes closeAnime2 {
+  0% {
+    top: 27px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 30px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+
+@keyframes closeAnime2 {
+  0% {
+    top: 27px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 30px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+
+@-webkit-keyframes closeBackAnime {
+  0% {
+    top: 24px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@keyframes closeBackAnime {
+  0% {
+    top: 24px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 27px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@-webkit-keyframes closeBackAnime2 {
+  0% {
+    top: 30px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 27px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+@keyframes closeBackAnime2 {
+  0% {
+    top: 30px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 27px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 27px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+/*anime__sp
+===============================================================*/
+@-webkit-keyframes closeAnimeSp {
+  0% {
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 17px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+@keyframes closeAnimeSp {
+  0% {
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 17px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+
+@-webkit-keyframes closeAnimeSp2 {
+  0% {
+    top: 20px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 23px;
+    -webkit-transform: rotate(0); } }
+
+@keyframes closeAnimeSp2 {
+  0% {
+    top: 20px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 23px;
+    -webkit-transform: rotate(0); } }
+
+@-webkit-keyframes closeBackAnimeSp {
+  0% {
+    top: 17px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@keyframes closeBackAnimeSp {
+  0% {
+    top: 17px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); } }
+
+@-webkit-keyframes closeBackAnimeSp2 {
+  0% {
+    top: 23px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 20px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+@keyframes closeBackAnimeSp2 {
+  0% {
+    top: 23px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50% {
+    top: 20px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    top: 20px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+/* module
+=================================================================== */
+/* modal__detail--info
+--------------------------------------------------------- */
+h4 {
+  position: absolute;
+  width: 50px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+  font-size: 12px;
+  background-color: #5a498e;
+  color: #fff;
+  text-align: center;
+  border-radius: 24px; }
+
+/* modal
+=================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  z-index: 11; }
+  .modal.movie .modal__main {
+    min-height: 552px;
+    max-width: 980px;
+    margin: auto; }
+    .modal.movie .modal__main .modal__main--contents {
+      padding-top: 56.25%;
+      height: 0; }
+  .modal .modal__main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 930px; }
+    .modal .modal__main .modal__main--contents {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      max-width: 980px;
+      width: 100%; }
+      .modal .modal__main .modal__main--contents iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100% !important;
+        height: 100% !important; }
+      .modal .modal__main .modal__main--contents .contents__name {
+        width: 210px;
+        margin: 0 auto 57px; }
+        .modal .modal__main .modal__main--contents .contents__name dl dt {
+          font-size: 24px;
+          margin-bottom: 0; }
+          .modal .modal__main .modal__main--contents .contents__name dl dt strong {
+            display: block;
+            margin: 0 5px 19px 0; }
+        .modal .modal__main .modal__main--contents .contents__name dl dd {
+          display: none; }
+      .modal .modal__main .modal__main--contents > dl > dt {
+        float: left;
+        width: calc(50% - 30px);
+        padding-top: 62.75%;
+        background-size: 100% auto !important;
+        border-radius: 3px; }
+        .about .modal .modal__main .modal__main--contents > dl > dt {
+          background: url(../img/contents/about/modal__main--img.jpg) no-repeat center top; }
+        .ocean .modal .modal__main .modal__main--contents > dl > dt {
+          background: url(../img/contents/color/ocean/modal__main--img.jpg) no-repeat center top; }
+        .nude .modal .modal__main .modal__main--contents > dl > dt {
+          background: url(../img/contents/color/nude/modal__main--img.jpg) no-repeat center top; }
+        .forest .modal .modal__main .modal__main--contents > dl > dt {
+          background: url(../img/contents/color/forest/modal__main--img.jpg) no-repeat center top; }
+        .safari .modal .modal__main .modal__main--contents > dl > dt {
+          background: url(../img/contents/color/safari/modal__main--img.jpg) no-repeat center top; }
+      .modal .modal__main .modal__main--contents > dl > dd {
+        float: right;
+        width: 50%; }
+        .modal .modal__main .modal__main--contents > dl > dd > ul > li {
+          margin-bottom: 35px; }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li h3 {
+            font-size: 16px;
+            line-height: 1;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid; }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li {
+            position: relative;
+            margin-bottom: 13px; }
+            .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph {
+              margin-left: 64px;
+              height: 24px; }
+              .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span {
+                display: inline-block;
+                font-size: 12px;
+                color: #5a498e;
+                line-height: 24px; }
+                .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--text--left {
+                  width: 70px;
+                  text-align: right;
+                  float: left;
+                  margin-right: 11px; }
+                .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--text--right {
+                  float: right; }
+                .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                  position: relative;
+                  width: calc(100% - 115px);
+                  height: 24px;
+                  background-size: 100% auto !important; }
+                  .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line:after {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    width: 9px;
+                    height: 9px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    left: -4px;
+                    border-radius: 50%;
+                    background-color: #5a498e;
+                    transition-duration: 0.5s;
+                    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+                    -ms-transition-duration: 0.5s;
+                    -ms-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+                    -webkit-transition-duration: 0.5s;
+                    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+                    　-moz-transition-duration: 0.5s;
+                    -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+                  .about .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                    background: url(../img/contents/about/modal__graph--line.png) no-repeat center center; }
+                  .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                    background: url(../img/contents/color/ocean/modal__graph--line.png) no-repeat center center; }
+                  .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                    background: url(../img/contents/color/nude/modal__graph--line.png) no-repeat center center; }
+                  .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                    background: url(../img/contents/color/forest/modal__graph--line.png) no-repeat center center; }
+                  .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line {
+                    background: url(../img/contents/color/safari/modal__graph--line.png) no-repeat center center; }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info.active ul li .modal__detail--info--graph span.graph--line--1:after {
+            left: calc(100% / 6 - 4px); }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info.active ul li .modal__detail--info--graph span.graph--line--2:after {
+            left: calc(100% / 6 * 2 - 4px); }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info.active ul li .modal__detail--info--graph span.graph--line--3:after {
+            left: calc(100% / 6 * 3 - 4px); }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info.active ul li .modal__detail--info--graph span.graph--line--4:after {
+            left: calc(100% / 6 * 4 - 4px); }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info.active ul li .modal__detail--info--graph span.graph--line--5:after {
+            left: calc(100% / 6 * 5 - 4px); }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level {
+            position: relative;
+            margin-bottom: 13px; }
+            .top .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level {
+              margin-bottom: 20px; }
+            .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level h4 {
+              width: 93px; }
+            .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents {
+              margin-left: 105px;
+              line-height: 24px; }
+              .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul li {
+                float: left;
+                margin-right: 5px;
+                font-size: 13px;
+                font-family: 'MyWebFont';
+                letter-spacing: 0.18em;
+                font-style: normal; }
+                .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul li strong {
+                  font-size: 19px;
+                  font-family: 'MyWebFontBold';
+                  letter-spacing: 0.18em;
+                  font-style: normal;
+                  margin: 0 5px; }
+              .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul.level__contents--line {
+                padding-bottom: 15px;
+                margin-bottom: 10px;
+                border-bottom: 1px dashed;
+                border-color: #5a498e; }
+              .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents p {
+                font-family: 'MyWebFontBold';
+                letter-spacing: 0.18em;
+                font-style: normal;
+                font-size: 27px;
+                margin-left: 8px; }
+          .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--point p {
+            font-size: 14px;
+            line-height: 1.8; }
+      .ocean .modal .modal__main .modal__main--contents .contents__name dl dt {
+        color: #9abfe2; }
+        .ocean .modal .modal__main .modal__main--contents .contents__name dl dt:after {
+          background-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li h3 {
+        color: #9abfe2;
+        border-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li h4 {
+        background-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span {
+        color: #9abfe2; }
+        .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line:after {
+          background-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level h4 {
+        background-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents {
+        color: #9abfe2; }
+        .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul.level__contents--line {
+          border-color: #9abfe2; }
+      .ocean .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--point p {
+        color: #9abfe2; }
+      .nude .modal .modal__main .modal__main--contents .contents__name dl dt {
+        color: #d3a792; }
+        .nude .modal .modal__main .modal__main--contents .contents__name dl dt:after {
+          background-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li h3 {
+        color: #d3a792;
+        border-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li h4 {
+        background-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span {
+        color: #d3a792; }
+        .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line:after {
+          background-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level h4 {
+        background-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents {
+        color: #d3a792; }
+        .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul.level__contents--line {
+          border-color: #d3a792; }
+      .nude .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--point p {
+        color: #d3a792; }
+      .forest .modal .modal__main .modal__main--contents .contents__name dl dt {
+        color: #aed452; }
+        .forest .modal .modal__main .modal__main--contents .contents__name dl dt:after {
+          background-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li h3 {
+        color: #aed452;
+        border-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li h4 {
+        background-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span {
+        color: #aed452; }
+        .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line:after {
+          background-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level h4 {
+        background-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents {
+        color: #aed452; }
+        .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul.level__contents--line {
+          border-color: #aed452; }
+      .forest .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--point p {
+        color: #aed452; }
+      .safari .modal .modal__main .modal__main--contents .contents__name dl dt {
+        color: #c1b080; }
+        .safari .modal .modal__main .modal__main--contents .contents__name dl dt:after {
+          background-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li h3 {
+        color: #c1b080;
+        border-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li h4 {
+        background-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span {
+        color: #c1b080; }
+        .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--info ul li .modal__detail--info--graph span.graph--line:after {
+          background-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level h4 {
+        background-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents {
+        color: #c1b080; }
+        .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--contents .level .level__contents ul.level__contents--line {
+          border-color: #c1b080; }
+      .safari .modal .modal__main .modal__main--contents > dl > dd > ul > li.modal__detail--point p {
+        color: #c1b080; }
+
+/* close
+--------------------------------------------------------- */
+.modal__close {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  top: 28px;
+  right: 38px;
+  border-radius: 3px;
+  background-color: #5a498e;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  　-moz-transition-duration: 0.3s;
+  -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+  .modal__close:before, .modal__close:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 18px;
+    height: 1px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    left: 18px;
+    top: 27px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
+  .modal__close:before {
+    -webkit-animation: closeBackAnime .3s ease-in-out forwards;
+    animation: closeBackAnime .3s ease-in-out forwards; }
+  .modal__close:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -webkit-animation: closeBackAnime2 .3s ease-in-out forwards;
+    animation: closeBackAnime2 .3s ease-in-out forwards; }
+  .modal__close:hover {
+    background-color: rgba(90, 73, 142, 0.55); }
+    .modal__close:hover:before {
+      -webkit-animation: closeAnime .5s ease-in-out forwards;
+      animation: closeAnime .5s ease-in-out forwards; }
+    .modal__close:hover:after {
+      -webkit-animation: closeAnime2 .5s ease-in-out forwards;
+      animation: closeAnime2 .5s ease-in-out forwards; }
+  .ocean .modal__close {
+    background-color: #9abfe2; }
+    .ocean .modal__close:hover {
+      background-color: rgba(154, 191, 226, 0.7); }
+  .nude .modal__close {
+    background-color: #d3a792; }
+    .nude .modal__close:hover {
+      background-color: rgba(211, 167, 146, 0.7); }
+  .forest .modal__close {
+    background-color: #aed452; }
+    .forest .modal__close:hover {
+      background-color: rgba(174, 212, 82, 0.7); }
+  .safari .modal__close {
+    background-color: #c1b080; }
+    .safari .modal__close:hover {
+      background-color: rgba(193, 176, 128, 0.7); }
