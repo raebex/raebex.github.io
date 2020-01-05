@@ -10,9 +10,9 @@
     <meta property="og:type" content="website">
     <title>イルミナカラー公式サイト | WELLA PROFESSIONALS | イルミナカラー史上、最高の光色 最光色(さいこうしょく)</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-	<meta property="og:url" content="https://illumina.wella.co.jp/">
+  <meta property="og:url" content="https://illumina.wella.co.jp/">
     <meta property="og:title" content="イルミナカラー公式サイト | WELLA PROFESSIONALS | イルミナカラー史上、最高の光色 最光色(さいこうしょく)">
-	<meta property="og:image" content="https://illumina.wella.co.jp/assets/img/ogp.png">
+  <meta property="og:image" content="https://illumina.wella.co.jp/assets/img/ogp.png">
     <meta property="og:description" content="キューティクルダメージの負担軽減に配慮しつつ、内側から自信と光が溢れるような光感度カラーへと導くイルミナカラー。取り扱いサロン検索や、スターダスト、ブロッサム、ディープシーの新色に関する最新情報をいち早く知ることができる公式サイト。">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/import.css" media="screen,print">
     <link rel="stylesheet" type="text/css" href="assets/css/top.css" media="screen,print">
     <link rel="stylesheet" type="text/css" href="assets/css/kurokami.css" media="screen,print">
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://bolt.shuttlerock-cdn.com/production/bundle-stateful-latest.js"></script><!--[if lt IE 9]>
     <!--if lt IE 9script(src="assets/js/html5shiv.js")-->
   </head>
@@ -52,143 +53,121 @@
         </div>
       </button>
     </header>
-
     <div class="inner">
-      <article id="marquee">
-        <div id="marquee-inner">
-          <section id="marquee" class="section--gray text-center">
-            <div class="marquee-inner">
-                <video autoplay muted loop id="marqueeVideo">
-                  <source src="assets/img/campaign/01_K_Atype_1212.mp4" type="video/mp4">
-                </video>
-                <div class="marquee__content">
-                    <div>
-                        <h1 class="sr-only">#黒髪卒業式 ILLUMINA COLOR 2020</h1>
-                        <img id="kurokamiLogo" width="726" class="kurokami-logo" src="assets/img/kurokami_2020_logo--white.svg" alt="Kurokami 2020 Logo">
-                        <div>
-                            <button id="openVideo">
-                              <div class="movie-play-button">
-                                <p class="Barlow">PLAY MOVIE</p>
-                              </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <article class="inviewEl" id="firstview">
+        <div id="firstview-inner">
+          <video autoplay muted loop id="firstview-video">
+            <source src="assets/img/contents/kurokami/01_K_Atype_1212.mp4" type="video/mp4">
+          </video>
+          <div id="firstview-content">
+            <div id="firstview-text">
+              <img id="firstview-logo" src="assets/img/contents/kurokami/kurokami_2020_logo--white.svg" alt="Kurokami 2020 Logo">
+              <div class="movie-thumbnail">
+                <button class="movie-play-button">
+                  <img width="80" src="assets/img/contents/top/play-movie.svg" alt="play movie">
+                  <span class="Barlow">PLAY MOVIE</span>
+                </button>
+              </div>
             </div>
-          </section>
-          <div class="video-overlay hidden" id="yt-player">
-              <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/MK1-HurFCx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <button id="closeVideo">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"></path></svg>
-              </button>
+          </div>
+          <div id="firstview-scroll">
+            <div class="letters Barlow">SCROLL</div>
+            <div id="firstview-scroll-bar"></div>
           </div>
         </div>
       </article>
-
-      <article class="section text-center font-mincho">
-          <div class="container">
-              <p class="text-wrapper text-center">
-                  新しい人生への第一歩。 春からの新しい自分を見つけるために、
-                  <br>まずは髪色をチェンジしてみませんか?
-                  <br>
-                  “みんなと同じ”黒髪から、“自分が選んだ”カラーにすることで、自分に自信を
-                  <br>持って新生活をはじめられそう。
-                  <br>
-                  あなたの新しい人生は、どんなカラーではじめたい!?
-              </p>
-          </div>
+      <article id="description" class="inviewEl">
+        <div class="container">
+          <p>
+            新しい人生への第一歩。 春からの新しい自分を見つけるために、
+            <br>まずは髪色をチェンジしてみませんか?
+            <br>
+            “みんなと同じ”黒髪から、“自分が選んだ”カラーにすることで、自分に自信を
+            <br>持って新生活をはじめられそう。
+            <br>
+            あなたの新しい人生は、どんなカラーではじめたい!?
+          </p>
+        </div>
       </article>
 
-      <div class="gradient-container">
-        <article class="section" id="video-before-after">
-          <div id="video-before-after-inner">
+      <div class="gradient-banner-container">
+        <article id="video-before-after">
+          <div class="video-before-after-inner">
             <h2 class="section__title">2020年 黒髪卒業アルバム</h2>
-            <p class="text-center font-mincho">
-                イルミナカラーだったら
-                <br>
-                なりたい自分がきっと見つかる！
+            <p class="section__description">
+              イルミナカラーだったら
+              <br>
+              なりたい自分がきっと見つかる！
             </p>
-
-            <div class="beforeafter beforeafter--video inviewEl">
-                  <img class="beforeafter__left" aria-hidden="true" src="assets/img/arrow-left.svg">
-                  <div class="beforeafter__inner">
-                      <div class="before">
-                          <img src="assets/img/carousel/phase_1/koukousei_before.jpg" alt="Before picture of Musume"/>
-                      </div>
-                      <div class="after">
-                          <img src="assets/img/carousel/phase_1/koukousei_after.jpg" alt="After picture of Musume"/>
-                      </div>
-                  </div>
-                  <img class="beforeafter__right" aria-hidden="true" src="assets/img/arrow-right.svg">
-                  <div class="beforeafter__indicators">
-                      <div class="indicator indicator--before active"></div>
-                      <div class="indicator indicator--after"></div>
-                  </div>
+            <div id="beforeafter--video" class="inviewEl">
+              <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
+              <div class="beforeafter__inner">
+                <div class="before">
+                  <img src="assets/img/contents/kurokami/video-before-after/koukousei_before.jpg" alt="Before picture of Musume"/>
+                </div>
+                <div class="after">
+                  <img src="assets/img/contents/kurokami/video-before-after/koukousei_after.jpg" alt="After picture of Musume"/>
+                </div>
+              </div>
+              <button class="beforeafter__right"><span class="sr-only">Next</span></button>
+              <div class="beforeafter__indicators">
+                <div class="indicator indicator--before active"></div>
+                <div class="indicator indicator--after"></div>
               </div>
             </div>
+          </div>
         </article>
-
-        <article id="opi-campaign">
-          <div class="container campaign-block">
-              <div class="text-wrapper">
-                  <h3 class="section__title section__title--campaign">
-                      <img class="campaign__stars" src="assets/img/stars-left.svg" alt="">
-                      イルミナカラー黒髪卒業生限定！
-                      <img class="campaign__stars" src="assets/img/stars-right.svg" alt="">
-                  </h3>
-                  <p class="text-center">2020年の#黒髪卒業式をさらに盛り上げるため、ネイルカラーのイノベーターであるオーピーアイとコラボレーション！イルミナカラーで #黒髪卒業 された方々に漏れなく速乾ネイルラッカー「インフィニットシャイン」をプレゼント💖
-                      <br>
-                      1サロン10本なので、在庫確認のお問い合わせのうえご来店願います。
-                  </p>
+        <article id="kurokami-campaign">
+          <div id="kurokami-campaign-inner">
+            <div id="kurokami-campaign-content">
+              <h2>
+                  <img class="campaign__stars" src="assets/img/contents/kurokami/campaign/stars-left.svg" alt="">
+                  イルミナカラー黒髪卒業生限定！
+                  <img class="campaign__stars" src="assets/img/contents/kurokami/campaign/stars-right.svg" alt="">
+              </h2>
+              <p id="kurokami-campaign-content-description">
+                2020年の#黒髪卒業式をさらに盛り上げるため、ネイルカラーのイノベーターであるオーピーアイとコラボレーション！イルミナカラーで #黒髪卒業 された方々に漏れなく速乾ネイルラッカー「インフィニットシャイン」をプレゼント💖
+                <br>
+                1サロン10本なので、在庫確認のお問い合わせのうえご来店願います。
+              </p>
+              <div class="campaign__steps">
+                <div class="campaign__step campaign__step-1 inviewEl" data-transition-delay="0.5">
+                    <img class="campaign__background" src="assets/img/contents/kurokami/campaign/step_1.svg" alt="" width="240" height="240">
+                    <div class="campaign__step__content">
+                        <div class="campaign__step-text">
+                            <h4 class="sr-only">STEP 1</h4>
+                            <p>サロンにキャンペーン<br>実施の確認の<br>問い合わせをする</p>
+                            <img class="campaign__img" src="assets/img/contents/kurokami/campaign/step_1_graphic.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <img class="campaign__arrow" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
+                <div class="campaign__step campaign__step-2 inviewEl" data-transition-delay="1">
+                    <img class="campaign__background" src="assets/img/contents/kurokami/campaign/step_2.svg" alt="" width="240" height="240">
+                    <div class="campaign__step__content">
+                        <div class="campaign__step-text">
+                            <h4 class="sr-only">STEP 2</h4>
+                            <p>実施サロンで<br>イルミナカラー体験</p>
+                            <img class="campaign__img" src="assets/img/contents/kurokami/campaign/step_2_graphic.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <img class="campaign__arrow" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
+                <div class="campaign__step campaign__step-3 inviewEl" data-transition-delay="1.5">
+                    <img class="campaign__background" src="assets/img/contents/kurokami/campaign/step_3.svg" alt="" width="240" height="240">
+                    <div class="campaign__step__content">
+                        <div class="campaign__step-text">
+                            <h4 class="sr-only">STEP 3</h4>
+                            <p>黒髪卒業、<br>そしてOPIをゲット！</p>
+                        </div>
+                    <img class="campaign__img--overlap" src="assets/img/contents/kurokami/campaign/opi-bottle.png" alt="OPI bottle">
+                  </div>
+                </div>
               </div>
-              <div class="row campaign__steps">
-                  <div class="col-sm-12 col-md-12 col-lg-auto">
-                      <div class="campaign__step campaign__step-1">
-                          <img class="campaign__background" src="assets/img/campaign/step_1.svg" alt="" width="240" height="240">
-                          <div class="campaign__step__content">
-                              <div class="campaign__step-text">
-                                  <h4 class="sr-only">STEP 1</h4>
-                                  <p>サロンにキャンペーン<br>実施の確認の<br>問い合わせをする</p>
-                                  <img class="campaign__img" src="assets/img/campaign/step_1_graphic.svg" alt="">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-auto d-none d-lg-flex">
-                      <img src="assets/img/campaign/step-arrow.svg">
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-auto">
-                      <div class="campaign__step campaign__step-2">
-                          <img class="campaign__background" src="assets/img/campaign/step_2.svg" alt="" width="240" height="240">
-                          <div class="campaign__step__content">
-                              <div class="campaign__step-text">
-                                  <h4 class="sr-only">STEP 2</h4>
-                                  <p>実施サロンでイルミナカラー体験</p>
-                                  <img class="campaign__img" src="assets/img/campaign/step_2_graphic.svg" alt="">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-auto d-none d-lg-flex">
-                      <img src="assets/img/campaign/step-arrow.svg">
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-auto">
-                      <div class="campaign__step campaign__step-3">
-                          <img class="campaign__background" src="assets/img/campaign/step_3.svg" alt="" width="240" height="240">
-                          <div class="campaign__step__content">
-                              <div class="campaign__step-text">
-                                  <h4 class="sr-only">STEP 3</h4>
-                                  <p>黒髪卒業、そしてOPIをゲット！</p>
-                              </div>
-                          <img class="campaign__img--overlap" src="assets/img/campaign/opi-bottle.png" alt="OPI bottle">
-                      </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="text-center">
-                  <a href="https://illumina.wella.co.jp/shoplist/" class="btn btn-secondary">お近くのイルミナカラーサロンはこちら ></a>
-                  <br>
-                  <button id="openTC" type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#tcModal">応募要項</button>
+              <div class="campaign__buttons">
+                <a href="shoplist.html" class="kurokami-btn">お近くのイルミナカラーサロンはこちら ></a>
+                <br>
+                <button id="openTC" type="button" class="kurokami-btn kurokami-btn--outline" data-toggle="modal" data-target="#tcModal">応募要項</button>
               </div>
               <div id="tcModal" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -201,111 +180,92 @@
                     </div>
                     <div class="modal-body">
                       <ol class="tc__list">
-                          <li>実際にキャンペーン参加サロンでサービスを受けたものが対象となります。
-  ※サロンが参加しているか否かは直接、サロン様にお問い合わせください。</li>
+                        <li>実際にキャンペーン参加サロンでサービスを受けたものが対象となります。
+※サロンが参加しているか否かは直接、サロン様にお問い合わせください。</li>
 
-                          <li>商品が無くなり次第終了とさせて頂きますので予めご了承くださいませ。</li>
-                          <li>お一人様一本プレゼントとなります。</li>
+                        <li>商品が無くなり次第終了とさせて頂きますので予めご了承くださいませ。</li>
+                        <li>お一人様一本プレゼントとなります。</li>
                       </ol>
                     </div>
                   </div>
                 </div>
               </div>
-          </div>
+            </div>
         </article>
       </div>
-
-      <article class="Barlow" id="before-after">
-        <div id="before-after-inner">
-          <div class="container">
-            <h2>
-              なりたい自分は？
-            </h2>
-            <p>イルミナカラーだったらなりたい自分がきっと見つかる！</p>
-            <div class="beforeafter-wrapper">
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                      <div class="beforeafter before-after-photo inviewEl" data-transition-delay="0.5">
-                          <img class="beforeafter__left" aria-hidden="true" src="assets/img/arrow-left.svg">
-                          <div class="beforeafter__inner">
-                              <div class="before">
-                                  <img src="assets/img/beforeafter/phase_1/1.jpg" alt="Before picture of Musume"/>
-                              </div>
-                              <div class="after">
-                                  <img src="assets/img/beforeafter/phase_1/1_after.jpg" alt="After picture of Musume"/>
-                              </div>
-                          </div>
-                          <img class="beforeafter__right" aria-hidden="true" src="assets/img/arrow-right.svg">
-                          <div class="beforeafter__indicators">
-                              <div class="indicator indicator--before active"></div>
-                              <div class="indicator indicator--after"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                      <div class="beforeafter before-after-photo inviewEl" data-transition-delay="1">
-                          <img class="beforeafter__left" aria-hidden="true" src="assets/img/arrow-left.svg">
-                          <div class="beforeafter__inner">
-                              <div class="before">
-                                  <img src="assets/img/beforeafter/phase_1/2.jpg" alt="Before picture of Musume"/>
-                              </div>
-                              <div class="after">
-                                  <img src="assets/img/beforeafter/phase_1/2_after.jpg" alt="After picture of Musume"/>
-                              </div>
-                          </div>
-                          <img class="beforeafter__right" aria-hidden="true" src="assets/img/arrow-right.svg">
-                          <div class="beforeafter__indicators">
-                              <div class="indicator indicator--before active"></div>
-                              <div class="indicator indicator--after"></div>
-                          </div>
-                      </div>
-
-                  </div>
+      <article id="bob">
+        <div id="bob-inner">
+          <h2 class="section__title">なりたい自分は？</h2>
+          <p class="section__description">イルミナカラーだったらなりたい自分がきっと見つかる！</p>
+          <div class="beforeafter-wrapper">
+            <div class="beforeafter inviewEl" data-transition-delay="0.5">
+              <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
+              <div class="beforeafter__inner">
+                <div class="before">
+                  <img src="assets/img/contents/kurokami/beforeafter/1.jpg" alt="Before picture"/>
+                </div>
+                <div class="after">
+                  <img src="assets/img/contents/kurokami/beforeafter/1_after.jpg" alt="After picture"/>
+                </div>
               </div>
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                      <div class="beforeafter before-after-photo inviewEl" data-transition-delay="1.5">
-                          <img class="beforeafter__left" aria-hidden="true" src="assets/img/arrow-left.svg">
-                          <div class="beforeafter__inner">
-                              <div class="before">
-                                  <img src="assets/img/beforeafter/phase_1/3.jpg" alt="Before picture of Musume"/>
-                              </div>
-                              <div class="after">
-                                  <img src="assets/img/beforeafter/phase_1/3_after.jpg" alt="After picture of Musume"/>
-                              </div>
-                          </div>
-                          <img class="beforeafter__right" aria-hidden="true" src="assets/img/arrow-right.svg">
-                          <div class="beforeafter__indicators">
-                              <div class="indicator indicator--before active"></div>
-                              <div class="indicator indicator--after"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                      <div class="beforeafter before-after-photo inviewEl" data-transition-delay="2">
-                          <img class="beforeafter__left" aria-hidden="true" src="assets/img/arrow-left.svg">
-                          <div class="beforeafter__inner">
-                              <div class="before">
-                                  <img src="assets/img/beforeafter/phase_1/4.jpg" alt="Before picture of Musume"/>
-                              </div>
-                              <div class="after">
-                                  <img src="assets/img/beforeafter/phase_1/4_after.jpg" alt="After picture of Musume"/>
-                              </div>
-                          </div>
-                          <img class="beforeafter__right" aria-hidden="true" src="assets/img/arrow-right.svg">
-                          <div class="beforeafter__indicators">
-                              <div class="indicator indicator--before active"></div>
-                              <div class="indicator indicator--after"></div>
-                          </div>
-                      </div>
-                  </div>
+              <button class="beforeafter__right"><span class="sr-only">Next</span></button>
+              <div class="beforeafter__indicators">
+                <div class="indicator indicator--before active"></div>
+                <div class="indicator indicator--after"></div>
               </div>
+            </div>
+            <div class="beforeafter inviewEl" data-transition-delay="1">
+              <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
+              <div class="beforeafter__inner">
+                <div class="before">
+                  <img src="assets/img/contents/kurokami/beforeafter/2.jpg" alt="Before picture"/>
+                </div>
+                <div class="after">
+                  <img src="assets/img/contents/kurokami/beforeafter/2_after.jpg" alt="After picture"/>
+                </div>
+              </div>
+              <button class="beforeafter__right"><span class="sr-only">Next</span></button>
+              <div class="beforeafter__indicators">
+                <div class="indicator indicator--before active"></div>
+                <div class="indicator indicator--after"></div>
+              </div>
+            </div>
+            <div class="beforeafter inviewEl" data-transition-delay="1.5">
+              <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
+              <div class="beforeafter__inner">
+                <div class="before">
+                  <img src="assets/img/contents/kurokami/beforeafter/3.jpg" alt="Before picture"/>
+                </div>
+                <div class="after">
+                  <img src="assets/img/contents/kurokami/beforeafter/3_after.jpg" alt="After picture"/>
+                </div>
+              </div>
+              <button class="beforeafter__right"><span class="sr-only">Next</span></button>
+              <div class="beforeafter__indicators">
+                <div class="indicator indicator--before active"></div>
+                <div class="indicator indicator--after"></div>
+              </div>
+            </div>
+            <div class="beforeafter inviewEl" data-transition-delay="2">
+              <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
+              <div class="beforeafter__inner">
+                <div class="before">
+                  <img src="assets/img/contents/kurokami/beforeafter/4.jpg" alt="Before picture"/>
+                </div>
+                <div class="after">
+                  <img src="assets/img/contents/kurokami/beforeafter/4_after.jpg" alt="After picture"/>
+                </div>
+              </div>
+              <button class="beforeafter__right"><span class="sr-only">Next</span></button>
+              <div class="beforeafter__indicators">
+                <div class="indicator indicator--before active"></div>
+                <div class="indicator indicator--after"></div>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
       </article>
-
-      <div class="gradient-container">
+      <div class="gradient-banner-container">
         <article id="campaign">
           <div id="campaign-inner">
             <div class="lead">
@@ -318,10 +278,6 @@
                   <div class="ja"><span>#ハッシュタグキャンペーン</span></div>
                 </div>
               </h2>
-              <h3>
-                <div class="en Barlow"> ILLUMINA SALON IS HERE</div>
-                <div class="ja">イルミナサロンはこちら</div>
-              </h3>
             </div>
             <div id="campaign-list-container">
               <div class="bolt-ver current-list" campaign-stardust-vertical="" id="campaign-stardust-vertical"></div>
@@ -332,84 +288,90 @@
         </article>
       </div>
 
-      <article id="faq" class="section">
-          <div class="container">
-            <h3 class="section__title">イルミナカラー・よくある質問 </h3>
-            <div class="faq-wrapper">
-                <div class="faq">
-                    <div class="faq__icon">Q1</div>
-                    <div class="ml-5">
-                        <h5 class="faq__question">イルミナってそもそもなに？</h5>
-                        <p class="faq__answer">
-                            イルミナカラーは、ツヤ・透明感、やわらかな質感を表現できるサロン専用のヘアカラー剤です。 
-                            <br><br>
-                            特に、赤味がでやすい日本人の髪でも、外国人の髪のような赤味を感じない、シアーで透き通ったカラーが表現できることで多くの美容師さん、消費者から支持されているカラー剤です。 
-                        </p>
-                    </div>
-                </div>
-                <div class="faq">
-                    <div class="faq__icon">Q2</div>
-                    <div class="ml-5">
-                        <h5 class="faq__question">市販のカラー剤とは何が違うの？</h5>
-                        <p class="faq__answer">
-                            サロンで使用しているカラー剤は、髪の専門家である美容師さんが使うことを前提に開発されています。お客様の髪質や状態によって使い分けたり、アレンジすることができるように設計されています。また、サロンで使用しているカラーブランドによてっも様々な特徴があります。透明感やツヤ感の表現が得意なカラー剤や、深みや色の鮮やかさの表現を時とする薬剤など多くのサロン専用ブランドがあります。 
-                            <br><br>
-                            また、より髪への負担に配慮した設計となっているのも特徴です。
-                        </p>
-                    </div>
-                </div>
-                <div class="faq">
-                    <div class="faq__icon">Q3</div>
-                    <div class="ml-5">
-                        <h5 class="faq__question">イルミナカラーは他のカラー剤とどう違う？</h5>
-                        <p class="faq__answer">ダメージを抑えます 透き通るような外国人風カラー 手触りが違う 艶が違う </p>
-                    </div>
-                </div>
-                <div class="faq">
-                    <div class="faq__icon">Q4</div>
-                    <div class="ml-5">
-                        <h5 class="faq__question">カラーリングって髪が傷みそう… </h5>
-                        <p class="faq__answer">カラー剤の技術開発や、美容師さんのテクニックによって、ダメージを気にせずにヘアカラーを楽しめる時代になってきました。 特に初めてヘアカラーをする方にはイルミナカラーがオススメ！ 繰り返されるヘアカラーによるキューティクルダメージに配慮されているので、自然な光を含んだような透明感と美しい輝きが叶えられます！
-                        </p>
-                    </div>
-                </div>
-                <div class="faq">
-                    <div class="faq__icon">Q5</div>
-                    <div class="ml-5">
-                        <h5 class="faq__question">カラーしたあとは、どんなヘアケアをすればいいの？</h5>
-                        <p class="faq__answer">
-                            カラー剤や髪質に合わせてケアの方法を選ぶのがGOOD！ 自身の髪に合ったケアをするかどうかで、カラーの色持ちやツヤも変わってくるんですよ。 髪を美しくメンテナンスするためにも、美容師さんにどんなヘアケアが合うのか聞いてみましょう！
-                        </p>
-                    </div>
-                </div>
+      <article id="faq">
+        <div id="faq-inner">
+            <h2 class="section__title">イルミナカラー・よくある質問 </h2>
+            <div class="faq-item">
+              <img class="faq__icon" src="assets/img/contents/kurokami/faq/Q1.svg" alt="Question 1">
+              <div class="faq__text">
+                <h3 class="faq__question">イルミナってそもそもなに？</h3>
+                <p class="faq__answer">
+                  イルミナカラーは、ツヤ・透明感、やわらかな質感を表現できるサロン専用のヘアカラー剤です。 
+                  <br><br>
+                  特に、赤味がでやすい日本人の髪でも、外国人の髪のような赤味を感じない、シアーで透き通ったカラーが表現できることで多くの美容師さん、消費者から支持されているカラー剤です。 
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <img class="faq__icon" src="assets/img/contents/kurokami/faq/Q2.svg" alt="Question 2">
+              <div class="faq__text">
+                <h3 class="faq__question">市販のカラー剤とは何が違うの？</h3>
+                <p class="faq__answer">
+                  サロンで使用しているカラー剤は、髪の専門家である美容師さんが使うことを前提に開発されています。お客様の髪質や状態によって使い分けたり、アレンジすることができるように設計されています。また、サロンで使用しているカラーブランドによてっも様々な特徴があります。透明感やツヤ感の表現が得意なカラー剤や、深みや色の鮮やかさの表現を時とする薬剤など多くのサロン専用ブランドがあります。 
+                  <br><br>
+                  また、より髪への負担に配慮した設計となっているのも特徴です。
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <img class="faq__icon" src="assets/img/contents/kurokami/faq/Q3.svg" alt="Question 3">
+              <div class="faq__text">
+                <h3 class="faq__question">イルミナカラーは他のカラー剤とどう違う？</h3>
+                <p class="faq__answer">ダメージを抑えます 透き通るような外国人風カラー 手触りが違う 艶が違う </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <img class="faq__icon" src="assets/img/contents/kurokami/faq/Q4.svg" alt="Question 4">
+              <div class="faq__text">
+                <h3 class="faq__question">カラーリングって髪が傷みそう… </h3>
+                <p class="faq__answer">カラー剤の技術開発や、美容師さんのテクニックによって、ダメージを気にせずにヘアカラーを楽しめる時代になってきました。 特に初めてヘアカラーをする方にはイルミナカラーがオススメ！ 繰り返されるヘアカラーによるキューティクルダメージに配慮されているので、自然な光を含んだような透明感と美しい輝きが叶えられます！
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <img class="faq__icon" src="assets/img/contents/kurokami/faq/Q5.svg" alt="Question 5">
+              <div class="faq__text">
+                <h3 class="faq__question">カラーしたあとは、どんなヘアケアをすればいいの？</h3>
+                <p class="faq__answer">
+                  カラー剤や髪質に合わせてケアの方法を選ぶのがGOOD！ 自身の髪に合ったケアをするかどうかで、カラーの色持ちやツヤも変わってくるんですよ。 髪を美しくメンテナンスするためにも、美容師さんにどんなヘアケアが合うのか聞いてみましょう！
+                </p>
+              </div>
             </div>
         </div>
       </article>
+
       <article class="inviewEl" id="banners">
         <div id="banners-inner">
           <ul>
-            <li id="banner-product"><a href="/product/">
+            <li id="banner-product">
+              <a href="/product/">
                 <div class="link-inner">
                   <div class="bg"></div>
                   <div class="text"><img class="pc-only" src="assets/img/contents/top/banner-product-text.svg" alt="PRODUCT イルミナブランドの詳細はこちら"><img class="sp-only" src="assets/img/contents/top/banner-product-text-sp.svg" alt="PRODUCT イルミナブランドの詳細はこちら"></div>
-                </div></a></li>
-            <li id="banner-shoplist"><a href="/shoplist/">
+                </div>
+              </a>
+            </li>
+            <li id="banner-shoplist">
+              <a href="/shoplist/">
                 <div class="link-inner">
                   <div class="bg"></div>
                   <div class="text"><img class="pc-only" src="assets/img/contents/top/banner-shoplist-text.svg" alt="SHOP LIST お近くのイルミナカラーサロンはこちら"><img class="sp-only" src="assets/img/contents/top/banner-shoplist-text-sp.svg" alt="SHOP LIST お近くのイルミナカラーサロンはこちら"></div>
-                </div></a></li>
+                </div>
+              </a>
+            </li>
           </ul>
+        </div>
       </article>
 
       <article id="sns">
         <div id="sns-inner">
           <ul>
             <li class="instagram"><a href="https://www.instagram.com/wellapro_japan/?hl=ja/" target="_blank">
-                <div class="icon"><img src="assets/img/contents/top/sns-instagram-icon.svg" alt="Instagram"></div>
-                <p class="pc-only Barlow">INSTAGRAM</p></a></li>
+                <div class="icon"><img src="assets/img/contents/top/sns-instagram-icon--light.svg" alt="Instagram"></div>
+                <p class="sr-only Barlow">INSTAGRAM</p></a></li>
             <li class="facebook"><a href="https://www.facebook.com/color.wella/" target="_blank">
-                <div class="icon"><img src="assets/img/contents/top/sns-facebook-icon.svg" alt="Facebook"></div>
-                <p class="pc-only Barlow">FACEBOOK</p></a></li>
+                <div class="icon"><img src="assets/img/contents/top/sns-facebook-icon--light.svg" alt="Facebook"></div>
+                <p class="sr-only Barlow">FACEBOOK</p></a></li>
           </ul>
         </div>
       </article>
@@ -421,7 +383,6 @@
         <div class="site-footer__wella-logo"></div>
       </footer>
       <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
       <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
@@ -433,57 +394,7 @@
       <script type="text/javascript" src="assets/js/common.js"></script>
       <script type="text/javascript" src="assets/js/contents.js"></script>
       <script type="text/javascript" src="assets/js/top.js"></script>
-      <script type="text/javascript">
-        // 新色リアルスタイル - スライダー
-        var realStyleHorizontal = document.querySelectorAll('[real-style-horizontal]')[0]
-        if (realStyleHorizontal)
-          sr_widget_init(realStyleHorizontal, {
-            "jquery":true,
-            "locale":"ja",
-            "angular":true,
-            "board_id":null,
-            "facebook":false,
-            "use_gzip":true,
-            "list_type":"board",
-            "board_info":false,
-            "file_upload":false,
-            "random_page":false,
-            "bundle_version":"latest",
-            "dialog_enabled":true,
-            "hover_text_type":"none",
-            "include_adverts":false,
-            "allow_complaints":false,
-            "select_upload_board":false,
-            "show_details_on_hover":false,
-            "customer":"wella1",
-            "facebook_appid":"191200280929933",
-            "human_type":"horizontal",
-            "product":{
-              "id":null,
-              "url":null,
-              "name":null
-            },
-            "products":[],
-            "slug":"salon",
-            "stateful":false,
-            "base_url":"https://wella1.shuttlerock.com/horizontal",
-            "boards":[{
-              "id":"salon",
-              "name":"Krattra | Instagram posts"
-            }],
-            "board_list_enabled":false,
-            "enable_search":false,
-            "client_side_sorting":false,
-            "disable_url_changes":true,
-            "show_tile_text":false,
-            "board_index":false,
-            "flavor":"horizontal",
-            "board_ids":"salon",
-            "tag_ids":"",
-            "tag_id":null,
-            "tile_image_size":"large_square"
-          })
-      </script>
+      <script type="text/javascript" src="assets/js/kurokami.js"></script>
       <script type="text/javascript">
         // #ハッシュタグキャンペーン - スターダスト
         var campaignStardustVertical = document.querySelectorAll('[campaign-stardust-vertical]')[0]

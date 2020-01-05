@@ -1,386 +1,50 @@
-article h2 {
-	text-align: center;
-	line-height: 1;
-}
-
-@media screen and (min-width: 769px) {
-	article h2 {
-		margin-bottom: 45px;
-		font-size: 30px;
-	}
-}
-@media screen and (max-width: 768px) {
-	article h2 {
-		margin-bottom: 6.666666666666667vw;
-		font-size: 6.666666666666667vw;
-		line-height: 1.2;
-	}
-}
-
-.font-mincho {
-  font-family: "Hiragino Mincho Pro", "Noto Serif JP", "Yu Mincho", YuMincho, serif;;
-}
-
-.inviewEl {
-	position: relative;
-	opacity: 0;
-	cursor: pointer;
-	-webkit-transition-property: opacity;
-	   -moz-transition-property: opacity;
-	    -ms-transition-property: opacity;
-	     -o-transition-property: opacity;
-	        transition-property: opacity;
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	    filter: alpha(opacity=0);
-}
-
-.inviewEl.inviewed {
-	opacity: 1;
-	-webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-	   -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-	    -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-	     -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-	        transition: opacity 1s 0.5s, transform 1s 0.5s;
-	-webkit-transform: translateY(0);
-	   -moz-transform: translateY(0);
-	    -ms-transform: translateY(0);
-	     -o-transform: translateY(0);
-	        transform: translateY(0);
-
-	-ms-filter: none;
-	    filter: none;
-}
-
-/* ==== layout ==== */
-
-.section {
-    padding: 120px 0;
-    font-size: 20px;
-    line-height: 2;
-    color: #343539;
-    font-weight: 400;
-}
-
-@media only screen and (max-width: 576px) {
-  .section {
-    padding-top: 77px;
-    padding-bottom: 77px;
-  }
-}
-
 .section__title {
-    font-family: YakuHanMP, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;;
-    color: #5a498e;
-    margin-bottom: 53px;
-    text-align: center;
-    font-size: 34px;
-    font-weight: 600;
-}
-
-@media only screen and (max-width: 576px) {
-  .section__title {
-    font-size: 28px;
-  }
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
+  color: #5a498e;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
 }
 
 .section__description {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
+  font-size: 20px;
+  color: #343539;
+  margin-bottom: 75px;
   text-align: center;
 }
-
-.section--gray {
-    background:  url(../img/banner-bg-25.png) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.text-wrapper {
-    max-width: 770px;
-    margin: 0 auto;
-}
-
-.btn {
-    min-width: 220px;
-
-}
-
-.btn-secondary {
-    background: #5A498E;
-    border-color: #5A498E;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 21px 44px;
-}
-
-.btn-secondary:hover {
-    background: #544B6E;
-}
-
-.btn-outline-secondary {
-    color: #5A498E;
-    border-color: #5A498E;;
-    font-size: 16px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    margin-top: 32px;
-}
-
-.btn-outline-secondary:hover {
-    background: #5A498E;
-}
-
-
-@media only screen and (max-width: 576px) {
-  .container {
-    padding-right: 25px;
-    padding-left: 25px;
+@media only screen and (max-width: 768px) {
+  .section__title {
+    font-size: 28px;
+  }
+  .section__description {
+    margin-bottom: 45px;
   }
 }
 
-#marquee {
-  height: 642px;
-}
-
-.marquee-inner {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  height: 100%;
-}
-
-.marquee__content {
-  position: absolute;
-  color: #fff;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-  background: url(../img/banner-bg-50.png) center no-repeat;
-  background-size: cover;
-  font-family: "Barlow", sans-serif;
-}
-
-#marqueeVideo {
-  height: 100%;
-  width: auto;
-  margin: 0 auto;
-}
-
-.video-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.85);
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease;
-}
-
-.video-overlay.hidden {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.youtube-video {
-  width: 95vw;
-  height: calc(100vw/1.77);
-  max-height: 750px;
-  max-width: 1110px;
-}
-
-@media only screen and (max-width: 567px) {
-  #marqueeVideo {
-    margin-left: -150vw;
-  }
-}
-
-@media only screen and (min-width: 1700px) {
-  #marqueeVideo {
-    width: 100%;
-    height: auto;
-  }
-
-  #marquee {
-    height: auto;
-  }
-
-  .marquee-inner {
-    height: 100%;
-  }
-}
-
-.open-video-text {
-  margin-left: 23px;
-}
-
-#openVideo {
-	background: transparent;
-	border: none;
-	color: #fff;
-	font-size: 16px;
-}
-
-#openVideo img {
-	width: auto;
-}
-
-#openVideo:hover {
-
-}
-
-#closeVideo {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-}
-
-#closeVideo svg {
-  width: 45px;
-  fill: #fff;
-}
-
-.kurokami-logo {
-  margin-bottom: 71px;
-  margin-top: 57px;
-  max-width: 726px;
-  width: 100%;
-}
-
-.movie-play-button:before {
-	display: block;
-	margin: auto;
-	background: url("../img/contents/top/play-movie.svg") no-repeat center center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-	        background-size: 100% 100%;
-	content: "";
-}
-.movie-play-button p {
-	text-indent: 0.1em;
-	text-align: center;
-	line-height: 1;
-}
-
-.movie-play-button {
-		-webkit-transition: -webkit-transform 1s;
-		   -moz-transition:    -moz-transform 1s;
-		    -ms-transition:     -ms-transform 1s;
-		     -o-transition:      -o-transform 1s;
-		        transition:         transform 1s;
-	}
-.movie-play-button:before {
-		width: 80px;
-		height: 80px;
-		margin-bottom: 28px;
-	}
-.movie-play-button p {
-		font-size: 16px;
-	}
-
-	#about .movie-play-button {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		   -moz-transform: translate(-50%, -50%);
-		    -ms-transform: translate(-50%, -50%);
-		     -o-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
-	}
-
-@media only screen and (max-width: 567px) {
-  .kurokami-logo {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .open-video-text {
-    margin-left: 0;
-    margin-top: 25px;
-    display: block;
-  }
-}
-
-#video-before-after #video-before-after-inner {
-	position: relative;
-	margin: auto;
-}
-
-
-@media screen and (min-width: 769px) {
-	#video-before-after {
-		padding-bottom: 100px;
-		text-align: center;
-	}
-	#video-before-after #video-before-after-inner {
-		width: 100%;
-		max-width: 1340px;
-	}
-}
-@media screen and (max-width: 768px) {
-	#video-before-after {
-		padding-bottom: 10.666666666666668vw;
-	}
-	#video-before-after #video-before-after-inner {
-		width: 90.66666666666667%;
-	}
-}
-
-/* ==== before and after ==== */
-.before img,
-.after img {
-  width: 100%;
-}
-
-.section--beforeafter {
-  padding-bottom: 25rem;
-  font-family: YakuHanMP, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;;
-}
-
-.beforeafter {
-  opacity: 1;
-  position: relative;
+.beforeafter__left,
+.beforeafter__right {
+  background: transparent;
+  border: 0;
   cursor: pointer;
-  margin: 5rem;
-  text-align: center;
-  max-width: 380px;
 }
-
-.beforeafter--video {
-  max-width: 540px;
-  margin: 60px auto 0;
+.beforeafter__left {
+  background-image: url(../img/contents/kurokami/arrow-left-mobile.svg);
 }
-
-@media only screen and (max-width: 576px) {
-  .beforeafter {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: unset;
-  }
-
-  .beforeafter:last-child {
-    margin-bottom: 0;
-  }
+.beforeafter__right {
+  background-image: url(../img/contents/kurokami/arrow-right-mobile.svg);
 }
-
-.beforeafter-wrapper {
-  margin: 0 auto;
-  max-width: 100rem;
-}
-
 .beforeafter__inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-
+.before img,
+.after img {
+  width: 100%;
+}
 .before {
   position: absolute;
   top: 0;
@@ -388,40 +52,8 @@ article h2 {
   width: 100%;
   height: 100%;
 }
-
-.beforeafter__left {
-  left: -4rem;
-}
-
-.beforeafter__right {
-  right: -4rem;
-}
-
-.beforeafter__left,
-.beforeafter__right {
-  position: absolute;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-  top: 37%;
-  max-width: 7rem !important;
-  z-index: 4;
-  width: 25%;
-}
-
-.beforeafter__left:hover,
-.beforeafter__right:hover {
-  opacity: 1;
-}
-
-@media only screen and (max-width: 576px) {
-  .beforeafter__left,
-  .beforeafter__right {
-    display: none;
-  }
-}
-
 .beforeafter__indicators {
-  margin-top: 1.5rem;
+  margin-top: 15px;
   display: inline-block; 
 }
 
@@ -437,121 +69,335 @@ article h2 {
   margin: 0 6px;
   float: left;
 }
+@media only screen and (min-width: 768px) {
+  .beforeafter__left {
+    background-image: url(../img/contents/kurokami/arrow-left.svg);
+  }
+  .beforeafter__right {
+    background-image: url(../img/contents/kurokami/arrow-right.svg);
+  }
+  .beforeafter__left:hover,
+  .beforeafter__left:focus {
+    background-image: url(../img/contents/kurokami/arrow-left-hover.svg);
+  }
+  .beforeafter__right:hover,
+  .beforeafter__right:focus {
+    background-image: url(../img/contents/kurokami/arrow-right-hover.svg);
+  }
 
-/* ==== campaign ==== */
-
-@media only screen and (min-width: 1110px) {
-  #campaign .row {
-    margin-left: 10rem;
+  .beforeafter__left:focus,
+  .beforeafter__right:focus {
+    outline: none;
   }
 }
 
-.section__title--campaign {
-  color: #fff;
-  margin-bottom: 40px;
+#video-before-after {
+  padding-top: 110px;
+  text-align: center;
+  max-width: 540px;
+  margin: 60px auto 0;
+  position: relative;
+  cursor: pointer;
+}
+#video-before-after p {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
+  font-size: 20px;
+  color: #343539;
+  margin-bottom: 75px;
+}
+#beforeafter--video {
+  opacity: 0;
+-webkit-transform: translateY(10px);
+   -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+     -o-transform: translateY(10px);
+        transform: translateY(10px);
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#beforeafter--video.inviewed {
+  opacity: 1;
+  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
+     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
+      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
+       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
+          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+
+  -ms-filter: none;
+      filter: none;
+}
+#video-before-after .beforeafter__left {
+  left: -70px;
+}
+#video-before-after .beforeafter__right {
+  right: -70px;
+}
+#video-before-after .beforeafter__left,
+#video-before-after .beforeafter__right {
+  position: absolute;
+  transition: background-image 0.15s ease;
+  top: 40%;
+  z-index: 4;
+  width: 104px;
+  height: 104px;
+  background-size: contain;
+}
+@media only screen and (max-width: 768px) {
+  #video-before-after .beforeafter__left {
+    left: 10px;
+  }
+  #video-before-after .beforeafter__right {
+    right: 10px;
+  }
+  #video-before-after .beforeafter__left,
+  #video-before-after .beforeafter__right {
+    top: 58%;
+    width: 45px;
+    height: 45px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  #video-before-after .beforeafter__left,
+  #video-before-after .beforeafter__right {
+    width: 28px;
+    height: 28px;
+    top: 60%;
+  }
 }
 
-.section__title--campaign::after {
-  content: "";
-  height: 1px;
-  width: 75.5px;
-  background: #fff;
-  margin: 37px auto;
-  display: block;
+#bob {
+  margin: 110px 0;
+}
+#bob .beforeafter-wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#bob .beforeafter {
+  max-width: 380px;
+  width: 50%;
+  position: relative;
+  margin: 30px 75px;
+  opacity: 0;
+-webkit-transform: translateY(10px);
+   -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+     -o-transform: translateY(10px);
+        transform: translateY(10px);
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#bob .beforeafter.inviewed {
+  opacity: 1;
+  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
+     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
+      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
+       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
+          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+
+  -ms-filter: none;
+      filter: none;
+}
+#bob .beforeafter[data-transition-delay="0.5"] {
+  -webkit-transition-delay: 0.5s;
+     -moz-transition-delay: 0.5s;
+      -ms-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+#bob .beforeafter[data-transition-delay="1"] {
+  -webkit-transition-delay: 1s;
+     -moz-transition-delay: 1s;
+      -ms-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+#bob .beforeafter[data-transition-delay="1.5"] {
+  -webkit-transition-delay: 1.5s;
+     -moz-transition-delay: 1.5s;
+      -ms-transition-delay: 1.5s;
+       -o-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+#bob .beforeafter[data-transition-delay="2"] {
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+#bob .beforeafter__left {
+  left: -50px;
+}
+#bob .beforeafter__right {
+  right: -50px;
+}
+#bob .beforeafter__left,
+#bob .beforeafter__right {
+  position: absolute;
+  transition: background-image 0.15s ease;
+  top: 40%;
+  z-index: 4;
+  width: 74px;
+  height: 74px;
+  background-size: contain;
+}
+@media only screen and (max-width: 768px) {
+  #bob .beforeafter {
+    max-width: 100%;
+    width: 100%;
+    margin: 45px 24px;
+  }
+  #bob .beforeafter__left {
+    left: 10px;
+  }
+  #bob .beforeafter__right {
+    right: 10px;
+  }
+  #bob .beforeafter__left,
+  #bob .beforeafter__right {
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 567px) {
+  #bob .beforeafter__left,
+  #bob .beforeafter__right {
+    width: 28px;
+    height: 28px;
+  }
 }
 
-.campaign__stars {
-  margin-top: -27px;
-  width: auto;
+#kurokami-campaign {
+  padding-bottom: 1px;
 }
-
-.campaign-block {
+#kurokami-campaign-inner {
   background: linear-gradient(125deg, rgba(167,147,224,1) 0%, rgba(211,200,239,1) 100%);
   border-radius: 4px;
-  margin-top: 82px;
-  padding-top: 128px;
+  padding: 23px;
   color: #fff;
   position: relative;
-  padding-bottom: 100px;
-}
+  margin: 82px auto;
+  max-width: 1110px;
 
-.campaign-block::after {
-  content: "";
-  position: absolute;
+}
+#kurokami-campaign-content {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: calc(100% - 46px);
-  height: calc(100% - 46px);
-  top: 23px;
-  left: 23px;
+  padding-top: 103px;
+  padding-bottom: 100px;
+}
+#kurokami-campaign-content h2 {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
 }
 
-@media only screen and (min-width: 1110px) {
-  .campaign-block {
-    max-width: 1110px;
-  }
+#kurokami-campaign-content-description {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-size: 20px;
+  margin: 0 auto 75px;
+  text-align: center;
+  max-width: 790px;
 }
-
-@media only screen and (max-width: 567px) {
-  .section--campaign {
-    padding-bottom: 0;
-  }
+.campaign__stars {
+  margin-top: -27px;
+  width: 38px;
 }
-
-@media only screen and (max-width: 1110px) {
-
-  .campaign-block {
-    border-radius: 0;
-    padding-top: 87px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .campaign-block::after {
-    border-radius: 0;
-    top: 12px;
-    left: 12px;
-    width: calc(100% - 24px);
-    height: calc(100% - 24px);
-  }
+.campaign__arrow {
+  width: 15px;
 }
-
 .campaign__steps {
   margin-top: 58px;
   margin-bottom: 67px;
-  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
-
 .campaign__step {
-  width: 100%;
-  height: 100%;
+  width: 240px;
+  height: 240px;
   text-align: center;
   position: relative;
   color: #564685;
+  opacity: 0;
+-webkit-transform: translateY(10px);
+   -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+     -o-transform: translateY(10px);
+        transform: translateY(10px);
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
+.campaign__step.inviewed {
+  opacity: 1;
+  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
+     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
+      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
+       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
+          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
 
+  -ms-filter: none;
+      filter: none;
+}
+.campaign__step[data-transition-delay="0.5"] {
+  -webkit-transition-delay: 0.5s;
+     -moz-transition-delay: 0.5s;
+      -ms-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.campaign__step[data-transition-delay="1"] {
+  -webkit-transition-delay: 1s;
+     -moz-transition-delay: 1s;
+      -ms-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.campaign__step[data-transition-delay="1.5"] {
+  -webkit-transition-delay: 1.5s;
+     -moz-transition-delay: 1.5s;
+      -ms-transition-delay: 1.5s;
+       -o-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
 .campaign__background {
   max-width: 100%;
-  width: 240px;
-  height: 240px;
 }
-
-@media only screen and (max-width: 992px) {
-  .campaign__step {
-    margin-top: 2rem;
-  }
-
-  .campaign__steps {
-  	margin-left: 0;
-  }
-}
-
 .campaign__step-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.campaign__step-text p {
   margin: auto;
   max-width: 140px;
-  margin-top: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
 .campaign__step__content {
   position: absolute;
   display: flex;
@@ -562,217 +408,144 @@ article h2 {
   top: 0;
   height: 100%;
 }
-
-.campaign__step-text p {
-  font-size: 13px;
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
 .campaign__img {
-  max-height: 4rem !important;
-  width: auto;
+  max-height: 55px !important;
 }
-
 .campaign__step-2 .campaign__img {
-  max-height: 5rem !important;
+  max-height: 66px !important;
 }
-
+.campaign__step-3 .campaign__step-text p {
+  margin-top: 85px;
+}
 .campaign__img--overlap {
-   width: 64px;
-   position: absolute;
-   top: 120px;
+  width: 60px;
+}
+.campaign__buttons {
+  text-align: center;
+  margin-top: 65px;
+}
+.kurokami-btn {
+  min-width: 220px;
+  background: #5A498E;
+  border-color: #5A498E;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 21px 44px;
+  color: #fff;
+  border-radius: 4px;
+  display: inline;
+  transition: background 0.5s ease;
+}
+.kurokami-btn--outline {
+  background: transparent;
+  color: #5A498E;
+  border-color: #5A498E;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 1110px) {
+  #kurokami-campaign-inner {
+    border-radius: 0;
+  }
+  #kurokami-campaign-content {
+    border-radius: 0;
+  }
+  .campaign__steps {
+    width: 95%;
+  }
+  #kurokami-campaign {
+    padding-bottom: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #kurokami-campaign-content {
+    padding: 83px 24px;
+  }
+  .campaign__steps {
+    display: block;
+    width: 100%;
+  }
+  .campaign__step {
+    margin: 0 auto 40px;
+  }
+  .campaign__arrow {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .kurokami-btn:hover {
+    background: #8376AA;
+    color: #fff;
+  }
+  .kurokami-btn--outline:hover {
+    background: rgba(225,225,225,0.30);
+    color: #5A498E;
+  }
 }
 
-#tcModal {
-  color: #564685;
+#faq {
+	margin-top: 110px;
+	padding-bottom: 110px;
 }
-
-.tc__list {
-  text-align: left;
-  padding-left: 3rem;
-  margin: 2rem;
-}
-
-.tc__list li {
-  list-style-type: decimal;
-  margin-bottom: 2rem;
-}
-
-#before-after #before-after-inner {
-	position: relative;
-	margin: auto;
-}
-#before-after section {
-	position: relative;
-	margin: 0 auto;
-	max-width: 800px;
-	width: 100%;
-}
-#before-after section img {
-	vertical-align: bottom;
-}
-#before-after .before-after-photo.w50 {
-	width: calc((550 / 1180) * 100%);
-	-webkit-transition-duration: 0.5s;
-   	-moz-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-}
-
-#before-after ul {
-	margin-top: 50px;
-	display: -webkit-box;
-	display:    -moz-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         box;
-	display:         flex;
-
-	-webkit-box-lines: multiple;
-	   -moz-box-lines: multiple;
-	     -o-box-lines: multiple;
-	-webkit-box-pack: justify;
-	   -moz-box-pack: justify;
-	     -o-box-pack: justify;
-	-ms-flex-pack: justify;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
-}
-
-@media screen and (min-width: 769px) {
-	#before-after {
-		padding-bottom: 50px;
-		text-align: center;
-	}
-	#before-after #before-after-inner {
-		width: 100%;
-		max-width: 1340px;
-	}
-	#before-after section + section {
-		margin-top: 30px;
-	}
-	#before-after .before-after-photo {
-		margin-bottom: 50px;
-	}
-	#before-after .before-after-photo:hover img {
-		opacity: 0.6;
-
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-		    filter: alpha(opacity=60);
-	}
-	#before-after .before-after-photo[data-transition-delay="0.5"] {
-		-webkit-transition-delay: 0.5s;
-		   -moz-transition-delay: 0.5s;
-		    -ms-transition-delay: 0.5s;
-		     -o-transition-delay: 0.5s;
-		        transition-delay: 0.5s;
-	}
-	#before-after .before-after-photo[data-transition-delay="1"] {
-		-webkit-transition-delay: 1s;
-		   -moz-transition-delay: 1s;
-		    -ms-transition-delay: 1s;
-		     -o-transition-delay: 1s;
-		        transition-delay: 1s;
-	}
-	#before-after .before-after-photo[data-transition-delay="1.5"] {
-		-webkit-transition-delay: 1.5s;
-		   -moz-transition-delay: 1.5s;
-		    -ms-transition-delay: 1.5s;
-		     -o-transition-delay: 1.5s;
-		        transition-delay: 1.5s;
-	}
-		#before-after .before-after-photo[data-transition-delay="2"] {
-		-webkit-transition-delay: 2s;
-		   -moz-transition-delay: 2s;
-		    -ms-transition-delay: 2s;
-		     -o-transition-delay: 2s;
-		        transition-delay: 2s;
-	}
-}
-@media screen and (max-width: 768px) {
-	#before-after {
-		padding-bottom: 10.666666666666668vw;
-	}
-	#before-after #before-after-inner {
-		width: 90.66666666666667%;
-	}
-	#before-after section + section {
-		margin-top: 16vw;
-	}
-	#before-after .before-after-photo {
-		margin-bottom: 8vw;
-		-webkit-transition-duration: 1s;
-		   -moz-transition-duration: 1s;
-		    -ms-transition-duration: 1s;
-		     -o-transition-duration: 1s;
-		        transition-duration: 1s;
-	}
-}
-
-
-/* ==== faq ==== */
-
-#faq .section__title {
-  margin-bottom: 88px;
-}
-
-.faq-wrapper {
-  max-width: 925px;
+#faq-inner {
+  max-width: 950px;
   margin: 0 auto;
 }
-
-.faq {
-  display: flex;
+.faq-item {
   margin-bottom: 60px;
 }
-
+.faq-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.faq__text {
+  margin-left: 120px;
+}
 .faq__question {
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 1.5rem;
   color: #5A498E;
 }
-
 .faq__answer {
   font-size: 20px;
   color: #646464;
 }
-
 .faq__icon {
-  font-family: YakuHanMP, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;;
-  border-radius: 50%;
-  background: #5A498E;
-  color: #ffffff;
   width: 88px;
   height: 88px;
   flex-shrink: 0;
   font-size: 2.1rem;
   line-height: 5rem;
   text-align: center;
+  float: left;
 }
-
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
+  #faq {
+    margin-top: 70px;
+    padding-bottom: 70px;
+  }
   .faq__question {
     font-size: 18px;
   }
-
+  .faq__answer {
+    font-size: 16px;
+  }
   .faq__icon {
     width: 56px;
     height: 56px;
   }
-}
 
-@media only screen and (max-width: 576px) {
-  .faq {
-    margin-bottom: 30px;
+  #faq-inner {
+    padding-left: 24px;
+    padding-right: 34px;
   }
-
-  .faq__answer {
-    font-size: 16px;
+  .faq__text {
+    margin-left: 75px;
   }
 }
