@@ -117,11 +117,11 @@
 }
 #beforeafter--video.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+     -moz-transition: opacity 1s, -moz-transform 1s;
+      -ms-transition: opacity 1s, -ms-transform 1s;
+       -o-transition: opacity 1s, -o-transform 1s;
+          transition: opacity 1s, transform 1s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -324,6 +324,20 @@
 }
 .campaign__arrow {
   width: 15px;
+  opacity: 0;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.campaign__arrow.inviewed {
+  opacity: 1;
+  -webkit-transition: opacity 1s 2s;
+     -moz-transition: opacity 1s 2s;
+      -ms-transition: opacity 1s 2s;
+       -o-transition: opacity 1s 2s;
+          transition: opacity 1s 2s;
+
+  -ms-filter: none;
+      filter: none;
 }
 .campaign__steps {
   margin-top: 58px;
@@ -446,6 +460,17 @@
   padding-top: 11px;
   padding-bottom: 11px;
   margin-top: 32px;
+}
+#tcModal {
+  color: #564685;
+}
+.tc__list {
+  text-align: left;
+  margin: 24px 24px 24px 36px;
+}
+.tc__list li {
+  list-style-type: decimal;
+  margin-bottom: 2rem;
 }
 @media only screen and (max-width: 1110px) {
   #kurokami-campaign-inner {

@@ -20,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/import.css" media="screen,print">
     <link rel="stylesheet" type="text/css" href="assets/css/top.css" media="screen,print">
     <link rel="stylesheet" type="text/css" href="assets/css/kurokami.css" media="screen,print">
-    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://bolt.shuttlerock-cdn.com/production/bundle-stateful-latest.js"></script><!--[if lt IE 9]>
     <!--if lt IE 9script(src="assets/js/html5shiv.js")-->
   </head>
@@ -68,6 +67,14 @@
                   <span class="Barlow">PLAY MOVIE</span>
                 </button>
               </div>
+              <div id="movie-container">
+                <button id="movie-modal-close"></button>
+                <div id="movie-modal-content">
+                  <div id="movie-inner">
+                  <iframe id="movie" src="https://www.youtube.com/embed/FKmjMc94SZE?enablejsapi=1&html5=1" allowfullscreen="" frameborder="0" height="467" width="800"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div id="firstview-scroll">
@@ -99,7 +106,7 @@
               <br>
               なりたい自分がきっと見つかる！
             </p>
-            <div id="beforeafter--video" class="inviewEl">
+            <div id="beforeafter--video" class="beforeafter inviewEl">
               <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
               <div class="beforeafter__inner">
                 <div class="before">
@@ -141,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="campaign__arrow" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
+                <img class="campaign__arrow inviewEl" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
                 <div class="campaign__step campaign__step-2 inviewEl" data-transition-delay="1">
                     <img class="campaign__background" src="assets/img/contents/kurokami/campaign/step_2.svg" alt="" width="240" height="240">
                     <div class="campaign__step__content">
@@ -152,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="campaign__arrow" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
+                <img class="campaign__arrow inviewEl" src="assets/img/contents/kurokami/campaign/step-arrow.svg">
                 <div class="campaign__step campaign__step-3 inviewEl" data-transition-delay="1.5">
                     <img class="campaign__background" src="assets/img/contents/kurokami/campaign/step_3.svg" alt="" width="240" height="240">
                     <div class="campaign__step__content">
@@ -391,6 +398,7 @@
       <script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
       <script type="text/javascript" src="assets/js/jquery.matchHeight.js"></script>
       <script type="text/javascript" src="assets/js/top/jquery.inview.min.js"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="assets/js/common.js"></script>
       <script type="text/javascript" src="assets/js/contents.js"></script>
       <script type="text/javascript" src="assets/js/top.js"></script>
