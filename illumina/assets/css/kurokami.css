@@ -20,6 +20,8 @@
   }
   .section__description {
     margin-bottom: 45px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -156,7 +158,7 @@
   }
   #video-before-after .beforeafter__left,
   #video-before-after .beforeafter__right {
-    top: 58%;
+    top: 45%;
     width: 45px;
     height: 45px;
   }
@@ -166,7 +168,6 @@
   #video-before-after .beforeafter__right {
     width: 28px;
     height: 28px;
-    top: 60%;
   }
 }
 
@@ -450,6 +451,12 @@
   display: inline;
   transition: background 0.5s ease;
 }
+.kurokami-btn:hover {
+  color: #fff;
+}
+.kurokami-btn--outline:hover {
+  color: #5A498E;
+}
 .kurokami-btn--outline {
   background: transparent;
   color: #5A498E;
@@ -509,6 +516,15 @@
   .kurokami-btn--outline:hover {
     background: rgba(225,225,225,0.30);
     color: #5A498E;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .kurokami-btn {
+    display: block;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
   }
 }
 
