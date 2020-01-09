@@ -44,7 +44,7 @@
   align-items: center;
   height: 100%;
   justify-content: center;
-  background: url("../img/banner-bg-50.png") center no-repeat;
+  background: url("../img/contents/top/banner-bg-50.png") center no-repeat;
   background-size: cover;
   font-family: "Barlow", sans-serif;
 }
@@ -56,10 +56,9 @@
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	opacity: 0;
-	font-size: 0;
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	    filter: alpha(opacity=0);
+  animation-duration: 1s;
+  animation-name: fadeInShift;
+  animation-fill-mode: forwards;
 }
 #firstview .movie-play-button {
   cursor: pointer;
@@ -72,10 +71,11 @@
 	   -moz-background-size: 100% auto;
 	        background-size: 100% auto;
 	opacity: 0;
-	font-size: 0;
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	    filter: alpha(opacity=0);
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+  transition-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 #firstview .movie-play-button img {
   width: 108px;
@@ -141,42 +141,11 @@
 }
 #firstview #firstview-scroll {
 	opacity: 0;
-
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	    filter: alpha(opacity=0);
-}
-#firstview.inviewed #firstview-logo {
-	opacity: 1;
-	-webkit-transition: opacity 2s 0.5s;
-	   -moz-transition: opacity 2s 0.5s;
-	    -ms-transition: opacity 2s 0.5s;
-	     -o-transition: opacity 2s 0.5s;
-	        transition: opacity 2s 0.5s;
-
-	-ms-filter: none;
-	    filter: none;
-}
-#firstview.inviewed .movie-play-button {
-	opacity: 1;
-	-webkit-transition: opacity 2s 1s;
-	   -moz-transition: opacity 2s 1s;
-	    -ms-transition: opacity 2s 1s;
-	     -o-transition: opacity 2s 1s;
-	        transition: opacity 2s 1s;
-
-	-ms-filter: none;
-	    filter: none;
-}
-#firstview.inviewed #firstview-scroll {
-	opacity: 1;
-	-webkit-transition: opacity 2s 1.75s;
-	   -moz-transition: opacity 2s 1.75s;
-	    -ms-transition: opacity 2s 1.75s;
-	     -o-transition: opacity 2s 1.75s;
-	        transition: opacity 2s 1.75s;
-
-	-ms-filter: none;
-	    filter: none;
+	animation-duration: 1s;
+  animation-name: fadeInShift;
+  animation-delay: 0.5s;
+  transition-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 @media screen and (min-width: 769px) {
   #movie-modal-close:hover,
@@ -252,6 +221,12 @@
 		        animation-timing-function: ease-in-out;
 	}
   #firstview .movie-play-button {
+  	 opacity: 0;
+	  transition: transform 0.5s ease, opacity 0.5s ease;
+	  animation-duration: 1s;
+	  animation-name: fadeIn;
+	  animation-fill-mode: forwards;
+	  animation-delay: 0.25s
     -webkit-transition: -webkit-transform 1s;
        -moz-transition:    -moz-transform 1s;
         -ms-transition:     -ms-transform 1s;
@@ -260,11 +235,11 @@
   }
   #firstview .movie-play-button:hover,
   #firstview .movie-play-button:focus {
-    -webkit-transform: scale(1.05);
-       -moz-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-         -o-transform: scale(1.05);
-            transform: scale(1.05);
+    -webkit-transform: scale(1.5);
+       -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+         -o-transform: scale(1.5);
+            transform: scale(1.5);
     -webkit-transition: -webkit-transform 0.5s;
        -moz-transition:    -moz-transform 0.5s;
         -ms-transition:     -ms-transform 0.5s;
@@ -327,11 +302,11 @@
 }
 #description.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+     -moz-transition: opacity 1s, -moz-transform 1s;
+      -ms-transition: opacity 1s, -ms-transform 1s;
+       -o-transition: opacity 1s, -o-transform 1s;
+          transition: opacity 1s, transform 1s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -358,7 +333,7 @@
 	background-image:         linear-gradient(to bottom, #e4dff6 0%, #fff 100%);
 }
 .gradient-banner-container {
-  background: url("../img/banner-bg-50.png") no-repeat center;
+  background: url("../img/contents/top/banner-bg-25.png") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -698,11 +673,11 @@
 }
 #campaign-banner.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+     -moz-transition: opacity 1s, -moz-transform 1s;
+      -ms-transition: opacity 1s, -ms-transform 1s;
+       -o-transition: opacity 1s, -o-transform 1s;
+          transition: opacity 1s, transform 1s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -1050,4 +1025,24 @@
 	100% {
 		top: 100%;
 	}
+}
+@keyframes fadeInShift {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

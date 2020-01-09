@@ -1,3 +1,14 @@
+#firstview .gradient-border {
+  width: 100%;
+  height: 12px;
+  background: rgb(254,200,155);
+  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);
+}
+
+.section__icon {
+  width: 48px;
+  margin-bottom: 40px;
+}
 .section__title {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #5a498e;
@@ -30,12 +41,10 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+  background-image: url(../img/contents/kurokami/arrow-mobile.svg);
 }
 .beforeafter__left {
-  background-image: url(../img/contents/kurokami/arrow-left-mobile.svg);
-}
-.beforeafter__right {
-  background-image: url(../img/contents/kurokami/arrow-right-mobile.svg);
+  transform: rotateY(180deg);
 }
 .beforeafter__inner {
   position: relative;
@@ -60,41 +69,37 @@
 }
 
 .indicator.active {
-  background-color: #A897DA;
+  background-color: #FFA1C2;
 }
 
 .indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid #A897DA;
+  border: 1px solid #FFA1C2;
   margin: 0 6px;
   float: left;
 }
 @media only screen and (min-width: 768px) {
-  .beforeafter__left {
-    background-image: url(../img/contents/kurokami/arrow-left.svg);
-  }
+  .beforeafter__left,
   .beforeafter__right {
-    background-image: url(../img/contents/kurokami/arrow-right.svg);
+    background-image: url(../img/contents/kurokami/arrow.svg);
+  }
+  .beforeafter__left:hover,
+  .beforeafter__left:focus,
+  .beforeafter__right:hover,
+  .beforeafter__right:focus {
+    background-image: url(../img/contents/kurokami/arrow-hover.svg);
+    outline: none;
   }
   .beforeafter__left:hover,
   .beforeafter__left:focus {
-    background-image: url(../img/contents/kurokami/arrow-left-hover.svg);
-  }
-  .beforeafter__right:hover,
-  .beforeafter__right:focus {
-    background-image: url(../img/contents/kurokami/arrow-right-hover.svg);
-  }
-
-  .beforeafter__left:focus,
-  .beforeafter__right:focus {
-    outline: none;
+    transform: rotateY(180deg);
   }
 }
 
 #video-before-after {
-  padding-top: 110px;
+  padding-top: 90px;
   text-align: center;
   max-width: 540px;
   margin: 60px auto 0;
@@ -119,11 +124,11 @@
 }
 #beforeafter--video.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-     -moz-transition: opacity 1s, -moz-transform 1s;
-      -ms-transition: opacity 1s, -ms-transform 1s;
-       -o-transition: opacity 1s, -o-transform 1s;
-          transition: opacity 1s, transform 1s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+     -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+      -ms-transition: opacity 0.5s, -ms-transform 0.5s;
+       -o-transition: opacity 0.5s, -o-transform 0.5s;
+          transition: opacity 0.5s, transform 0.5s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -199,11 +204,11 @@
 }
 #bob .beforeafter.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+     -moz-transition: opacity 1s, -moz-transform 1s;
+      -ms-transition: opacity 1s, -ms-transform 1s;
+       -o-transition: opacity 1s, -o-transform 1s;
+          transition: opacity 1s, transform 1s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -219,27 +224,6 @@
       -ms-transition-delay: 0.5s;
        -o-transition-delay: 0.5s;
           transition-delay: 0.5s;
-}
-#bob .beforeafter[data-transition-delay="1"] {
-  -webkit-transition-delay: 1s;
-     -moz-transition-delay: 1s;
-      -ms-transition-delay: 1s;
-       -o-transition-delay: 1s;
-          transition-delay: 1s;
-}
-#bob .beforeafter[data-transition-delay="1.5"] {
-  -webkit-transition-delay: 1.5s;
-     -moz-transition-delay: 1.5s;
-      -ms-transition-delay: 1.5s;
-       -o-transition-delay: 1.5s;
-          transition-delay: 1.5s;
-}
-#bob .beforeafter[data-transition-delay="2"] {
-  -webkit-transition-delay: 2s;
-     -moz-transition-delay: 2s;
-      -ms-transition-delay: 2s;
-       -o-transition-delay: 2s;
-          transition-delay: 2s;
 }
 #bob .beforeafter__left {
   left: -50px;
@@ -288,9 +272,8 @@
   padding-bottom: 1px;
 }
 #kurokami-campaign-inner {
-  background: linear-gradient(125deg, rgba(167,147,224,1) 0%, rgba(211,200,239,1) 100%);
-  border-radius: 4px;
-  padding: 23px;
+  background: #CC9FFF url(../img/contents/top/banner-bg.png) no-repeat;
+  background-size: cover;  padding: 23px;
   color: #fff;
   position: relative;
   margin: 82px auto;
@@ -299,9 +282,38 @@
 }
 #kurokami-campaign-content {
   border: 1px solid #fff;
-  border-radius: 4px;
   padding-top: 103px;
   padding-bottom: 100px;
+  position: relative;
+}
+.campaign__border {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+}
+.campaign__border--top-left {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  top: 10px;
+  left: 10px;
+}
+.campaign__border--top-right {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  top: 10px;
+  right: 10px;
+}
+.campaign__border--bottom-left {
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  bottom: 10px;
+  left: 10px;
+}
+.campaign__border--bottom-right {
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  bottom: 10px;
+  right: 10px;
 }
 #kurokami-campaign-content h2 {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
@@ -320,7 +332,7 @@
   max-width: 790px;
 }
 .campaign__stars {
-  margin-top: -27px;
+  margin-top: -37px;
   width: 38px;
 }
 .campaign__arrow {
@@ -329,13 +341,16 @@
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+.campaign__arrow svg {
+  height: 100%;
+}
 .campaign__arrow.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 2s;
-     -moz-transition: opacity 1s 2s;
-      -ms-transition: opacity 1s 2s;
-       -o-transition: opacity 1s 2s;
-          transition: opacity 1s 2s;
+  -webkit-transition: opacity 1s 0.75s;
+     -moz-transition: opacity 1s 0.75s;
+      -ms-transition: opacity 1s 0.75s;
+       -o-transition: opacity 1s 0.75s;
+          transition: opacity 1s 0.75s;
 
   -ms-filter: none;
       filter: none;
@@ -365,11 +380,11 @@
 }
 .campaign__step.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
-     -moz-transition: opacity 1s 0.5s, -moz-transform 1s 0.5s;
-      -ms-transition: opacity 1s 0.5s, -ms-transform 1s 0.5s;
-       -o-transition: opacity 1s 0.5s, -o-transform 1s 0.5s;
-          transition: opacity 1s 0.5s, transform 1s 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+     -moz-transition: opacity 1s, -moz-transform 1s;
+      -ms-transition: opacity 1s, -ms-transform 1s;
+       -o-transition: opacity 1s, -o-transform 1s;
+          transition: opacity 1s, transform 1s;
   -webkit-transform: translateY(0);
      -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -379,26 +394,19 @@
   -ms-filter: none;
       filter: none;
 }
-.campaign__step[data-transition-delay="0.5"] {
+.campaign__step-2.inviewed {
+  -webkit-transition-delay: 0.25s;
+     -moz-transition-delay: 0.25s;
+      -ms-transition-delay: 0.25s;
+       -o-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+.campaign__step-3.inviewed {
   -webkit-transition-delay: 0.5s;
      -moz-transition-delay: 0.5s;
       -ms-transition-delay: 0.5s;
        -o-transition-delay: 0.5s;
           transition-delay: 0.5s;
-}
-.campaign__step[data-transition-delay="1"] {
-  -webkit-transition-delay: 1s;
-     -moz-transition-delay: 1s;
-      -ms-transition-delay: 1s;
-       -o-transition-delay: 1s;
-          transition-delay: 1s;
-}
-.campaign__step[data-transition-delay="1.5"] {
-  -webkit-transition-delay: 1.5s;
-     -moz-transition-delay: 1.5s;
-      -ms-transition-delay: 1.5s;
-       -o-transition-delay: 1.5s;
-          transition-delay: 1.5s;
 }
 .campaign__background {
   max-width: 100%;
@@ -456,11 +464,12 @@
 }
 .kurokami-btn--outline:hover {
   color: #5A498E;
+  border-color: #5A498E;
 }
 .kurokami-btn--outline {
   background: transparent;
-  color: #5A498E;
-  border-color: #5A498E;
+  color: #fff;
+  border-color: #fff;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
@@ -480,12 +489,6 @@
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 1110px) {
-  #kurokami-campaign-inner {
-    border-radius: 0;
-  }
-  #kurokami-campaign-content {
-    border-radius: 0;
-  }
   .campaign__steps {
     width: 95%;
   }
@@ -532,8 +535,11 @@
 	margin-top: 110px;
 	padding-bottom: 110px;
 }
+#faq .section__title {
+  margin-bottom: 88px;
+}
 #faq-inner {
-  max-width: 950px;
+  max-width: 925px;
   margin: 0 auto;
 }
 .faq-item {
