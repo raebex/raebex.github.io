@@ -45,9 +45,9 @@ $(function() {
   let winW, shadeModalID, $shadeModal, tabID;
 
   let mediaQuery = window.matchMedia('(max-width: 700px)');
-  let bigVideo="../assets/img/contents/kurokami/01_K_Atype_1212.mp4";
-  let smallVideo = "../assets/img/contents/kurokami/01-k-atype-1212-ebp7ss0jmp4_pP2b.mp4";
-  var backupImg = "../assets/contents/kurokami/img/video-still.png";
+  let bigVideo="assets/img/contents/kurokami/01_K_Atype_1212.mp4";
+  let smallVideo = "assets/img/contents/kurokami/01-k-atype-1212-ebp7ss0jmp4_pP2b.mp4";
+  var backupImg = "assets/contents/kurokami/img/video-still.png";
 
   loadVideo(mediaQuery);
 
@@ -66,7 +66,7 @@ $(function() {
     $(this).addClass("inviewed");
   });
 
-  console.log('load more button', $loadMoreBtn);
-
-  $loadMoreBtn.addClass('kurokami-btn--outline');
+  $loadMoreBtn.on('load', function () {
+    addClass('kurokami-btn--outline');
+  });
 });
