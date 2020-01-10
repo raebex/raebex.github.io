@@ -653,6 +653,26 @@
 		line-height: 14.666666666666668vw;
 	}
 }
+
+.taggbox-socialwall .loadMoreBtn {
+  background: transparent;
+  color: #5A498E;
+  border-color: #5A498E;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .taggbox-socialwall .loadMoreBtn:hover {
+    background: rgba(225,225,225,0.30);
+    color: #5A498E;
+    color: #5A498E;
+    border-color: #5A498E;
+  }
+}
 #campaign-banner {
   margin: 110px 0;
   opacity: 0;
