@@ -28,6 +28,8 @@
 @media only screen and (max-width: 768px) {
   .section__title {
     font-size: 28px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .section__description {
     margin-bottom: 45px;
