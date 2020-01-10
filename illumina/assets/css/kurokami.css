@@ -41,7 +41,7 @@
   background: transparent;
   border: 0;
   cursor: pointer;
-  background-image: url(../img/contents/kurokami/arrow-mobile.svg);
+  background-image: url(../img/contents/kurokami/arrow.svg);
 }
 .beforeafter__left {
   transform: rotateY(180deg);
@@ -541,6 +541,8 @@
 #faq-inner {
   max-width: 925px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 34px
 }
 .faq-item {
   margin-bottom: 60px;
@@ -586,11 +588,6 @@
   .faq__icon {
     width: 56px;
     height: 56px;
-  }
-
-  #faq-inner {
-    padding-left: 24px;
-    padding-right: 34px;
   }
   .faq__text {
     margin-left: 75px;
