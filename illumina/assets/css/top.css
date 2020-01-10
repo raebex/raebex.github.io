@@ -654,23 +654,22 @@
 	}
 }
 
-.taggbox-socialwall .loadMoreBtn {
-  background: transparent;
-  color: #5A498E;
-  border-color: #5A498E;
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 16px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  margin-top: 32px;
+.loadMoreWrapper .loadMoreBtn {
+  background: transparent !important;
+  color: #5A498E !important;
+  border-color: #5A498E !important;
+  border-radius: 4px !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  margin-top: 32px !important;
 }
 @media only screen and (min-width: 768px) {
-  .taggbox-socialwall .loadMoreBtn:hover {
-    background: rgba(225,225,225,0.30);
-    color: #5A498E;
-    color: #5A498E;
-    border-color: #5A498E;
+  .loadMoreWrapper .loadMoreBtn:hover {
+    background: rgba(225,225,225,0.30) !important;
+    color: #5A498E !important;
+    border-color: #5A498E !important;
   }
 }
 #campaign-banner {
