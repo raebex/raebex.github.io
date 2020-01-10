@@ -57,7 +57,6 @@
       <article class="inviewEl" id="firstview">
         <div id="firstview-inner">
           <div id="videoContainer"></div>
-          <canvas class="canvas"></canvas>
           <div id="firstview-content">
             <div id="firstview-text">
               <img id="firstview-logo" src="../assets/img/contents/kurokami/kurokami_2020_logo--white.svg" alt="Kurokami 2020 Logo">
@@ -84,7 +83,7 @@
         </div>
       </article>
       <div class="gradient-border"></div>
-      <article id="description" class="inviewEl">
+      <article id="description">
         <p>
           新しい人生への第一歩。 春からの新しい自分を見つけるために、
           <br>まずは髪色をチェンジしてみませんか?
@@ -413,27 +412,8 @@
       <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="../assets/js/common.js"></script>
       <script type="text/javascript" src="../assets/js/contents.js"></script>
-      <script type="text/javascript" src="../assets/js/canvas-video-player.js"></script>
       <script type="text/javascript" src="../assets/js/top.js"></script>
       <script type="text/javascript" src="../assets/js/kurokami.js"></script>
-      <script>
-        var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
-        if (isIOS) {
-          var canvasVideo = new CanvasVideoPlayer({
-            videoSelector: '.video',
-            canvasSelector: '.canvas',
-            timelineSelector: false,
-            autoplay: true,
-            makeLoop: true,
-            pauseOnClick: false,
-            audio: false
-          });
-        } else {
-          // Use HTML5 video
-          document.querySelectorAll('.canvas')[0].style.display = 'none';
-        }
-      </script>
     </div>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

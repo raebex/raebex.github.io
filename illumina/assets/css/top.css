@@ -292,34 +292,10 @@
   color: #343539;
   font-weight: 400;
   margin: 110px auto;
-  opacity: 0;
-  -webkit-transform: translateY(10px);
-     -moz-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-       -o-transform: translateY(10px);
-          transform: translateY(10px);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
 }
 #description p {
   font-size: 20px;
   line-height: 2.1;
-}
-#description.inviewed {
-  opacity: 1;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-     -moz-transition: opacity 1s, -moz-transform 1s;
-      -ms-transition: opacity 1s, -ms-transform 1s;
-       -o-transition: opacity 1s, -o-transform 1s;
-          transition: opacity 1s, transform 1s;
-  -webkit-transform: translateY(0);
-     -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-       -o-transform: translateY(0);
-          transform: translateY(0);
-
-  -ms-filter: none;
-      filter: none;
 }
 @media screen and (max-width: 768px) {
   #description {
