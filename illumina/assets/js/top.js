@@ -62,10 +62,10 @@ $(function() {
 
   function loadVideo (isMobile) {
     if (mediaQuery.matches){
-      var videoTag = "\<video preload=\"auto\" id=\"firstview-video\" autoplay muted loop playinline src=\"" + smallVideo +"\"/\>";
+      var videoTag = "\<video preload=\"auto\" id=\"firstview-video\" controls autoplay muted loop playinline src=\"" + smallVideo +"\"/\>";
       document.getElementById('videoContainer').innerHTML = videoTag;
     } else{
-      var videoTag = "\<video preload=\"auto\" id=\"firstview-video\" autoplay muted loop playinline src=\"" + bigVideo +"\"/\>";
+      var videoTag = "\<video preload=\"auto\" id=\"firstview-video\" controls autoplay muted loop playinline src=\"" + bigVideo +"\"/\>";
       document.getElementById('videoContainer').innerHTML = videoTag;
     }
   }
