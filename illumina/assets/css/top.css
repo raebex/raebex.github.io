@@ -259,6 +259,10 @@
 	#firstview {
 		border-top: 1px solid #d9d9d9;
 	}
+	#firstview-content {
+		background: rgb(117,102,198);
+		background: radial-gradient(circle, rgba(117,102,198,0.35) 0%, rgba(162,119,184,0.35) 100%);
+  }
   #firstview #firstview-text {
     position: absolute;
     bottom: 50px;
