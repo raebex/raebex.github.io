@@ -235,11 +235,11 @@
   }
   #firstview .movie-play-button:hover,
   #firstview .movie-play-button:focus {
-    -webkit-transform: scale(1.5);
-       -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-         -o-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.05);
+       -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+         -o-transform: scale(1.05);
+            transform: scale(1.05);
     -webkit-transition: -webkit-transform 0.5s;
        -moz-transition:    -moz-transform 0.5s;
         -ms-transition:     -ms-transform 0.5s;
