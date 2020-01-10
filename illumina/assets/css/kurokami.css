@@ -63,22 +63,30 @@
 }
 
 .beforeafter__left {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   left: -70px;
 }
 
 .beforeafter__left,
 .beforeafter__right {
-  background-image: url(../img/contents/kurokami/arrow.svg);
+  background: url(../img/contents/kurokami/arrow.svg) no-repeat center;
+  background-size: contain;
+  box-shadow: none;
+  border: 0;
   position: absolute;
   transition: background-image 0.15s ease;
   top: 37%;
   z-index: 4;
   width: 104px;
   height: 104px;
-  background-size: contain;
-  background-color: transparent;
-  border: 0;
+  -webkit-transition: background-position linear 0.5s;
+  -moz-transition: background-position linear 0.5s;
+  -o-transition: background-position linear 0.5s;
+  transition: background-position linear 0.5s;
+
 }
 
 .beforeafter__left:focus,
@@ -90,6 +98,9 @@
 }
 
 .beforeafter__left:hover {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -123,16 +134,25 @@
   max-width: 540px;
   margin: 60px auto 0;
   opacity: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
   transform: translateY(10px);
   transition: opacity 1s, transform 1s;
 }
 
 #beforeafter--video.inviewed {
   opacity: 1;
-  transform: translate(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 #video-before-after .beforeafter__left {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   left: -81px;
 }
@@ -184,11 +204,17 @@
 
   #video-before-after .beforeafter__inner {
     transition: transform 0.6s;
-    transform-style: preserve-3d;
   }
 
   #video-before-after .beforeafter.reveal-after .beforeafter__inner {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
 
   #video-before-after .before,
@@ -196,10 +222,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
     backface-visibility: hidden;
   }
 
   #video-before-after .after {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
 
@@ -235,11 +267,13 @@
 
 #bob {
   padding-bottom: 120px;
-  padding-top: 100px;
 }
 
 #bob .beforeafter {
   opacity: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
   transform: translateY(10px);
   transition: opacity 1s 0.25s, transform 1s 0.25s;
   height: 380px;
@@ -252,7 +286,10 @@
 
 #bob .beforeafter.inviewed {
   opacity: 1;
-  transform: translate(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 #bob .beforeafter[data-transition-delay="0.5"] {
@@ -268,6 +305,9 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
   backface-visibility: hidden;
   bottom: 12px;
 }
@@ -277,17 +317,26 @@
 }
 
 #bob .after {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   left: 12px;
 }
 
 #bob .beforeafter__inner {
   transition: transform 0.6s;
-  transform-style: preserve-3d;
 }
 
 #bob .beforeafter.reveal-after .beforeafter__inner {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 #bob .beforeafter__left,
@@ -368,6 +417,9 @@
   }
 
   #bob .after {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
     left: 8px;
   }
@@ -448,6 +500,7 @@
 }
 .campaign__arrow svg {
   height: 100%;
+  display: block;
 }
 .campaign__arrow.inviewed {
   opacity: 1;
@@ -574,7 +627,7 @@
 .kurokami-btn--outline {
   background: transparent;
   color: #fff;
-  border-color: #fff;
+  border: 1px solid #fff;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
@@ -618,7 +671,7 @@
 }
 @media only screen and (min-width: 768px) {
   .kurokami-btn:hover {
-    background: #8376AA;
+    background: #3F306D;
     color: #fff;
   }
   .kurokami-btn--outline:hover {
