@@ -1,4 +1,4 @@
-#firstview .gradient-border {
+.gradient-border {
   width: 100%;
   height: 12px;
   background: rgb(254,200,155);
@@ -36,35 +36,65 @@
   }
 }
 
-.beforeafter__left,
-.beforeafter__right {
-  background: transparent;
-  border: 0;
+.beforeafter {
+  position: relative;
   cursor: pointer;
-  background-image: url(../img/contents/kurokami/arrow.svg);
+  margin: 50px;
+  text-align: center;
 }
-.beforeafter__left {
-  transform: rotateY(180deg);
-}
+
 .beforeafter__inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
+  z-index: 2;
 }
-.before img,
-.after img {
-  width: 100%;
-}
+
 .before {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.5s ease;
 }
+
+.beforeafter.reveal-after .before {
+  opacity: 0;
+}
+
+.beforeafter__left {
+  transform: rotateY(180deg);
+  left: -70px;
+}
+
+.beforeafter__left,
+.beforeafter__right {
+  background-image: url(../img/contents/kurokami/arrow.svg);
+  position: absolute;
+  transition: background-image 0.15s ease;
+  top: 37%;
+  z-index: 4;
+  width: 104px;
+  height: 104px;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+}
+
+.beforeafter__left:focus,
+.beforeafter__right:focus,
+.beforeafter__left:hover,
+.beforeafter__right:hover {
+  background-image: url(../img/contents/kurokami/arrow-hover.svg);
+  outline: none;
+}
+
+.beforeafter__left:hover {
+  transform: rotateY(180deg);
+}
+
 .beforeafter__indicators {
-  margin-top: 15px;
+  margin-top: 28px;
   display: inline-block; 
 }
 
@@ -80,86 +110,46 @@
   margin: 0 6px;
   float: left;
 }
-@media only screen and (min-width: 768px) {
-  .beforeafter__left,
-  .beforeafter__right {
-    background-image: url(../img/contents/kurokami/arrow.svg);
-  }
-  .beforeafter__left:hover,
-  .beforeafter__left:focus,
-  .beforeafter__right:hover,
-  .beforeafter__right:focus {
-    background-image: url(../img/contents/kurokami/arrow-hover.svg);
-    outline: none;
-  }
-  .beforeafter__left:hover,
-  .beforeafter__left:focus {
-    transform: rotateY(180deg);
-  }
-}
+
+/* ==== video before and after ==== */
 
 #video-before-after {
-  padding-top: 90px;
+  padding-bottom: 50px;
+  padding-top: 70px;
   text-align: center;
+}
+
+#beforeafter--video {
   max-width: 540px;
   margin: 60px auto 0;
-  position: relative;
-  cursor: pointer;
-}
-#video-before-after p {
-  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
-  font-size: 20px;
-  color: #343539;
-  margin-bottom: 75px;
-}
-#beforeafter--video {
   opacity: 0;
--webkit-transform: translateY(10px);
-   -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-     -o-transform: translateY(10px);
-        transform: translateY(10px);
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  transform: translateY(10px);
+  transition: opacity 1s, transform 1s;
 }
+
 #beforeafter--video.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-     -moz-transition: opacity 0.5s, -moz-transform 0.5s;
-      -ms-transition: opacity 0.5s, -ms-transform 0.5s;
-       -o-transition: opacity 0.5s, -o-transform 0.5s;
-          transition: opacity 0.5s, transform 0.5s;
-  -webkit-transform: translateY(0);
-     -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-       -o-transform: translateY(0);
-          transform: translateY(0);
+  transform: translate(0);
+}
 
-  -ms-filter: none;
-      filter: none;
-}
 #video-before-after .beforeafter__left {
-  left: -70px;
+  transform: rotateY(180deg);
+  left: -81px;
 }
+
 #video-before-after .beforeafter__right {
-  right: -70px;
+  right: -57px;
 }
-#video-before-after .beforeafter__left,
-#video-before-after .beforeafter__right {
-  position: absolute;
-  transition: background-image 0.15s ease;
-  top: 40%;
-  z-index: 4;
-  width: 104px;
-  height: 104px;
-  background-size: contain;
-}
+
 @media only screen and (max-width: 768px) {
+  #video-before-after {
+    padding-bottom: 20px;
+  }
   #video-before-after .beforeafter__left {
     left: 10px;
   }
   #video-before-after .beforeafter__right {
-    right: 10px;
+    right: 23px;
   }
   #video-before-after .beforeafter__left,
   #video-before-after .beforeafter__right {
@@ -168,56 +158,103 @@
     height: 45px;
   }
 }
-@media only screen and (max-width: 567px) {
+
+@media only screen and (max-width: 540px) {
   #video-before-after .beforeafter__left,
   #video-before-after .beforeafter__right {
     width: 28px;
     height: 28px;
   }
+
+  #video-before-after .beforeafter__right {
+    right: 10px;
+  }
 }
 
-#bob {
-  margin: 110px 0;
+@media only screen and (min-width: 540px) {
+  #video-before-after .gradient-border {
+    display: none;
+  }
+
+  #video-before-after .beforeafter {
+    perspective: 1000px;
+    background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
+  opacity: 1;
+  }
+
+  #video-before-after .beforeafter__inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  #video-before-after .beforeafter.reveal-after .beforeafter__inner {
+    transform: rotateY(180deg);
+  }
+
+  #video-before-after .before,
+  #video-before-after .after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  #video-before-after .after {
+    transform: rotateY(180deg);
+  }
+
+  #video-before-after #beforeafter--video {
+    max-width: 540px;
+    height: 540px;
+  }
+
+  #video-before-after .before,
+  #video-before-after .after {
+    bottom: 12px;
+  }
+
+  #video-before-after .before {
+    right: 12px;
+  }
+
+  #video-before-after .after {
+    left: 12px;
+  }
 }
-#bob .beforeafter-wrapper {
-  max-width: 1110px;
+
+/* ==== bob before and after ==== */
+
+.beforeafter-wrapper {
   margin: 0 auto;
-  text-align: center;
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-#bob .beforeafter {
-  max-width: 380px;
-  width: 50%;
-  position: relative;
-  margin: 30px 75px;
-  opacity: 0;
--webkit-transform: translateY(10px);
-   -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-     -o-transform: translateY(10px);
-        transform: translateY(10px);
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+
+#bob {
+  padding-bottom: 120px;
+  padding-top: 100px;
 }
+
+#bob .beforeafter {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s 0.25s, transform 1s 0.25s;
+  height: 380px;
+  max-width: 380px;
+  perspective: 1000px;
+  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
+  width: 50%;
+  margin: 65px 75px;
+}
+
 #bob .beforeafter.inviewed {
   opacity: 1;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-     -moz-transition: opacity 1s, -moz-transform 1s;
-      -ms-transition: opacity 1s, -ms-transform 1s;
-       -o-transition: opacity 1s, -o-transform 1s;
-          transition: opacity 1s, transform 1s;
-  -webkit-transform: translateY(0);
-     -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-       -o-transform: translateY(0);
-          transform: translateY(0);
-
-  -ms-filter: none;
-      filter: none;
+  transform: translate(0);
 }
+
 #bob .beforeafter[data-transition-delay="0.5"] {
   -webkit-transition-delay: 0.5s;
      -moz-transition-delay: 0.5s;
@@ -225,46 +262,114 @@
        -o-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
+
+#bob .before,
+#bob .after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  bottom: 12px;
+}
+
+#bob .before {
+  right: 12px;
+}
+
+#bob .after {
+  transform: rotateY(180deg);
+  left: 12px;
+}
+
+#bob .beforeafter__inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+#bob .beforeafter.reveal-after .beforeafter__inner {
+  transform: rotateY(180deg);
+}
+
+#bob .beforeafter__left,
+#bob .beforeafter__right {
+  width: 74px;
+  height: 74px;
+}
+
 #bob .beforeafter__left {
   left: -50px;
 }
+
 #bob .beforeafter__right {
-  right: -50px;
+  right: -37px;
 }
-#bob .beforeafter__left,
-#bob .beforeafter__right {
-  position: absolute;
-  transition: background-image 0.15s ease;
-  top: 40%;
-  z-index: 4;
-  width: 74px;
-  height: 74px;
-  background-size: contain;
-}
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1068px) {
   #bob .beforeafter {
-    max-width: 100%;
-    width: 100%;
-    margin: 45px 24px;
-  }
-  #bob .beforeafter__left {
-    left: 10px;
-  }
-  #bob .beforeafter__right {
-    right: 10px;
-  }
-  #bob .beforeafter__left,
-  #bob .beforeafter__right {
-    width: 45px;
-    height: 45px;
-    background-size: contain;
+    margin: 55px;
   }
 }
-@media only screen and (max-width: 567px) {
+
+@media only screen and (max-width: 992px) {
   #bob .beforeafter__left,
   #bob .beforeafter__right {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 50px;
+  }
+
+  #bob .beforeafter__left {
+    left: -45px;
+  }
+
+  #bob .beforeafter__right {
+    right: -21px;
+  }
+
+  #bob .beforeafter {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #bob .beforeafter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #bob .beforeafter__left,
+  #bob .beforeafter__right {
+    width: 36px;
+    height: 36px;
+    top: 45%;
+  }
+
+  #bob .beforeafter__left {
+    left: 8px;
+  }
+
+  #bob .beforeafter__right {
+    right: 18px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  #bob .beforeafter {
+    height: 300px;
+    max-width: 300px;
+    margin: 42px 7px 42px 15px;;
+  }
+  #bob .before,
+  #bob .after {
+    bottom: 8px;
+  }
+
+  #bob .before {
+    right: 8px;
+  }
+
+  #bob .after {
+    transform: rotateY(180deg);
+    left: 8px;
   }
 }
 

@@ -7,15 +7,15 @@ $(function() {
     var $beforeIndicator = $this.find('.indicator--before');
     var $afterIndicator = $this.find('.indicator--after');
 
-    if ($before.is(':visible')) {
-      $before.fadeOut();
-      $beforeIndicator.removeClass('active');
-      $afterIndicator.addClass('active');
-      
-    } else {
-      $before.fadeIn();
+    if ($this.hasClass('reveal-after')) {
+      $this.removeClass('reveal-after');
       $beforeIndicator.addClass('active');
       $afterIndicator.removeClass('active');
+      
+    } else {
+      $this.addClass('reveal-after');
+      $beforeIndicator.removeClass('active');
+      $afterIndicator.addClass('active');
     }
   });
 });
