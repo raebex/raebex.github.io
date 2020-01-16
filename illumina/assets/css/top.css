@@ -293,6 +293,20 @@
     max-width: 1110px;;
   }
 }
+@media only screen and (min-width: 630px) and (max-width: 720px) {
+  #firstview-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1142px) {
+  #firstview-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
 #description {
   text-align: center;
   max-width: 790px;
