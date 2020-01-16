@@ -92,11 +92,13 @@
 }
 
 .beforeafter__left:focus,
-.beforeafter__right:focus,
+.beforeafter__right:focus {
+  outline: none;
+}
+
 .beforeafter__left:hover,
 .beforeafter__right:hover {
   background-image: url(../img/contents/kurokami/arrow-hover.svg);
-  outline: none;
 }
 
 .beforeafter__left:hover {
@@ -617,7 +619,7 @@
   padding: 21px 44px;
   color: #fff;
   border-radius: 4px;
-  display: inline;
+  display: inline-block;
   transition: background 0.5s ease;
 }
 .kurokami-btn:hover {

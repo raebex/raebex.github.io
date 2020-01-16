@@ -26,6 +26,9 @@
 .Barlow {
 	font-family: "Barlow", sans-serif;
 }
+.jt {
+  display:inline-block;
+}
 
 @-webkit-keyframes closeAnime {
   0% {
