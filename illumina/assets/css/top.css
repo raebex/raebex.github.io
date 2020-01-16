@@ -55,6 +55,11 @@
 #firstview #firstview-text {
   text-align: center;
 }
+#firstview #firstview-wella-logo {
+	width: auto;
+	height: auto;
+	margin-bottom: 36px;
+}
 #firstview #firstview-logo {
 	-webkit-background-size: 100% auto;
 	   -moz-background-size: 100% auto;
@@ -86,12 +91,12 @@
   height: 108px;
   vertical-align: middle;
 }
-#firstview .movie-play-button span {
+#firstview .movie-play-button .movie-play-button__text {
   text-indent: 0.1em;
   text-align: center;
   line-height: 1;
   font-size: 16px;
-  margin-left: 28px;
+  margin-top: 20px;
 }
 #movie-container {
   display: none;
