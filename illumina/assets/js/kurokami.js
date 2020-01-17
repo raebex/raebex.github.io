@@ -41,7 +41,6 @@ $(function() {
   const $inviewEl = $(".inviewEl"),
     $window = $(window),
     $body = $("body"),
-    $loadMoreBtn = $("#appendBtn"),
     mediaQueryMobile = window.matchMedia('(max-width: 480px)'),
     mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)'),
     mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)'),
@@ -53,10 +52,6 @@ $(function() {
 
   $inviewEl.on("inview", function() {
     $(this).addClass("inviewed");
-  });
-
-  $loadMoreBtn.on('load', function () {
-    addClass('kurokami-btn--outline');
   });
 
   $body.on('click', '.beforeafter', function () {

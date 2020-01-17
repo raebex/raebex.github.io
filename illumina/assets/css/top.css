@@ -655,18 +655,6 @@
 		line-height: 14.666666666666668vw;
 	}
 }
-
-#appendBtn {
-  background: transparent !important;
-  color: #5A498E !important;
-  border-color: #5A498E !important;
-  border-radius: 4px !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
-  margin-top: 32px !important;
-}
 @media only screen and (min-width: 768px) {
   .loadMoreWrapper .loadMoreBtn:hover {
     background: rgba(225,225,225,0.30) !important;
