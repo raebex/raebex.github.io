@@ -74,8 +74,7 @@ $(function() {
     $(this).addClass("inviewed");
   });
 
-  $loadMoreBtn.on('load', function () {
-    addClass('kurokami-btn--outline');
-    console.log($loadMoreBtn);
-  });
+  console.log('take 3', $loadMoreBtn);
+  $loadMoreBtn.attr('style', 'background: transparent !important');
+  $loadMoreBtn.addClass('kurokami-btn--outline');
 });

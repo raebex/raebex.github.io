@@ -656,7 +656,7 @@
 	}
 }
 
-.loadMoreWrapper .loadMoreBtn {
+#appendBtn {
   background: transparent !important;
   color: #5A498E !important;
   border-color: #5A498E !important;
