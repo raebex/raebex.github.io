@@ -44,7 +44,7 @@ function swipedetect(el, callback){
   startY,
   distX,
   distY,
-  threshold = 150, //required min distance traveled to be considered swipe
+  threshold = 50, //required min distance traveled to be considered swipe
   restraint = 100, // maximum distance allowed at the same time in perpendicular direction
   allowedTime = 300, // maximum time allowed to travel that distance
   elapsedTime,
@@ -58,7 +58,6 @@ function swipedetect(el, callback){
       startX = touchobj.pageX
       startY = touchobj.pageY
       startTime = new Date().getTime() // record time when finger first makes contact with surface
-      e.preventDefault()
   }, false)
 
   touchsurface.addEventListener('touchend', function(e){
