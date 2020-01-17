@@ -1,19 +1,69 @@
+const tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var ytPlayerKurokami;
+function onYouTubeIframeAPIReady() {
+  ytPlayerKurokami = new YT.Player(
+    "movie",
+    {
+      width: 800,
+      height: 467,
+      videoId: "FKmjMc94SZE",
+      events: {
+        'onReady': onPlayerReady
+      },
+      playerVars: {
+        origin: location.protocol + "//" + location.hostname + "/",
+        playsinline: 1
+      }
+    }
+  );
+}
+
+function onPlayerReady(event){
+  const $movieContainer = $("#movie-container"),
+        $moviePlayButton = $(".movie-play-button"),
+        $movieCloseButton = $("#movie-modal-close");
+
+  $moviePlayButton.on('click', function() {
+    $movieContainer.fadeIn();
+    ytPlayerKurokami.playVideo().mute();
+  });
+
+  $movieCloseButton.on("click", function() {
+    ytPlayerKurokami.pauseVideo();
+    $movieContainer.fadeOut(500);
+  });
+}
+
 $(function() {
-  const $body = $("body");
-  const mediaQueryMobile = window.matchMedia('(max-width: 480px)');
-  const mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)');
-  const mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)')
-  const xlVideo = "../assets/img/contents/kurokami/Koukousei-15s-1080.mp4";
-  const bigVideo= "../assets/img/contents/kurokami/Koukousei-15s-1080-cropped.mp4";
-  const medVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-720.mp4";
-  const smallVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-480.mp4";
-  const backupImg = "../assets/img/contents/kurokami/video-still.png";
+  const $inviewEl = $(".inviewEl"),
+    $window = $(window),
+    $body = $("body"),
+    $loadMoreBtn = $("#appendBtn"),
+    mediaQueryMobile = window.matchMedia('(max-width: 480px)'),
+    mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)'),
+    mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)'),
+    xlVideo = "../assets/img/contents/kurokami/Koukousei-15s-1080.mp4",
+    bigVideo= "../assets/img/contents/kurokami/Koukousei-15s-1080-cropped.mp4",
+    medVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-720.mp4",
+    smallVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-480.mp4",
+    backupImg = "../assets/img/contents/kurokami/video-still.png";
+
+  $inviewEl.on("inview", function() {
+    $(this).addClass("inviewed");
+  });
+
+  $loadMoreBtn.on('load', function () {
+    addClass('kurokami-btn--outline');
+  });
 
   $body.on('click', '.beforeafter', function () {
-    var $this = $(this);
-    var $before = $this.find('.before');
-    var $beforeIndicator = $this.find('.indicator--before');
-    var $afterIndicator = $this.find('.indicator--after');
+    let $this = $(this);
+    let $before = $this.find('.before');
+    let $beforeIndicator = $this.find('.indicator--before');
+    let $afterIndicator = $this.find('.indicator--after');
 
     if ($this.hasClass('reveal-after')) {
       $this.removeClass('reveal-after');

@@ -667,10 +667,14 @@
     width: 100%;
   }
   .campaign__step {
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
   }
   .campaign__arrow {
-    display: none;
+    transform: rotate(90deg);
+    margin: 0 auto 20px;
+  }
+  .campaign__arrow svg {
+    display: inline;
   }
 }
 @media only screen and (min-width: 768px) {
