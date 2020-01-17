@@ -76,5 +76,6 @@ $(function() {
 
   $loadMoreBtn.on('load', function () {
     addClass('kurokami-btn--outline');
+    console.log($loadMoreBtn);
   });
 });
