@@ -21,6 +21,7 @@
 .section__description {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   font-size: 20px;
+  line-height: 2.125;
   color: #343539;
   margin-bottom: 75px;
   text-align: center;
@@ -35,6 +36,7 @@
     margin-bottom: 45px;
     padding-left: 24px;
     padding-right: 24px;
+    font-size: 16px;
   }
 }
 
@@ -442,6 +444,14 @@
   max-width: 1110px;
 
 }
+#kurokami-campaign-title::after {
+  content: "";
+  height: 1px;
+  width: 75.5px;
+  background: #fff;
+  margin: 37px auto;
+  display: block;
+}
 #kurokami-campaign-content {
   border: 1px solid #fff;
   padding-top: 103px;
@@ -678,9 +688,6 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  #kurokami-campaign-content h2 {
-    font-size: 32px;
-  }
   .kurokami-btn:hover {
     background: #3F306D;
     color: #fff;
@@ -691,6 +698,12 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  #kurokami-campaign-content h2 {
+    font-size: 28px;
+  }
+  #kurokami-campaign-content-description {
+    font-size: 16px;
+  }
   .kurokami-btn {
     display: block;
     max-width: 450px;
