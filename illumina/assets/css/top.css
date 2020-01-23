@@ -39,6 +39,9 @@
   height: 100%;
   width: auto;
   margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 #firstview-content {
   position: absolute;
@@ -260,6 +263,11 @@
     outline: none;
   }
 }
+@media screen and (max-width: 567px) {
+  #firstview #firstview-logo {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 768px) {
 	#firstview {
 		border-top: 1px solid #d9d9d9;
@@ -267,17 +275,17 @@
 	#firstview-content {
 		background: rgb(117,102,198);
 		background: radial-gradient(circle, rgba(117,102,198,0.35) 0%, rgba(162,119,184,0.35) 100%);
-  }
-  #firstview #firstview-text {
-    position: absolute;
-    bottom: 50px;
-  }
-	#firstview #firstview-logo {
-		width: 80%;
+    }
+	#firstview #firstview-text {
+		position: absolute;
+		bottom: 50px;
 	}
 	#firstview #firstview-scroll {
 		display: none;
 	}
+  #firstview .movie-play-button img {
+    width: 88px;
+  }
   #firstview .movie-play-button span {
     margin-left: 0;
     margin-top: 28px;
