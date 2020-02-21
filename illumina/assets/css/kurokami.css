@@ -666,6 +666,14 @@ p.bob-modal__description {
   .bob-modal__stat {
     font-size: 20px;
   }
+
+  .bob-modal__stylist {
+    display: block;
+  }
+
+  .bob-modal__stylist-info {
+    margin-top: 30px;
+  }
 }
 
 #kurokami-campaign {
