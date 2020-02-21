@@ -29,6 +29,10 @@
 .jt {
   display:inline-block;
 }
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 
 @-webkit-keyframes closeAnime {
   0% {

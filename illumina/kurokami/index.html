@@ -222,7 +222,16 @@
             <span class="jt">イルミナカラーで</span><span class="jt">黒髪卒業を</span><span class="jt">記念して、</span><br><span class="jt">輝く</span><span class="jt">髪色を</span><span class="jt">投稿しよう。</span>
           </p>
           <div class="beforeafter-wrapper">
-            <div class="beforeafter inviewEl">
+            <div
+              class="beforeafter inviewEl"
+              data-color="BLOSSOM"
+              data-p1='<span class="jt">SUNLIGHTでハチ周りに</span><span class="jt">左右10枚ずつホイルワークの後、</span>'
+              data-p2='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist="Tierra"
+              data-stylist-comment='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist-description="ダメージを抑え"
+              data-stylist-description2="ダメ"
+            >
               <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
               <div class="beforeafter__inner">
                 <div class="before">
@@ -238,7 +247,18 @@
                 <div class="indicator indicator--after"></div>
               </div>
             </div>
-            <div class="beforeafter inviewEl" data-transition-delay="0.5">
+
+            <div
+              class="beforeafter inviewEl"
+              data-transition-delay="0.5"
+              data-color="DEEPSEA"
+              data-p1='<span class="jt">SUNLIGHTでハチ周りに</span><span class="jt">左右10枚ずつホイルワークの後、</span>'
+              data-p2='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist="Tierra"
+              data-stylist-comment='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist-description="ダメージを抑え"
+              data-stylist-description2="ダメ"
+            >
               <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
               <div class="beforeafter__inner">
                 <div class="before">
@@ -254,7 +274,17 @@
                 <div class="indicator indicator--after"></div>
               </div>
             </div>
-            <div class="beforeafter inviewEl">
+
+            <div
+              class="beforeafter inviewEl"
+              data-color="BLOSSOM"
+              data-p1='<span class="jt">SUNLIGHTでハチ周りに</span><span class="jt">左右10枚ずつホイルワークの後、</span>'
+              data-p2='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist="Tierra"
+              data-stylist-comment='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist-description="ダメージを抑え"
+              data-stylist-description2="ダメ"
+            >
               <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
               <div class="beforeafter__inner">
                 <div class="before">
@@ -270,7 +300,18 @@
                 <div class="indicator indicator--after"></div>
               </div>
             </div>
-            <div class="beforeafter inviewEl" data-transition-delay="0.5">
+
+            <div
+              class="beforeafter inviewEl"
+              data-transition-delay="0.5"
+              data-color="STARDUST"
+              data-p1='<span class="jt">SUNLIGHTでハチ周りに</span><span class="jt">左右10枚ずつホイルワークの後、</span>'
+              data-p2='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist="Tierra"
+              data-stylist-comment='<span class="jt">ダメージを抑えながらトーンアップするSUNLIGHT</span><span class="jt">なら、ハイライト部もするっとダメージレスな指通</span><span class="jt">りが叶う。</span>'
+              data-stylist-description="ダメージを抑え"
+              data-stylist-description2="ダメ"
+            >
               <button class="beforeafter__left"><span class="sr-only">Previous</span></button>
               <div class="beforeafter__inner">
                 <div class="before">
@@ -286,6 +327,51 @@
                 <div class="indicator indicator--after"></div>
               </div>
             </div>
+
+            <div class="bob-overlay hidden"></div>
+            <template id="bobModal">
+              <div class="bob-modal">
+                <button id="closeBobModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"></path></svg>
+                </button>
+                <img id="modelImg" src="" alt="After picture"/>
+                <div class="bob-modal__heading">
+                  <span class="Barlow">FEATURE COLOR:</span>
+                  <br>
+                  <h4 id="colorTitle" class="bob__color"></h4>
+                </div>
+                <p id="p1"></p>
+                <div class="bob-modal__stats">
+                  <div class="bob-modal__stat bob-modal__stats-1">
+                    <div class="number">1 <br>剤</div>
+                    <div class="text-left mr-3">
+                      <span class="tag tag--nude">NUDE</span>
+                      <div>10 level：</div>
+                    </div>
+                    <div class="text-left">
+                      <span class="tag tag--color"></span>
+                      <div>10 level（3:1）</div>
+                    </div>
+                  </div>
+                  <div class="bob-modal__stat bob-modal__stats-2">
+                    <div class="number">2<br>剤</div>
+                    <span>6%（等倍）</span>
+                  </div>
+                </div>
+                <p id="p2" class="bob-modal__description"></p>
+                <div class="bob-modal__stylist">
+                  <img id="stylistImg" src="" alt="Stylist image">
+                  <div class="bob-modal__stylist-info">
+                    <div class="bob-modal__stylist-info-heading">
+                      <h4 id="stylistName"></h4>
+                      <span id="stylistDescription"></span>
+                      <span id="stylistDescription2"></span>
+                    </div>
+                    <p id="stylistComment"></p>
+                  </div>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
       </article>
