@@ -162,10 +162,10 @@ function swipedetect(el, callback){
 function loadVideo (mobile, tablet, desktop) {
   let videoTag;
   let videoContainer = document.getElementById('videoContainer');
-  const xlVideo = "../assets/img/contents/kurokami/Koukousei-15s-1080.mp4",
-        bigVideo= "../assets/img/contents/kurokami/Koukousei-15s-1080-cropped.mp4",
-        medVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-720.mp4",
-        smallVideo = "../assets/img/contents/kurokami/Koukousei-15s-sq-480.mp4";
+  const xlVideo = "../assets/img/contents/kurokami/musume-1080.mp4",
+        bigVideo= "../assets/img/contents/kurokami/musume-1080-cropped.mp4",
+        medVideo = "../assets/img/contents/kurokami/musume-720.mp4",
+        smallVideo = "../assets/img/contents/kurokami/musume-480.mp4";
 
   if (mobile.matches){
     videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;

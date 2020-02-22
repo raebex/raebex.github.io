@@ -1,18 +1,8 @@
-.gradient-border {
-  width: 100%;
-  height: 12px;
-  background: rgb(254,200,155);
-  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);
-}
-
-.section__icon {
-  width: 48px;
-  margin-bottom: 40px;
-}
 .section__title {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #5a498e;
   margin-bottom: 30px;
+  margin-top: 30px;
   text-align: center;
   font-size: 34px;
   font-weight: 600;
@@ -116,14 +106,14 @@
 }
 
 .indicator.active {
-  background-color: #FFA1C2;
+  background-color: #A897DA;
 }
 
 .indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid #FFA1C2;
+  border: 1px solid #A897DA;
   margin: 0 6px;
   float: left;
 }
@@ -198,14 +188,9 @@
 }
 
 @media only screen and (min-width: 540px) {
-  #video-before-after .gradient-border {
-    display: none;
-  }
-
   #video-before-after .beforeafter {
     perspective: 1000px;
-    background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
-  opacity: 1;
+    opacity: 1;
   }
 
   #video-before-after .beforeafter__inner {
@@ -286,7 +271,6 @@
   height: 380px;
   max-width: 380px;
   perspective: 1000px;
-  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
   width: 50%;
   margin: 65px 75px;
 }
@@ -678,15 +662,18 @@ p.bob-modal__description {
 
 #kurokami-campaign {
   padding-bottom: 1px;
+  border-radius: 4px;
 }
 #kurokami-campaign-inner {
-  background: #CC9FFF url(../img/contents/top/banner-bg.png) no-repeat;
-  background-size: cover;  padding: 23px;
+  /*background: rgb(91,169,236);
+  background: linear-gradient(119deg, rgba(91,169,236,1) 20%, rgba(137,205,245,1) 100%);*/
+  background: url(../img/contents/kurokami/campaign/banner-bg-blue.png) no-repeat;
+  padding: 23px;
   color: #fff;
   position: relative;
   margin: 82px auto;
   max-width: 1110px;
-
+  border-radius: 4px;
 }
 #kurokami-campaign-title::after {
   content: "";
@@ -702,35 +689,6 @@ p.bob-modal__description {
   padding-bottom: 100px;
   position: relative;
 }
-.campaign__border {
-  position: absolute;
-  width: 43px;
-  height: 43px;
-}
-.campaign__border--top-left {
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  top: 10px;
-  left: 10px;
-}
-.campaign__border--top-right {
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  top: 10px;
-  right: 10px;
-}
-.campaign__border--bottom-left {
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff;
-  bottom: 10px;
-  left: 10px;
-}
-.campaign__border--bottom-right {
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
-  bottom: 10px;
-  right: 10px;
-}
 #kurokami-campaign-content h2 {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #fff;
@@ -745,10 +703,9 @@ p.bob-modal__description {
   font-size: 20px;
   margin: 0 auto 75px;
   text-align: center;
-  max-width: 790px;
+  max-width: 805px;
 }
 .campaign__stars {
-  margin-top: -37px;
   width: 38px;
 }
 .campaign__arrow {
@@ -782,7 +739,6 @@ p.bob-modal__description {
 }
 .campaign__step {
   width: 240px;
-  height: 240px;
   text-align: center;
   position: relative;
   color: #564685;
@@ -829,36 +785,60 @@ p.bob-modal__description {
   max-width: 100%;
 }
 .campaign__step-text {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
-}
-.campaign__step-text p {
-  margin: auto;
-  max-width: 140px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.campaign__step__content {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  top: 47%;
+  left: 0;
+  color: #1A5BA6;
   width: 100%;
-  top: 0;
-  height: 100%;
+  text-align: center;
 }
-.campaign__img {
-  max-height: 55px !important;
+.campaign__details {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
 }
-.campaign__step-2 .campaign__img {
-  max-height: 66px !important;
+.campaign__details h4 {
+  font-weight: 600;
 }
-.campaign__step-3 .campaign__step-text p {
-  margin-top: 85px;
+.campaign__egift {
+  background: #fff;
+  border-radius: 4px;
+  color: #1A5BA6;
+  width: 80%;
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 40px 60px;
+  font-size: 16px;
 }
-.campaign__img--overlap {
-  width: 60px;
+.campaign__egift h3 {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.campaign__egift__logos {
+  margin-top: 25px;
+}
+.campaign__egift__logos img {
+  margin: 0 5px;
+}
+.logo-amazon {
+  width: 128px;
+}
+.logo-apple {
+  width: 79px;
+}
+.logo-nanaco {
+  width: 102px;
+}
+.logo-redy {
+  width: 31px;
+}
+.campaign__tc {
+  font-size: 8px;
+  color: #646464;
+  margin-top: 25px;
+  line-height: 1.5;
 }
 .campaign__buttons {
   text-align: center;
@@ -885,8 +865,8 @@ p.bob-modal__description {
 }
 .kurokami-btn--outline {
   background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #5A498E;
+  border: 1px solid #5A498E;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
@@ -896,13 +876,11 @@ p.bob-modal__description {
 #tcModal {
   color: #564685;
 }
-.tc__list {
-  text-align: left;
-  margin: 24px 24px 24px 36px;
+.tc__body {
+  padding: 30px;
 }
-.tc__list li {
-  list-style-type: decimal;
-  margin-bottom: 2rem;
+.tc__section {
+  margin: 20px 0;
 }
 @media only screen and (max-width: 1110px) {
   .campaign__steps {
