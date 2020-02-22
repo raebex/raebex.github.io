@@ -72,7 +72,7 @@
   border: 0;
   position: absolute;
   transition: background-image 0.15s ease;
-  top: 37%;
+  top: 43%;
   z-index: 4;
   width: 104px;
   height: 104px;
@@ -80,7 +80,6 @@
   -moz-transition: background-position linear 0.5s;
   -o-transition: background-position linear 0.5s;
   transition: background-position linear 0.5s;
-
 }
 
 .beforeafter__left:focus,
@@ -150,11 +149,11 @@
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  left: -81px;
+  left: -65px;
 }
 
 #video-before-after .beforeafter__right {
-  right: -57px;
+  right: -65px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -189,7 +188,6 @@
 
 @media only screen and (min-width: 540px) {
   #video-before-after .beforeafter {
-    perspective: 1000px;
     opacity: 1;
   }
 
@@ -197,51 +195,15 @@
     transition: transform 0.6s;
   }
 
-  #video-before-after .beforeafter.reveal-after .beforeafter__inner {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  #video-before-after .before,
-  #video-before-after .after {
+  #video-before-after .before {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;
-    backface-visibility: hidden;
-  }
-
-  #video-before-after .after {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
   }
 
   #video-before-after #beforeafter--video {
     max-width: 540px;
     height: 540px;
-  }
-
-  #video-before-after .before,
-  #video-before-after .after {
-    bottom: 12px;
-  }
-
-  #video-before-after .before {
-    right: 12px;
-  }
-
-  #video-before-after .after {
-    left: 12px;
   }
 }
 
@@ -270,7 +232,6 @@
   transition: opacity 1s 0.25s, transform 1s 0.25s;
   height: 380px;
   max-width: 380px;
-  perspective: 1000px;
   width: 50%;
   margin: 65px 75px;
 }
@@ -291,43 +252,14 @@
           transition-delay: 0.5s;
 }
 
-#bob .before,
-#bob .after {
+#bob .before {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility:    hidden;
-  -ms-backface-visibility:     hidden;
-  backface-visibility: hidden;
-  bottom: 12px;
-}
-
-#bob .before {
-  right: 12px;
-}
-
-#bob .after {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  left: 12px;
 }
 
 #bob .beforeafter__inner {
   transition: transform 0.6s;
-}
-
-#bob .beforeafter.reveal-after .beforeafter__inner {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
 #bob .beforeafter__left,
@@ -337,11 +269,11 @@
 }
 
 #bob .beforeafter__left {
-  left: -50px;
+  left: -47px;
 }
 
 #bob .beforeafter__right {
-  right: -37px;
+  right: -47px;
 }
 
 @media only screen and (max-width: 1068px) {
@@ -358,11 +290,11 @@
   }
 
   #bob .beforeafter__left {
-    left: -45px;
+    left: -30px;
   }
 
   #bob .beforeafter__right {
-    right: -21px;
+    right: -30px;
   }
 
   #bob .beforeafter {
@@ -388,7 +320,7 @@
   }
 
   #bob .beforeafter__right {
-    right: 18px;
+    right: 8px;
   }
 }
 
@@ -397,22 +329,6 @@
     height: 300px;
     max-width: 300px;
     margin: 42px 7px 42px 15px;;
-  }
-  #bob .before,
-  #bob .after {
-    bottom: 8px;
-  }
-
-  #bob .before {
-    right: 8px;
-  }
-
-  #bob .after {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    left: 8px;
   }
 }
 
@@ -797,9 +713,11 @@ p.bob-modal__description {
   font-size: 16px;
   text-align: center;
   margin-top: 40px;
+  line-height: 1.5;
 }
 .campaign__details h4 {
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .campaign__egift {
   background: #fff;
