@@ -1,37 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap');
-@font-face {
-	font-family: "Noto Serif Japanese";
-	font-weight: 400;
-	font-style: normal;
-
-	font-display: swap;
-	src: url("/webfonts/NotoSerif/NotoSerifJP-Regular.otf") format("opentype");
-}
-@font-face {
-	font-family: "Noto Serif Japanese";
-	font-weight: 600;
-	font-style: normal;
-
-	font-display: swap;
-	src: url("/webfonts/NotoSerif/NotoSerifJP-SemiBold.otf") format("opentype");
-}
-@font-face {
-	font-family: "Noto Serif Japanese";
-	font-weight: 700;
-	font-style: normal;
-
-	font-display: swap;
-	src: url("/webfonts/NotoSerif/NotoSerifJP-Bold.otf") format("opentype");
-}
 .Barlow {
 	font-family: "Barlow", sans-serif;
-}
-.jt {
-  display:inline-block;
-}
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
 }
 
 @-webkit-keyframes closeAnime {
