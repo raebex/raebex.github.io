@@ -1,18 +1,8 @@
-.gradient-border {
-  width: 100%;
-  height: 12px;
-  background: rgb(254,200,155);
-  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);
-}
-
-.section__icon {
-  width: 48px;
-  margin-bottom: 40px;
-}
 .section__title {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #5a498e;
   margin-bottom: 30px;
+  margin-top: 30px;
   text-align: center;
   font-size: 34px;
   font-weight: 600;
@@ -82,7 +72,7 @@
   border: 0;
   position: absolute;
   transition: background-image 0.15s ease;
-  top: 37%;
+  top: 33%;
   z-index: 4;
   width: 104px;
   height: 104px;
@@ -90,7 +80,6 @@
   -moz-transition: background-position linear 0.5s;
   -o-transition: background-position linear 0.5s;
   transition: background-position linear 0.5s;
-
 }
 
 .beforeafter__left:focus,
@@ -111,21 +100,72 @@
 }
 
 .beforeafter__indicators {
-  margin-top: 28px;
-  display: inline-block; 
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 100;
 }
 
 .indicator.active {
-  background-color: #FFA1C2;
+  background-color: #A897DA;
 }
 
 .indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid #FFA1C2;
+  border: 1px solid #A897DA;
   margin: 0 6px;
   float: left;
+}
+
+.beforeafter__feature-color {
+  margin: 30px auto 0;
+  display: block;
+  position: relative;
+  background: none;
+  border: 0;
+}
+
+.beforeafter__feature-color .bob__feature-text {
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1.6px;
+}
+
+.beforeafter__feature-color:focus {
+  outline: none;
+}
+
+.beforeafter__feature-color:hover .bob__color:before,
+.beforeafter__feature-color:focus .bob__color:before {
+  animation-name: underlineAnimate;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.beforeafter__feature-color .bob__color:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+}
+
+@keyframes underlineAnimate {
+  from {
+    visibility: hidden;
+    width: 0;
+  }
+
+  to {
+    visibility: visible;
+    width: 100%;
+  }
 }
 
 /* ==== video before and after ==== */
@@ -160,11 +200,11 @@
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  left: -81px;
+  left: -65px;
 }
 
 #video-before-after .beforeafter__right {
-  right: -57px;
+  right: -65px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -198,65 +238,23 @@
 }
 
 @media only screen and (min-width: 540px) {
-  #video-before-after .gradient-border {
-    display: none;
-  }
-
   #video-before-after .beforeafter {
-    perspective: 1000px;
-    background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
-  opacity: 1;
+    opacity: 1;
   }
 
   #video-before-after .beforeafter__inner {
     transition: transform 0.6s;
   }
 
-  #video-before-after .beforeafter.reveal-after .beforeafter__inner {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  #video-before-after .before,
-  #video-before-after .after {
+  #video-before-after .before {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;
-    backface-visibility: hidden;
-  }
-
-  #video-before-after .after {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
   }
 
   #video-before-after #beforeafter--video {
     max-width: 540px;
     height: 540px;
-  }
-
-  #video-before-after .before,
-  #video-before-after .after {
-    bottom: 12px;
-  }
-
-  #video-before-after .before {
-    right: 12px;
-  }
-
-  #video-before-after .after {
-    left: 12px;
   }
 }
 
@@ -283,10 +281,7 @@
   -ms-transform: translateY(10px);
   transform: translateY(10px);
   transition: opacity 1s 0.25s, transform 1s 0.25s;
-  height: 380px;
   max-width: 380px;
-  perspective: 1000px;
-  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);  
   width: 50%;
   margin: 65px 75px;
 }
@@ -307,43 +302,14 @@
           transition-delay: 0.5s;
 }
 
-#bob .before,
-#bob .after {
+#bob .before {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility:    hidden;
-  -ms-backface-visibility:     hidden;
-  backface-visibility: hidden;
-  bottom: 12px;
-}
-
-#bob .before {
-  right: 12px;
-}
-
-#bob .after {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  left: 12px;
 }
 
 #bob .beforeafter__inner {
   transition: transform 0.6s;
-}
-
-#bob .beforeafter.reveal-after .beforeafter__inner {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
 #bob .beforeafter__left,
@@ -353,11 +319,11 @@
 }
 
 #bob .beforeafter__left {
-  left: -50px;
+  left: -47px;
 }
 
 #bob .beforeafter__right {
-  right: -37px;
+  right: -47px;
 }
 
 @media only screen and (max-width: 1068px) {
@@ -374,11 +340,11 @@
   }
 
   #bob .beforeafter__left {
-    left: -45px;
+    left: -30px;
   }
 
   #bob .beforeafter__right {
-    right: -21px;
+    right: -30px;
   }
 
   #bob .beforeafter {
@@ -396,7 +362,7 @@
   #bob .beforeafter__right {
     width: 36px;
     height: 36px;
-    top: 45%;
+    top: 35%;
   }
 
   #bob .beforeafter__left {
@@ -404,45 +370,352 @@
   }
 
   #bob .beforeafter__right {
-    right: 18px;
+    right: 8px;
   }
 }
 
 @media only screen and (max-width: 385px) {
   #bob .beforeafter {
-    height: 300px;
     max-width: 300px;
     margin: 42px 7px 42px 15px;;
   }
-  #bob .before,
-  #bob .after {
-    bottom: 8px;
+}
+
+/* ==== bob modal popup ==== */
+
+.bob-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(63,48,109, .5);
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  z-index: 100000;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit--moz-box-pack: center;
+  box-pack: center;
+  justify-content: center;
+}
+
+.bob-overlay.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.bob-modal {
+  position: relative;
+  max-width: 540px;
+  width: 98%;
+  background: #fff;
+  padding: 50px;
+  border: 1px solid #ccc;
+  max-height: 98vh;
+  overflow: scroll;
+}
+
+.bob-modal-content.hidden {
+  display: none;
+}
+
+.bob-modal p {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  text-align: left;
+  font-size: 20px;
+  color: #231815;
+}
+
+.bob-modal img {
+  width: 100%;
+}
+
+#closeBobModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: 0;
+}
+
+#closeBobModal svg {
+  width: 30px;
+  fill: #ccc;
+  transition: fill 0.5s ease;
+}
+
+#closeBobModal svg:hover {
+  fill: #999;
+}
+
+.bob-modal__heading {
+  font-family: "Barlow", sans-serif;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #231815;
+}
+
+.bob__color {
+  text-align: left;
+  font-size: 48px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-family: "Barlow", sans-serif;
+}
+
+
+.bob__color--BLOSSOM {
+  color: #E85298;
+}
+
+.bob__color--BLOSSOM:before {
+  background-color: #E85298;
+}
+
+.bob-modal .bob__color--BLOSSOM {
+  border-bottom: 4px solid #E85298;
+}
+
+.bob__color--STARDUST {
+  color: #687271;
+}
+
+.bob__color--STARDUST:before {
+  background-color: #687271;
+}
+
+.bob-modal .bob__color--STARDUST {
+  border-bottom: 4px solid #687271;
+}
+
+.bob-modal__stats {
+  margin-top: 40px;
+}
+
+.bob-modal__stat {
+  margin: 10px 0 50px;
+}
+
+.bob-modal__recipe {
+  margin-bottom: 10px;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  text-align: left;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.bob-modal__recipe-heading {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  position: relative;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.bob-modal__recipe-heading:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid black;
+  position: absolute;
+  left: -15px;
+  top: 3px;
+}
+
+.bob-modal__recipe-section {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.bob-modal__recipe-section--no-tag {
+  align-self: flex-end;
+}
+
+.bob-modal__recipe .number {
+  background: #343539;
+  border-radius: 2px;
+  color: #fff;
+  width: 24px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  margin-right: 16px;
+  letter-spacing: 0px;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.bob-modal__recipe .tag {
+  font-family: "Barlow", sans-serif;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: left;
+  padding: 2px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.bob-modal__recipe .tag--color--NUDE {
+  background: #D0B7A4;
+}
+
+.bob-modal__recipe .tag--color--BLOSSOM {
+  background: #E85298;
+}
+
+.bob-modal__recipe .tag--color--DEEPSEA {
+  background: #2783D3;
+}
+
+.bob-modal__recipe .tag--color--STARDUST {
+  background: #687271;
+}
+
+.bob-modal__recipe .tag--color--FOREST {
+  background: #9CC6A2;
+}
+
+.bob-modal__recipe .tag--color--SAFARI {
+  background: #906D58;
+}
+
+.bob-modal__recipe .tag--color--ORCHID {
+  background: #705C87;
+}
+
+p.bob-modal__description {
+  font-size: 16px;
+}
+
+.bob-modal__stylist {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  border-top: 1px solid #D4D6DA;
+  margin-top: 50px;
+  padding-top: 30px;
+  display: flex;
+  font-size: 16px;
+}
+
+.bob-modal__stylist-info {
+  text-align: left;
+}
+
+.bob-modal__stylist img {
+  align-self: start;
+  width: 140px;
+  margin-right: 25px;
+}
+
+.bob-modal__stylist p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.bob-modal__stylist-info-heading {
+  font-weight: 700;
+}
+
+.bob-modal__stylist-info-heading h4,
+.bob-modal__stylist-info-heading #stylistDescription {
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bob-modal__stylist-info-heading #stylistDescription2 {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 567px) {
+  .bob-modal {
+    padding: 35px 25px 25px;
   }
 
-  #bob .before {
-    right: 8px;
+  #closeBobModal {
+    top: 3px;
+    right: 3px;
   }
 
-  #bob .after {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    left: 8px;
+  .bob-modal p {
+    font-size: 16px;
+  }
+
+  .bob-modal__stat {
+    font-size: 20px;
+  }
+
+  .bob-modal__stylist {
+    display: block;
+    text-align: left;
+  }
+
+  .bob-modal__stylist-info {
+    margin-top: 30px;
+  }
+
+  .bob-modal__recipe {
+    display: block;
+    line-height: 48px;
+  }
+
+  .bob-modal__recipe .number {
+    float: left;
+  }
+
+  .bob-modal__recipe-section {
+    margin-left: 40px;
+    margin-top: 10px;
+    line-height: 1;
   }
 }
 
 #kurokami-campaign {
   padding-bottom: 1px;
+  border-radius: 4px;
 }
 #kurokami-campaign-inner {
-  background: #CC9FFF url(../img/contents/top/banner-bg.png) no-repeat;
-  background-size: cover;  padding: 23px;
+  background: url(../img/contents/kurokami/campaign/banner-bg-blue.png) no-repeat;
+  background-size: cover;
+  padding: 23px;
   color: #fff;
   position: relative;
   margin: 82px auto;
   max-width: 1110px;
-
+  border-radius: 4px;
 }
 #kurokami-campaign-title::after {
   content: "";
@@ -458,35 +731,6 @@
   padding-bottom: 100px;
   position: relative;
 }
-.campaign__border {
-  position: absolute;
-  width: 43px;
-  height: 43px;
-}
-.campaign__border--top-left {
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  top: 10px;
-  left: 10px;
-}
-.campaign__border--top-right {
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  top: 10px;
-  right: 10px;
-}
-.campaign__border--bottom-left {
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff;
-  bottom: 10px;
-  left: 10px;
-}
-.campaign__border--bottom-right {
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
-  bottom: 10px;
-  right: 10px;
-}
 #kurokami-campaign-content h2 {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #fff;
@@ -501,10 +745,9 @@
   font-size: 20px;
   margin: 0 auto 75px;
   text-align: center;
-  max-width: 790px;
+  max-width: 805px;
 }
 .campaign__stars {
-  margin-top: -37px;
   width: 38px;
 }
 .campaign__arrow {
@@ -538,7 +781,6 @@
 }
 .campaign__step {
   width: 240px;
-  height: 240px;
   text-align: center;
   position: relative;
   color: #564685;
@@ -585,36 +827,62 @@
   max-width: 100%;
 }
 .campaign__step-text {
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.5;
+  position: absolute;
+  top: 47%;
+  left: 0;
+  color: #1A5BA6;
+  width: 100%;
+  text-align: center;
+}
+.campaign__details {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
   line-height: 1.5;
 }
-.campaign__step-text p {
-  margin: auto;
-  max-width: 140px;
-  margin-top: 10px;
+.campaign__details h4 {
+  font-weight: 600;
   margin-bottom: 10px;
 }
-.campaign__step__content {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  top: 0;
-  height: 100%;
+.campaign__egift {
+  background: #fff;
+  border-radius: 4px;
+  color: #1A5BA6;
+  width: 80%;
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 40px 60px;
+  font-size: 16px;
 }
-.campaign__img {
-  max-height: 55px !important;
+.campaign__egift h3 {
+  font-weight: 600;
+  margin-bottom: 25px;
 }
-.campaign__step-2 .campaign__img {
-  max-height: 66px !important;
+.campaign__egift__logos {
+  margin-top: 25px;
 }
-.campaign__step-3 .campaign__step-text p {
-  margin-top: 85px;
+.campaign__egift__logos img {
+  margin: 0 5px;
 }
-.campaign__img--overlap {
-  width: 60px;
+.logo-amazon {
+  width: 128px;
+}
+.logo-apple {
+  width: 79px;
+}
+.logo-nanaco {
+  width: 102px;
+}
+.logo-redy {
+  width: 31px;
+}
+.campaign__tc {
+  font-size: 8px;
+  color: #646464;
+  margin-top: 25px;
+  line-height: 1.5;
 }
 .campaign__buttons {
   text-align: center;
@@ -641,8 +909,8 @@
 }
 .kurokami-btn--outline {
   background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #5A498E;
+  border: 1px solid #5A498E;
   border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
@@ -652,13 +920,26 @@
 #tcModal {
   color: #564685;
 }
-.tc__list {
-  text-align: left;
-  margin: 24px 24px 24px 36px;
+.tc__section {
+  margin-bottom: 60px;
 }
-.tc__list li {
-  list-style-type: decimal;
-  margin-bottom: 2rem;
+.modal-dialog {
+  max-width: 980px;
+}
+.modal-body {
+  padding: 100px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+button.close {
+  position: absolute;
+  right: 50px;
+  top: 50px;
 }
 @media only screen and (max-width: 1110px) {
   .campaign__steps {
@@ -713,11 +994,45 @@
     min-width: unset;
     padding: 21px;
   }
+  .campaign__egift {
+    background: #fff;
+    border-radius: 4px;
+    color: #1A5BA6;
+    width: 90%;
+    margin: 40px auto 70px;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+  .modal-body {
+    padding: 60px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #kurokami-campaign-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .modal-body {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  button.close {
+    right: 20px;
+    top: 20px;
+  }
 }
 
 #faq {
-	margin-top: 110px;
-	padding-bottom: 110px;
+  margin-top: 110px;
+  padding-bottom: 110px;
 }
 #faq .section__title {
   margin-bottom: 88px;

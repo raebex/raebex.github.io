@@ -1,3 +1,82 @@
+$(function() {
+  const $inviewEl = $(".inviewEl"),
+    $window = $(window),
+    $body = $("body"),
+    mediaQueryMobile = window.matchMedia('(max-width: 480px)'),
+    mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)'),
+    mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)');
+
+  loadVideo(mediaQueryMobile, mediaQueryTablet, mediaQueryDesktop);
+
+  $inviewEl.on("inview", function() {
+    $(this).addClass("inviewed");
+  });
+
+  // Show BOB model modal
+  $body.on('click', '#bob .beforeafter__feature-color', function (event) {
+    openBobModal($(this).parents('.beforeafter'));
+  });
+
+  // Toggle before/after pictures
+  $body.on('click', '.beforeafter .beforeafter__right, .beforeafter .beforeafter__left', function () {
+    let $this = $(this).parent();
+
+    if ($this.hasClass('reveal-after')) {
+      showBeforePicture($this, findIndicators($this));
+    } else {
+      showAfterPicture($this, findIndicators($this));
+    }
+  });
+
+  // Add swipe functionality for mobile screens
+  if (mediaQueryMobile || mediaQueryTablet) {
+    const el = document.querySelector('#beforeafter--video .beforeafter__inner');
+    const bobs = document.querySelectorAll('#bob .beforeafter__inner');
+
+    swipedetect(el, function(swipedir){
+        if (swipedir === 'left') {
+          showAfterPicture($(el.parentNode), findIndicators($(el.parentNode)));
+        } else if (swipedir === 'right') {
+          showBeforePicture($(el.parentNode), findIndicators($(el.parentNode)));
+        }
+    });
+
+    bobs.forEach((bob) => {
+      swipedetect(bob, function(swipedir){
+        if (swipedir === 'left') {
+          showAfterPicture($(bob.parentNode), findIndicators($(bob.parentNode)));
+        } else if (swipedir === 'right') {
+          showBeforePicture($(bob.parentNode), findIndicators($(bob.parentNode)));
+        } else if (swipedir === 'none') {
+          openBobModal($(bob).parents('.beforeafter'));
+        }
+      });
+    });
+  }
+});
+
+function findIndicators ($el) {
+  let indicators = {};
+
+  indicators.before = $el.find('.indicator--before');
+  indicators.after = $el.find('.indicator--after');
+
+  return indicators; 
+}
+
+function showBeforePicture ($el, indicators) {
+  $el.removeClass('reveal-after');
+  indicators.after.removeClass('active');
+  indicators.before.addClass('active');
+}
+
+function showAfterPicture ($el, indicators) {
+  $el.addClass('reveal-after');
+  indicators.after.addClass('active');
+  indicators.before.removeClass('active');
+}
+
+// Embed youtube video
 const tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName("script")[0];
@@ -14,8 +93,7 @@ function onYouTubeIframeAPIReady() {
         'onReady': onPlayerReady
       },
       playerVars: {
-        origin: location.protocol + "//" + location.hostname + "/",
-        playsinline: 1
+        origin: location.protocol + "//" + location.hostname + "/"
       }
     }
   );
@@ -23,17 +101,20 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event){
   const $movieContainer = $("#movie-container"),
-        $moviePlayButton = $(".movie-play-button"),
-        $movieCloseButton = $("#movie-modal-close");
+        $moviePlayButton = $(".movie-play-button");
 
   $moviePlayButton.on('click', function() {
     $movieContainer.fadeIn();
     ytPlayerKurokami.playVideo().mute();
+    $('body').addClass('stop-scrolling');
   });
 
-  $movieCloseButton.on("click", function() {
-    ytPlayerKurokami.pauseVideo();
-    $movieContainer.fadeOut(500);
+  $movieContainer.on('click', function () {
+    if(!$(event.target).closest('#movie').length && !$(event.target).is('#movie')) {
+      ytPlayerKurokami.pauseVideo();
+      $movieContainer.fadeOut(500);
+      $('body').removeClass('stop-scrolling');
+    }
   });
 }
 
@@ -78,92 +159,74 @@ function swipedetect(el, callback){
   }, false)
 }
 
-$(function() {
-  const $inviewEl = $(".inviewEl"),
-    $window = $(window),
-    $body = $("body"),
-    mediaQueryMobile = window.matchMedia('(max-width: 480px)'),
-    mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)'),
-    mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)'),
-    xlVideo = "/assets/img/contents/kurokami/Koukousei-15s-1080.mp4",
-    bigVideo= "/assets/img/contents/kurokami/Koukousei-15s-1080-cropped.mp4",
-    medVideo = "/assets/img/contents/kurokami/Koukousei-15s-sq-720.mp4",
-    smallVideo = "/assets/img/contents/kurokami/Koukousei-15s-sq-480.mp4",
-    backupImg = "/assets/img/contents/kurokami/video-still.png";
+function loadVideo (mobile, tablet, desktop) {
+  let videoTag;
+  let videoContainer = document.getElementById('videoContainer');
+  const xlVideo = "../assets/img/contents/kurokami/musume-1080.mp4",
+        bigVideo= "../assets/img/contents/kurokami/musume-1080-cropped.mp4",
+        medVideo = "../assets/img/contents/kurokami/musume-720.mp4",
+        smallVideo = "../assets/img/contents/kurokami/musume-480.mp4";
 
-  $inviewEl.on("inview", function() {
-    $(this).addClass("inviewed");
-  });
-
-  $body.on('click', '.beforeafter', function () {
-    let $this = $(this);
-    let $before = $this.find('.before');
-    let $beforeIndicator = $this.find('.indicator--before');
-    let $afterIndicator = $this.find('.indicator--after');
-
-    if ($this.hasClass('reveal-after')) {
-      $this.removeClass('reveal-after');
-      $beforeIndicator.addClass('active');
-      $afterIndicator.removeClass('active');
-    } else {
-      $this.addClass('reveal-after');
-      $beforeIndicator.removeClass('active');
-      $afterIndicator.addClass('active');
-    }
-  });
-
-  if (mediaQueryMobile || mediaQueryTablet) {
-    const el = document.querySelector('#beforeafter--video .beforeafter__inner');
-    const beforeIndicator = el.parentNode.querySelector('.indicator--before');
-    const afterIndicator = el.parentNode.querySelector('.indicator--after');
-    const bobs = document.querySelectorAll('#bob .beforeafter__inner');
-
-    swipedetect(el, function(swipedir){
-        if (swipedir === 'left') {
-          el.parentNode.classList.add('reveal-after');
-          beforeIndicator.classList.remove('active');
-          afterIndicator.classList.add('active');
-        } else if (swipedir === 'right') {
-          el.parentNode.classList.remove('reveal-after');
-          beforeIndicator.classList.add('active');
-          afterIndicator.classList.remove('active');
-        }
-    });
-
-    bobs.forEach((bob) => {
-      let beforeIndicator = bob.parentNode.querySelector('.indicator--before');
-      let afterIndicator = bob.parentNode.querySelector('.indicator--after');
-
-      swipedetect(bob, function(swipedir){
-        if (swipedir === 'left') {
-          bob.parentNode.classList.add('reveal-after');
-          beforeIndicator.classList.remove('active');
-          afterIndicator.classList.add('active');
-        } else if (swipedir === 'right') {
-          bob.parentNode.classList.remove('reveal-after');
-          beforeIndicator.classList.add('active');
-          afterIndicator.classList.remove('active');
-        }
-      });
-    });
+  if (mobile.matches){
+    videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;
+  } else if (tablet.matches) {
+    videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${medVideo}">`;
+  } else if (desktop.matches) {
+    videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${bigVideo}">`;
+  } else{
+    videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${xlVideo}">`;
   }
 
-  loadVideo();
+  videoContainer.innerHTML = videoTag;
+}
 
-  function loadVideo () {
-    let videoTag;
-    let videoContainer = document.getElementById('videoContainer');
+function openBobModal (el) {
+  const $bobOverlay = $('.bob-overlay');
+  const $body = $("body");
 
-    if (mediaQueryMobile.matches){
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${smallVideo}">`;
-    } else if (mediaQueryTablet.matches) {
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${medVideo}">`;
-    } else if (mediaQueryDesktop.matches) {
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${bigVideo}">`;
-    } else{
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${xlVideo}">`;
-    }
+  if ('content' in document.createElement('template')) {
+    // Instantiate the template
+    let template = document.querySelector('#bobModal');
 
-    videoContainer.innerHTML = videoTag;
+    // Helpful variables
+    let $beforeafter = el,
+        color = $beforeafter.find('.bob__color').text(),
+        modalContent = $beforeafter.find('.bob-modal-content').clone().removeClass('hidden');
+
+    // Create References to template's DOM elements
+    let overlay = document.querySelector(".bob-overlay"),
+        clone = template.content.cloneNode(true),
+        modelImg = clone.querySelector('#modelImg'),
+        colorTitle = clone.querySelector('#colorTitle'),
+        closeBtn = clone.querySelector('#closeBobModal'),
+        modalContentContainer = clone.querySelector('#bobModalContentContainer');
+
+    // Populate all the content
+    modelImg.src = $beforeafter.find('.after').find('img').attr('src');
+    colorTitle.textContent = color;
+    colorTitle.classList.add('bob__color--' + color);
+    $(modalContentContainer).append(modalContent);
+
+    overlay.appendChild(clone);
+
+    // Hide BOB model modal
+    closeBtn.addEventListener('click', function () {
+      $bobOverlay.addClass('hidden');
+      $body.removeClass('stop-scrolling');
+      overlay.innerHTML = "";
+    });
+
+    $bobOverlay.on('click', function (event) {
+      if(!$(event.target).closest('.bob-modal').length && !$(event.target).is('.bob-modal')) {
+        $bobOverlay.addClass('hidden');
+        $body.removeClass('stop-scrolling');
+        overlay.innerHTML = "";
+      }
+    });
+  } else {
+    console.log('HTML template tags are not supported in this browser');
   }
-});
+
+  $bobOverlay.removeClass('hidden');
+  $body.addClass('stop-scrolling');
+}
