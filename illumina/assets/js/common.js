@@ -1,7 +1,7 @@
 $(function() {
-	var urlArray = ["kurokami","freshers","mothersday","product","shoplist"];
+	var urlArray = ["kurokami","freshers","mothersday","product","shoplist","forstylists"];
 	var tags = {
-		kurokami: "黒髪卒業式2019",
+		kurokami: "黒髪卒業式2020",
 		freshers: "新社会人カラー",
 		mothersday: "母の日"
 	};
