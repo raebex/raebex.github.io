@@ -41,16 +41,14 @@ $(function() {
   const $inviewEl = $(".inviewEl"),
     $window = $(window),
     $body = $("body"),
-	$newShadePhoto = $(".new-shade-photo")
+	  $newShadePhoto = $(".new-shade-photo"),
     mediaQueryMobile = window.matchMedia('(max-width: 480px)'),
     mediaQueryTablet = window.matchMedia('(min-width:480px) and (max-width: 720px)'),
     mediaQueryDesktop = window.matchMedia('(min-width:720px) and (max-width: 1500px)'),
-    xlVideo = "/assets/img/contents/kurokami/Koukousei-15s-1080.mp4",
-    bigVideo= "/assets/img/contents/kurokami/Koukousei-15s-1080-cropped.mp4",
-    medVideo = "/assets/img/contents/kurokami/Koukousei-15s-sq-720.mp4",
-    smallVideo = "/assets/img/contents/kurokami/Koukousei-15s-sq-480.mp4",
-    backupImg = "/assets/img/contents/kurokami/video-still.png";
-
+    xlVideo = "assets/img/contents/kurokami/musume-1080.mp4",
+    bigVideo= "assets/img/contents/kurokami/musume-1080-cropped.mp4",
+    medVideo = "assets/img/contents/kurokami/musume-720.mp4",
+    smallVideo = "assets/img/contents/kurokami/musume-480.mp4";
   loadVideo();
 
   function loadVideo () {
@@ -58,13 +56,13 @@ $(function() {
     let videoContainer = document.getElementById('videoContainer');
 
     if (mediaQueryMobile.matches){
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${smallVideo}">`;
+      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;
     } else if (mediaQueryTablet.matches) {
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${medVideo}">`;
+      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;
     } else if (mediaQueryDesktop.matches) {
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${bigVideo}">`;
+      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${bigVideo}">`;
     } else{
-      videoTag = `<video preload="auto" id="firstview-video" autoplay muted loop playsinline poster="${backupImg}" src="${xlVideo}">`;
+      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${xlVideo}">`;
     }
 
     videoContainer.innerHTML = videoTag;
