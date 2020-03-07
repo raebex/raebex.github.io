@@ -72,7 +72,7 @@
   border: 0;
   position: absolute;
   transition: background-image 0.15s ease;
-  top: 33%;
+  top: 30%;
   z-index: 4;
   width: 104px;
   height: 104px;
@@ -205,6 +205,11 @@
 
 #video-before-after .beforeafter__right {
   right: -65px;
+}
+
+#video-before-after .beforeafter__left,
+#video-before-after .beforeafter__right {
+  top: 40%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -416,13 +421,18 @@
 
 .bob-modal {
   position: relative;
-  max-width: 540px;
+  max-width: 520px;
   width: 98%;
   background: #fff;
-  padding: 50px;
+  padding: 60px;
   border: 1px solid #ccc;
   max-height: 98vh;
   overflow: scroll;
+  color: #231815;
+}
+
+.bob-modal--wide {
+  max-width: 610px;
 }
 
 .bob-modal-content.hidden {
@@ -433,7 +443,6 @@
   font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   text-align: left;
   font-size: 20px;
-  color: #231815;
 }
 
 .bob-modal img {
@@ -504,7 +513,7 @@
 }
 
 .bob-modal__stats {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .bob-modal__stat {
@@ -513,7 +522,7 @@
 
 .bob-modal__recipe {
   margin-bottom: 10px;
-  font-family: "Barlow", sans-serif;
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   font-size: 18px;
   text-align: left;
 
@@ -530,29 +539,29 @@
 
 .bob-modal__recipe-heading {
   text-align: left;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   position: relative;
-  margin-left: 15px;
   margin-bottom: 15px;
-}
-
-.bob-modal__recipe-heading:before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid black;
-  position: absolute;
-  left: -15px;
-  top: 3px;
+  line-height: 1.6;
 }
 
 .bob-modal__recipe-section {
   white-space: nowrap;
-  margin-right: 10px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.bob-modal__recipe-section + .bob-modal__recipe-section {
+  padding-left: 13px;
+}
+
+.bob-modal__recipe-section + .bob-modal__recipe-section:before {
+  content: "：";
+  position: absolute;
+  left: -4px;
+  bottom: 0;
 }
 
 .bob-modal__recipe-section--no-tag {
@@ -580,10 +589,11 @@
   border-radius: 10px;
   font-weight: 700;
   text-align: left;
-  padding: 2px 10px;
+  padding: 2px 6px 3px;
   display: inline-block;
   margin-bottom: 10px;
   font-size: 12px;
+  line-height: 1;
 }
 
 .bob-modal__recipe .tag--color--NUDE {
@@ -649,14 +659,14 @@ p.bob-modal__description {
 }
 
 .bob-modal__stylist-info-heading h4,
-.bob-modal__stylist-info-heading #stylistDescription {
+.bob-modal__stylist-info-heading .stylistDescription {
   margin-bottom: 15px;
   text-align: left;
   font-size: 20px;
   font-weight: 700;
 }
 
-.bob-modal__stylist-info-heading #stylistDescription2 {
+.bob-modal__stylist-info-heading .stylistDescription2 {
   font-size: 13px;
 }
 
