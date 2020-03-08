@@ -191,7 +191,7 @@ function openBobModal (el) {
     // Helpful variables
     let $beforeafter = el,
         color = $beforeafter.find('.bob__color').text(),
-        isWide = $beforeafter.data('modalwidth') === 'wide',
+        modalWidth = $beforeafter.data('modalwidth'),
         modalContent = $beforeafter.find('.bob-modal-content').clone().removeClass('hidden');
 
     // Create References to template's DOM elements
@@ -208,8 +208,8 @@ function openBobModal (el) {
     colorTitle.textContent = color;
     colorTitle.classList.add('bob__color--' + color);
     $(modalContentContainer).append(modalContent);
-    if (isWide) {
-      modal.classList.add('bob-modal--wide');
+    if (modalWidth) {
+      modal.classList.add('bob-modal--' + modalWidth);
     }
 
     overlay.appendChild(clone);
