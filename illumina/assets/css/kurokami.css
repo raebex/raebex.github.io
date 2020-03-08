@@ -709,9 +709,13 @@ p.bob-modal__description {
   }
 
   .bob-modal__recipe-section {
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 10px;
     line-height: 1;
+  }
+
+  .bob-modal__recipe-section + .bob-modal__recipe-section:before {
+    content: "";
   }
 }
 
