@@ -943,7 +943,7 @@ p.bob-modal__description {
   max-width: 980px;
 }
 .modal-body {
-  padding: 100px;
+  padding: 0 100px 100px;
   font-size: 20px;
   line-height: 40px;
 }
@@ -951,6 +951,10 @@ p.bob-modal__description {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 60px;
+}
+.modal-header {
+  padding: 100px 100px 0;
+  border: 0;
 }
 button.close {
   position: absolute;
