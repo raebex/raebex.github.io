@@ -144,13 +144,15 @@
   outline: none;
 }
 
-.beforeafter__feature-color:hover .bob__color:before,
-.beforeafter__feature-color:focus .bob__color:before {
-  animation-name: underlineAnimate;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+@media only screen and (min-width: 567px) {
+  .beforeafter__feature-color:hover .bob__color:before,
+  .beforeafter__feature-color:focus .bob__color:before {
+    animation-name: underlineAnimate;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 }
 
 @keyframes underlineAnimate {
