@@ -533,16 +533,18 @@
   font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
   font-size: 24px;
   text-align: left;
+  overflow: auto;
+}
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+.bob-modal__recipes {
+  overflow: auto;
+}
+
+.bob-modal__recipe:after,
+.bob-modal__recipes:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .bob-modal__recipe-heading {
@@ -560,17 +562,21 @@
   margin-right: 5px;
   position: relative;
   line-height: 1;
+  float: left;
+  margin-top: -4px;
+  margin-bottom: 15px;
+  padding-right: 22px;
 }
 
-.bob-modal__recipe-section + .bob-modal__recipe-section {
-  padding-left: 22px;
-}
-
-.bob-modal__recipe-section + .bob-modal__recipe-section:before {
+.bob-modal__recipe-section:after {
   content: "：";
   position: absolute;
-  left: -4px;
+  right: 0;
   bottom: 0;
+}
+
+.bob-modal__recipe-section:last-child:after {
+  content: "";
 }
 
 .bob-modal__recipe-section--no-tag {
@@ -589,7 +595,7 @@
   margin-right: 16px;
   letter-spacing: 0px;
   line-height: 1.1;
-  flex-shrink: 0;
+  float: left;
 }
 
 .bob-modal__recipe .tag {
@@ -706,25 +712,6 @@ p.bob-modal__description {
   .bob-modal__stylist-info {
     margin-top: 30px;
   }
-
-  .bob-modal__recipe {
-    display: block;
-    line-height: 48px;
-  }
-
-  .bob-modal__recipe .number {
-    float: left;
-  }
-
-  .bob-modal__recipe-section {
-    margin-left: 20px;
-    margin-top: 10px;
-    line-height: 1;
-  }
-
-  .bob-modal__recipe-section + .bob-modal__recipe-section:before {
-    content: "";
-  }
 }
 
 #kurokami-campaign {
@@ -740,6 +727,9 @@ p.bob-modal__description {
   margin: 82px auto;
   max-width: 1110px;
   border-radius: 4px;
+}
+#kurokami-campaign-title {
+  letter-spacing: 1.4px;
 }
 #kurokami-campaign-title::after {
   content: "";
@@ -904,7 +894,7 @@ p.bob-modal__description {
 }
 .campaign__tc {
   font-size: 8px;
-  color: #646464;
+  color: #929292;
   margin-top: 25px;
   line-height: 1.5;
 }

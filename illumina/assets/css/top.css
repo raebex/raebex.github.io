@@ -300,10 +300,9 @@
     max-width: 1110px;;
   }
 }
-@media only screen and (min-width: 630px) and (max-width: 720px) {
-  #firstview-video {
-    width: 100%;
-    height: auto;
+@media only screen and (max-width: 567px) {
+  #firstview #firstview-inner {
+  	height: 530px;
   }
 }
 

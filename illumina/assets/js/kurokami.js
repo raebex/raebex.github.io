@@ -189,13 +189,11 @@ function openBobModal (el) {
     // Helpful variables
     let $beforeafter = el,
         color = $beforeafter.find('.bob__color').text(),
-        modalWidth = $beforeafter.data('modalwidth'),
         modalContent = $beforeafter.find('.bob-modal-content').clone().removeClass('hidden');
 
     // Create References to template's DOM elements
     let overlay = document.querySelector(".bob-overlay"),
         clone = template.content.cloneNode(true),
-        modal = clone.querySelector('.bob-modal'),
         modelImg = clone.querySelector('#modelImg'),
         colorTitle = clone.querySelector('#colorTitle'),
         closeBtn = clone.querySelector('#closeBobModal'),
@@ -206,9 +204,6 @@ function openBobModal (el) {
     colorTitle.textContent = color;
     colorTitle.classList.add('bob__color--' + color);
     $(modalContentContainer).append(modalContent);
-    if (modalWidth) {
-      modal.classList.add('bob-modal--' + modalWidth);
-    }
 
     overlay.appendChild(clone);
 
