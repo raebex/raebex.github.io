@@ -1,3 +1,8 @@
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .section__title {
   font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Noto Serif Japanese", serif, sans-serif;
   color: #5a498e;
@@ -675,6 +680,8 @@ p.bob-modal__description {
 @media only screen and (max-width: 567px) {
   .bob-modal {
     padding: 35px 25px 25px;
+    width: 90%;
+    height: 85vh;
   }
 
   #closeBobModal {

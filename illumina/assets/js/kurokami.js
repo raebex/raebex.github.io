@@ -47,8 +47,6 @@ $(function() {
           showAfterPicture($(bob.parentNode), findIndicators($(bob.parentNode)));
         } else if (swipedir === 'right') {
           showBeforePicture($(bob.parentNode), findIndicators($(bob.parentNode)));
-        } else if (swipedir === 'none') {
-          openBobModal($(bob).parents('.beforeafter'));
         }
       });
     });
