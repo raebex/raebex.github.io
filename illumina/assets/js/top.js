@@ -58,7 +58,7 @@ $(function() {
     if (mediaQueryMobile.matches){
       videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;
     } else if (mediaQueryTablet.matches) {
-      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${smallVideo}">`;
+      videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${medVideo}">`;
     } else if (mediaQueryDesktop.matches) {
       videoTag = `<video id="firstview-video" autoplay muted loop playsinline src="${bigVideo}">`;
     } else{

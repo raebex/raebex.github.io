@@ -423,7 +423,7 @@
   background: #fff;
   padding: 60px;
   border: 1px solid #ccc;
-  max-height: 98vh;
+  max-height: 85vh;
   overflow: scroll;
   color: #231815;
 }
@@ -681,7 +681,6 @@ p.bob-modal__description {
   .bob-modal {
     padding: 35px 25px 25px;
     width: 90%;
-    height: 85vh;
   }
 
   #closeBobModal {
