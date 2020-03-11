@@ -743,7 +743,7 @@ p.bob-modal__description {
   border-radius: 4px;
 }
 #kurokami-campaign-inner {
-  background: url(../img/contents/kurokami/campaign/banner-bg-blue.png) no-repeat;
+  background: url(../img/contents/kurokami/campaign/banner-bg-blue.png) no-repeat 98%;
   background-size: cover;
   padding: 23px;
   color: #fff;
@@ -1081,6 +1081,7 @@ button.close {
   }
 
   #kurokami-campaign-content {
+    border-radius: 0;
     border: 0;
     padding-left: 0;
     padding-right: 0;
