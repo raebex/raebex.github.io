@@ -230,6 +230,9 @@
 }
 
 @media only screen and (max-width: 540px) {
+  #video-before-after {
+    padding-bottom: 0;
+  }
   #video-before-after .beforeafter__left,
   #video-before-after .beforeafter__right {
     width: 28px;
@@ -564,14 +567,14 @@
   line-height: 1;
   float: left;
   margin-top: -4px;
-  margin-bottom: 15px;
   padding-right: 22px;
+  margin-bottom: 10px;
 }
 
 .bob-modal__recipe-section:after {
   content: "：";
   position: absolute;
-  right: 0;
+  right: -3px;
   bottom: 0;
 }
 
@@ -580,7 +583,8 @@
 }
 
 .bob-modal__recipe-section--no-tag {
-  align-self: flex-end;
+  clear: left;
+  margin-top: 10px;
 }
 
 .bob-modal__recipe .number {
@@ -738,6 +742,19 @@ p.bob-modal__description {
   background: #fff;
   margin: 37px auto;
   display: block;
+}
+.kurokami-campaign__flex {
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit--moz-box-pack: center;
+  box-pack: center;
+  justify-content: center;
+  line-height: 1.6;
 }
 #kurokami-campaign-content {
   border: 1px solid #fff;
@@ -997,6 +1014,16 @@ button.close {
   }
 }
 @media only screen and (max-width: 768px) {
+  .kurokami-campaign__flex {
+    display: block;
+  }
+  .campaign__stars--right {
+    display: none;
+  }
+  .campaign__stars-left {
+    display: block;
+    margin: 0 auto 20px;
+  }
   #kurokami-campaign-content h2 {
     font-size: 28px;
   }
@@ -1027,12 +1054,21 @@ button.close {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  #kurokami-campaign-content {
-    padding-left: 10px;
-    padding-right: 10px;
+@media only screen and (max-width: 540px) {
+  #kurokami-campaign-inner {
+    margin-top: 0;
+    border-radius: 0;
   }
 
+  #kurokami-campaign-content {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .modal-body {
     padding: 20px;
     font-size: 16px;

@@ -9,6 +9,9 @@
 		display: none;
 	}
 }
+.jt {
+  display:inline-block;
+}
 .sr-only {
   position: absolute;
   width: 1px;
