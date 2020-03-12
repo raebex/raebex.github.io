@@ -44,6 +44,8 @@
   height: 100%;
   width: auto;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
 }
 #firstview-content {
   position: absolute;
