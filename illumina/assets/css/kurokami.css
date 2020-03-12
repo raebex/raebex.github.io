@@ -104,6 +104,18 @@
   transform: rotateY(180deg);
 }
 
+@media only screen and (max-width: 768px) {
+  .beforeafter__left,
+  .beforeafter__right {
+    background: url(../img/contents/kurokami/arrow-mobile.svg) no-repeat center;
+  }
+
+  .beforeafter__left:hover,
+  .beforeafter__right:hover {
+    background-image: url(../img/contents/kurokami/arrow-mobile.svg);
+  }
+}
+
 .beforeafter__indicators {
   display: inline-block;
   position: absolute;
@@ -236,7 +248,6 @@
   #video-before-after .beforeafter__left,
   #video-before-after .beforeafter__right {
     width: 28px;
-    height: 28px;
   }
 
   #video-before-after .beforeafter__right {
