@@ -10,13 +10,16 @@ a {
   transition: $transition;
 }
 
-a:link, a:visited, a:focus, a:active {
+a:link,
+a:visited,
+a:focus, {
   color: $color-link;
-  text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: $color-hover;
+  text-decoration: none;
 }
 
 .center {
