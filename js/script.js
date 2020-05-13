@@ -9,7 +9,7 @@ var lastfm = {
   format: "json"
 }
 
-fetch('http://ws.audioscrobbler.com/2.0/' +
+fetch('//ws.audioscrobbler.com/2.0/' +
   "?method=" + lastfm.method +
   "&user=" + lastfm.user +
   "&limit=" + lastfm.limit +
