@@ -1,0 +1,29 @@
+.tag--color {
+  &--NUDE {
+    background: #D0B7A4;
+  }
+
+  &--BLOSSOM {
+    background: $color-blossom;
+  }
+
+  &--DEEPSEA {
+    background: #2783D3;
+  }
+
+  &--STARDUST {
+    background: $color-stardust;
+  }
+
+  &--FOREST {
+    background: #9CC6A2;
+  }
+
+  &--SAFARI {
+    background: #906D58;
+  }
+
+  &--ORCHID {
+    background: #705C87;
+  }
+}

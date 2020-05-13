@@ -1,0 +1,256 @@
+.marquee {
+  height: 642px;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+
+  @media only screen and (min-width: 1700px) {
+    height: 100%;
+  }
+}
+
+.marquee__content {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  background: url(../img/banner-bg-50.png) center no-repeat;
+  background-size: cover;
+  font-family: $font-barlow;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.85);
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.marquee__iframe {
+  max-height: 750px;
+  max-width: 1110px;
+}
+
+.marquee__video {
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.marquee__open-video-text {
+  margin-top: 20px;
+}
+
+.marquee__open-video-btn {
+  opacity: 0;
+  color: #fff;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
+  background: none;
+  border: 0;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.marquee__close-iframe {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  svg {
+    width: 45px;
+    fill: #ccc;
+    transition: fill 0.5s ease;
+
+    &:hover {
+      fill: #fff;
+    }
+  }
+}
+
+.marquee__logo {
+  margin-bottom: 71px;
+  margin-top: 57px;
+  max-width: 726px;
+  width: 95%;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fadeInShift;
+  animation-fill-mode: forwards;
+}
+
+.marquee__scroll  {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fadeInShift;
+  animation-delay: 0.5s;
+  transition-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+@media only screen and (max-width: $width_mobile) {
+  .marquee {
+    height: 530px;
+  }
+  .marquee__logo {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .marquee__open-video-text {
+    margin-left: 0;
+    margin-top: 25px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $width_tablet) {
+  .marquee__scroll {
+    display: none;
+  }
+  .marquee__content {
+    background: rgb(88,77,149);
+    background: radial-gradient(circle, rgba(88,77,149,0.5) 0%, rgba(135,100,153,0.5) 100%);
+  }
+}
+
+@media only screen and (min-width: $width_tablet) {
+  .marquee__scroll {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    width: 70px;
+    padding-bottom: 120px;
+    font-weight: bold;
+    text-align: center;
+    color: #5a498e;
+  }
+
+  .marquee__scroll__letters {
+    display: inline-block;
+    font-size: 10px;
+    font: $font-barlow;
+    text-indent: 0.2em;
+    letter-spacing: 0.2em;
+    transform: rotate(90deg);
+  }
+
+  .marquee__scroll__bar {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 80px;
+    margin: 0 auto;
+
+    &:before {
+      position: absolute;
+      top: -300%;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      background-color: currentColor;
+      content: "";
+      animation: scroll 2.5s infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  .marquee__video {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@-moz-keyframes scroll {
+  0% {
+    top: -300%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    top: -300%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-o-keyframes scroll {
+  0% {
+    top: -300%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes scroll {
+  0% {
+    top: -300%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes fadeInShift {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

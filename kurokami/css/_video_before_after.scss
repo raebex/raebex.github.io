@@ -1,0 +1,91 @@
+#video-before-after {
+  padding-bottom: 50px;
+
+  .beforeafter--video {
+    max-width: 540px;
+    margin: 60px auto 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s, transform 1s;
+
+    &.inviewed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .beforeafter__left,
+  .beforeafter__right {
+    top: 40%;
+  }
+
+  .beforeafter__left {
+    left: -65px;
+  }
+
+  .beforeafter__right {
+    right: -65px;
+  }
+}
+
+@media only screen and (max-width: $width_tablet) {
+  #video-before-after {
+    padding-bottom: 20px;
+
+    .beforeafter__left,
+    .beforeafter__right {
+      top: 45%;
+      width: 55px;
+      height: 55px;
+      background: url(../img/arrow-mobile.svg) no-repeat center;
+      background-size: cover;
+    }
+
+    .beforeafter__left {
+      left: 10px;
+    }
+
+    .beforeafter__right {
+      right: 23px;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #video-before-after {
+    padding-bottom: 0;
+
+    .beforeafter__left,
+    .beforeafter__right {
+      width: 36px;
+      height: 36px;
+    }
+
+    .beforeafter__right {
+      right: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  #video-before-after {
+    .beforeafter {
+      opacity: 1;
+    }
+
+    .beforeafter__inner {
+      transition: transform 0.6s;
+    }
+
+    .before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .beforeafter--video {
+      max-width: 540px;
+      height: 540px;
+    }
+  }
+}

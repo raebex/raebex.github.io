@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Round arrow Purple Copy 10</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+        <g id="Round-arrow-Purple-Hover" transform="translate(1.000000, 1.000000)" stroke="#5A498E">
+            <g id="Round-arrow-Purple-Copy-10">
+                <g id="Round-arrow-Copy-6">
+                    <circle id="Oval" fill-opacity="0.3" fill="#FFFFFF" cx="52" cy="52" r="52"></circle>
+                    <g id="Arrow" transform="translate(35.965863, 39.149536)" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline id="Path" transform="translate(25.054545, 11.258627) rotate(-45.000000) translate(-25.054545, -11.258627) " points="31.8118189 3.29944341 33.0137291 19.2178108 17.0953618 18.0159005"></polyline>
+                        <line x1="35.689441" y1="11.2586271" x2="0.392191659" y2="11.2586271" id="Line"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

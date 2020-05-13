@@ -1,0 +1,36 @@
+#faq .section__title {
+  margin-bottom: 88px;
+}
+
+.faq-wrapper {
+  max-width: 925px;
+  margin: 0 auto;
+}
+
+.faq {
+  margin-bottom: 60px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.faq__question {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #5A498E;
+}
+
+.faq__answer {
+  font-size: 20px;
+  color: #646464;
+}
+
+.faq__icon {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+}

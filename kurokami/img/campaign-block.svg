@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1110px" height="1014px" viewBox="0 0 1110 1014" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="12.368731%" x2="100%" y2="91.725347%" id="linearGradient-1">
+            <stop stop-color="#A793E0" offset="0%"></stop>
+            <stop stop-color="#D3C8EF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3-PC-MyNavi" transform="translate(-165.000000, -2335.000000)">
+            <g id="Campaign" transform="translate(165.000000, 2335.000000)">
+                <g id="Group">
+                    <rect id="Rectangle-Copy" fill="url(#linearGradient-1)" x="0" y="0" width="1110" height="1014" rx="4"></rect>
+                    <rect id="Rectangle-Copy-2" stroke="#FFFFFF" x="22" y="23" width="1066" height="967" rx="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

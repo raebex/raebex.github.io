@@ -1,0 +1,48 @@
+.section {
+  padding: 70px 0 100px;
+
+  @media only screen and (max-width: $width_mobile) {
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
+}
+
+.section__title {
+  font-family: YakuHanMP, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;
+  color: #5a498e;
+  margin-bottom: 53px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+
+  @media only screen and (max-width: $width_tablet) {
+    font-size: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media only screen and (max-width: $width_mobile) {
+    font-size: 28px;
+  }
+}
+
+.section__description {
+  text-align: center;
+
+  @media only screen and (max-width: $width_tablet) {
+    margin-bottom: 45px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.section__icon {
+  width: 48px;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.text-wrapper {
+  max-width: 790px;
+  margin: 0 auto;
+}

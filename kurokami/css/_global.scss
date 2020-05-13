@@ -1,0 +1,59 @@
+.gradient-border {
+  width: 100%;
+  height: 12px;
+  background: rgb(254,200,155);
+  background: linear-gradient(90deg, rgba(254,200,155,1) 0%, rgba(255,162,160,1) 33%, rgba(253,173,243,1) 66%, rgba(144,220,254,1) 100%);
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.font-mincho {
+  font-family: YakuHanMP, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;
+}
+
+.font-barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.font-kaku {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+
+.font-base {
+  font-size: 16px;
+}
+
+.gradient-container {
+  background:  url(../img/banner-bg-25.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wella {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  font-weight: 400;
+  color: #343539;
+  clear: both;
+  padding-bottom: 66px;
+
+  p {
+    font-size: 20px;
+    line-height: 2.1;
+    font-weight: 400;
+
+    @media only screen and (max-width: $width_mobile) {
+      font-size: 16px;
+    }
+  }
+}
+
+.jt {
+  display:inline-block;
+}
+
+.text-center {
+  text-align: center;
+}

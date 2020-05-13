@@ -1,0 +1,31 @@
+.btn {
+  min-width: 220px;
+}
+
+.btn-secondary {
+  background: #5A498E;
+  border-color: #5A498E;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 21px 50px;
+
+  &:hover {
+    background: #8376AA;
+    border-color: #8376AA;
+    color: #fff;
+  }
+}
+
+.btn-outline-secondary {
+    color: #5A498E;
+    border: 1px solid #5A498E;
+    font-size: 16px;
+    padding: 15px 20px;
+    margin-top: 32px;
+
+  &:hover {
+    background: rgba(225,225,225,0.30);
+    color: #5A498E;
+    border-color: #5A498E;
+  }
+}
