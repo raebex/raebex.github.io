@@ -5,7 +5,7 @@ var POY = (function($){
 	'use strict';
 	
 
-	var _tumblr_blog_url = 'http://api.tumblr.com/v2/blog/presenceofyes.tumblr.com/posts?';
+	var _tumblr_blog_url = 'http://presenceofyes.tumblr.com';
 
 
 	//reference
