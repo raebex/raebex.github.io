@@ -98,6 +98,7 @@ html {
 .icon {
   line-height: 0;
   font-size: 2em;
+  text-decoration: none !important;
 }
 
 .icon-back-arrow:before {
@@ -300,7 +301,7 @@ body, html {
   line-height: 1.8;
 }
 
-a {
+#home a {
   transition: all 0.3s ease-out;
 }
 
@@ -518,6 +519,10 @@ a:focus {
   content: "";
 }
 
+.project-header {
+  font-size: 2.5rem;
+}
+
 .project-description,
 .project-header {
   margin: 1em 0;
@@ -534,6 +539,13 @@ img {
   .video iframe {
     min-height: 28em;
   }
+}
+
+.blockquote {
+  border-left: 7px solid #ccc;
+  color: #046B99;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
 }
 
 .social-media {
