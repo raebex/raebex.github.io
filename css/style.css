@@ -492,8 +492,6 @@ a:focus {
 .error-image {
   max-width: 800px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   left: 0;
   right: 0;
   text-align: center;

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Rebecca Young">
     <title>404</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <main role="main" class="error-container">
     <figure class="error-image">
-      <img src="http://rebeccayoung.me/images/404.svg">
+      <img src="images/404.svg">
       <figcaption>Looks like you've lost your way...</figcaption>
-      <a class="back-btn" href="http://rebeccayoung.me">Get me outta here</a>
+      <a href="/">Get me outta here! </a>
     </figure>
 
   </main>
