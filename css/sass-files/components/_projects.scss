@@ -8,11 +8,11 @@
   transition: $transition;
 
   &:before {
-    content: '- ';
+    content: "- ";
   }
 
   &:first-child:before {
-    content: '';
+    content: "";
   }
 }
 
@@ -22,7 +22,7 @@
 
 .project-description,
 .project-header {
-  margin: 1em 0;
+  margin: 2rem 0;
 }
 
 img {
@@ -42,4 +42,8 @@ img {
   color: $color-link;
   padding: 0 2rem;
   margin-bottom: 2rem;
+}
+
+.outline {
+  border: 7px solid $color-link;
 }

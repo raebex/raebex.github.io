@@ -293,7 +293,8 @@ html {
     width: 100%;
   }
 }
-body, html {
+body,
+html {
   color: #333;
   font-family: "Quicksand", sans-serif;
   font-size: 1.1rem;
@@ -354,6 +355,10 @@ a:focus {
 
 .subsection {
   padding: 1em 0;
+}
+
+p + p {
+  margin-top: 1rem;
 }
 
 @keyframes fade-in-right {
@@ -530,7 +535,7 @@ a:focus {
 
 .project-description,
 .project-header {
-  margin: 1em 0;
+  margin: 2rem 0;
 }
 
 img {
@@ -551,6 +556,10 @@ img {
   color: #046B99;
   padding: 0 2rem;
   margin-bottom: 2rem;
+}
+
+.outline {
+  border: 7px solid #046B99;
 }
 
 .social-media {
